@@ -3,7 +3,6 @@
 //Go to your browser and type ipaddress/createSytheticData.php?number={number of records to create}
 
 
-
 // Connect to the database
 $host = "localhost";
 $username = "root";
