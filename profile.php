@@ -29,17 +29,13 @@ require 'topBar.php';
 <div class="main-container">
     <div class='centered-container'>
         <?php
-        //Used to easily store database credentials
-        $dbservername = "localhost";
-        $dbusername = "root";
-        $dbpassword = "root";
-        $database = "liccf";
+        require 'serverDetails.php';
 
         //Personal ID
         $pid = $_GET['pid'];
 
         // Create connection
-        $conn = new mysqli($dbservername, $dbusername, $dbpassword, $database);
+        $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 
         // Connect
         if ($conn->connect_error){

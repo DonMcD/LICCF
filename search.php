@@ -1,13 +1,9 @@
 <?php
 
-// Connect to the database
-$host = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "liccf";
+require 'serverDetails.php';
 //hellooooooooooooooooooooooooooooooooooooooooooo
 
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

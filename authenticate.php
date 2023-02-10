@@ -7,15 +7,10 @@ $username = cleanInput($_POST['username']);
 //Get the password from the user
 $password = cleanInput($_POST['password']);
 
-
-//Used to easily store database credentials
-$dbservername = "localhost";
-$dbusername = "root";
-$dbpassword = "root";
-$database = "liccf";
+require 'serverDetails.php';
 
 // Create connection
-$conn = new mysqli($dbservername, $dbusername, $dbpassword, $database);
+$conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 
 // Connect
 if ($conn->connect_error){

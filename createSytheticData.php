@@ -3,14 +3,10 @@
 //Go to your browser and type ipaddress/createSytheticData.php?number={number of records to create}
 
 
-// Connect to the database
-$host = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "liccf";
+require 'serverDetails.php';
 
 // Connect to the database
-$conn = mysqli_connect($host, $username, $password, $dbname);
+$conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 
 // Check the connection
 if (!$conn) {
