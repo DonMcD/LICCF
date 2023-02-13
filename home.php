@@ -111,6 +111,11 @@ $(document).ready(function() {
             }
         });
     });
+    // Attach event handlers to all checkboxes, radio buttons, textbox, and dropdown
+    $("input[type='checkbox'], input[type='radio'], input[type='text'], select").change(function() {
+        // Submit the form
+        $("form").submit();
+    });
 });
 </script>
 </div>
