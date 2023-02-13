@@ -6,5 +6,4 @@
     <a href="">Events</a>
     <a href="">Contacts</a>
     <a href="">Zoom</a>
-    <a href="">NEW</a>
 </header>
