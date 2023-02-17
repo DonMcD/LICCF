@@ -4,7 +4,7 @@ session_start();
 
 //This checks to see if the user is authenticated or not
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: login.php");
+    header("Location: ../frontend/login.php");
     exit;
 }
 ?>
@@ -24,8 +24,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 <body style="background-color: rgb(245,245,221)">
 <?php
 
-require 'header.php';
-require 'topBar.php';
+require '../frontend/header.php';
+require '../frontend/topBar.php';
 ?>
 
 <div class="main-container">
@@ -93,7 +93,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "search.php",
+            url: "../backend/search.php",
             data: $("form").serialize(),
             success: function(data) {
                 $(".results").html(data);

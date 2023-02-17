@@ -1,6 +1,6 @@
 <?php
 
-require 'cleanInput.php';
+require '../backend/cleanInput.php';
 
 //Get the username from the user
 $username = cleanInput($_POST['username']);

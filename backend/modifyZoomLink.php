@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
-    <link rel="stylesheet" href="../frontend/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
