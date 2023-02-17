@@ -1,7 +1,6 @@
 <?php
 
 require '../backend/serverDetails.php';
-//hellooooooooooooooooooooooooooooooooooooooooooo
 
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 
@@ -9,8 +8,6 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
-//esffwad
 // Get the data from the "members" table
 //$query = "SELECT f_name, l_name, dob, type, status FROM members WHERE status = 0";
 
