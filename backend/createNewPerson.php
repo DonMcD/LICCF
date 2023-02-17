@@ -5,7 +5,7 @@ session_start();
 
 //This checks to see if the user is authenticated or not
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: login.php");
+    header("Location: ../frontend/login.php");
     exit;
 }
 ?>
@@ -14,7 +14,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -24,8 +24,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 </head>
 <body style="background-color: rgb(245,245,221)">
 <?php
-require 'header.php';
-require 'topBar.php';
+require '../frontend/header.php';
+require '../frontend/topBar.php';
 ?>
 <form style="width: 100%;">
     <div class='centered-container'>
@@ -56,16 +56,12 @@ require 'topBar.php';
             <input type='date' name='title' required>
         </div>
         <div>
-            <label>Baptized:</label>
-            <input type='checkbox' name='baptized'>
-        </div>
-        <div>
-            <label>Confirmed:</label>
-            <input type='checkbox' name='confirmed'>
-        </div>
-        <div>
-            <label>Profession:</label>
+            <label>Work / Former Work:</label>
             <input type='text' name='title'>
+        </div>
+        <div>
+            <label>Interests:</label>
+            <input type='text' name='intererests'>
         </div>
         <div>
             <label>Account Type</label>

@@ -13,7 +13,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -55,17 +55,6 @@ require 'topBar.php';
                 </div>
             </div>
             <div>
-                <h3>Church</h3>
-                <div>
-                    <label>Baptized: </label>
-                    <input type='checkbox' name='baptized' value='baptized'>
-                </div>
-                <div>
-                    <label>Confirmed: </label>
-                    <input type='checkbox' name='confirmed' value='confirmed'>
-                </div>
-            </div>
-            <div>
                 <h3>Gender</h3>
                 <select name='gender' id='gender'>
                     <option value=''>All</option>
@@ -93,7 +82,7 @@ require 'topBar.php';
     </div>
     <div class="results">
         <?php
-        require 'search.php';
+        require '../backend/search.php';
         ?>
     </div>
 
