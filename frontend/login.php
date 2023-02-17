@@ -46,7 +46,8 @@ $.ajax({
       toastr.error("Invalid username.");
     }
     else {
-        toastr.error("An error has occured");
+        //toastr.error("An error has occured");
+        toastr.error("An error has occured, contact Donavon McDowell to get access to the Database");
     }
   }
 });
