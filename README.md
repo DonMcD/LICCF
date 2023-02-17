@@ -28,4 +28,4 @@ Overall, the LICCF website design project is focused on creating an engaging, in
 ### Dependencies
 
 * Apache / Xampp
-* VSCode
+* Your favourite code editor
