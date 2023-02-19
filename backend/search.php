@@ -77,7 +77,7 @@ switch($sortFor){
       while ($row = mysqli_fetch_assoc($result)) {
         //Change the background color from dark to light to make it easier to read
         $row_class = ($i % 2 == 0) ? "dark-row" : "light-row";
-        echo "<tr class='$row_class' onclick=\"window.location='../frontend/profile.php?pid={$row['pid']}'\">";
+        echo "<tr class='$row_class' onclick=\"window.location='../private/profile.php?pid={$row['pid']}'\">";
         $i = $i + 1;
         
           echo "<td>" . $row["title"] . "</td>";
@@ -159,10 +159,10 @@ switch($sortFor){
     while ($row = mysqli_fetch_assoc($result)) {
         //Change the background color drom dark to light to make it easier to read
         if(($i % 2) == 0){
-          echo "<tr class='dark-row' onclick=\"window.location='../frontend/profile.php?pid={$row['fid']}'\">";
+          echo "<tr class='dark-row' onclick=\"window.location='../private/profile.php?pid={$row['fid']}'\">";
         }
         else {
-          echo "<tr class='light-row' onclick=\"window.location='../frontend/profile.php?pid={$row['fid']}'\">";
+          echo "<tr class='light-row' onclick=\"window.location='../private/profile.php?pid={$row['fid']}'\">";
         }
         $i = $i + 1;
         echo "<td>" . $row["name"] . "</td>";
@@ -201,10 +201,10 @@ switch($sortFor){
     while ($row = mysqli_fetch_assoc($result)) {
         //Change the background color drom dark to light to make it easier to read
         if(($i % 2) == 0){
-          echo "<tr class='dark-row' onclick=\"window.location='../frontend/profile.php?pid={$row['did']}'\">";
+          echo "<tr class='dark-row' onclick=\"window.location='../private/profile.php?pid={$row['did']}'\">";
         }
         else {
-          echo "<tr class='light-row' onclick=\"window.location='../frontend/profile.php?pid={$row['did']}'\">";
+          echo "<tr class='light-row' onclick=\"window.location='../private/profile.php?pid={$row['did']}'\">";
         }
         $i = $i + 1;
         echo "<td>$" . $row["amount"] . "</td>";

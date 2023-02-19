@@ -1,7 +1,1 @@
-// ADD functionality to all of the buttons on the top bar.
-// ADD proper header to all pages
-// ADD new way of sorting using php request to database rather than using javascript - JS TOO SLOW
-// ADD search functionality
-// ADD javascript to filters to enable and disable certain filters based on if selection is Person, Family or Donation
-// ADD scroll bar to Donation filters to filter out low and high end of amount
-// ADD page for users to make their own profile without admin access
+Add anything in here that you feel needs to be done and has not been assigned to anyone

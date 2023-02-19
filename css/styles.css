@@ -25,11 +25,13 @@ header {
     height: 50px;
     align-items: center;
     background-color: white;
+    margin-bottom: 25px;
 }
 header a {
     text-decoration: none;
     color: black;
 }
+
 .backgrounds {
     background-color: var(--light);
 }
@@ -40,9 +42,10 @@ header a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--white);
+    background-color: transparent;
     justify-content: space-evenly;
     margin-bottom: 5px;
+    margin-top: 1px;
 }
 .top-bar div {
     display: flex;
@@ -182,6 +185,9 @@ body {
     border-radius: 20px;
     text-align: center;
     min-height: 300px;
+    border-bottom: 2px solid #3e702d;
+    border-right: 2px solid #3e702d;
+    box-shadow: 2px 2px 0 #3e702d;
 }
 .latest-members-main-container{
     display: flex;

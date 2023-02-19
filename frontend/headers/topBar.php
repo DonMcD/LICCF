@@ -1,6 +1,6 @@
 <div class="top-bar">
     <a href='../private/dashboard.php'><div id="dashboard">Dashboard</div></a>
-    <a href='../private/createNewPerson.php'><div id="manage-people">Manage People</div></a>
+    <a href='../private/personSelect.php'><div id="manage-people">Manage People</div></a>
     <a href='../private/createNewFamily.php'><div id="manage-families">Manage Families</div></a>
     <a href=''><div id="manage-donations">Manage Donations</div></a>
     <a href=''><div id="issue-tax-receipts">Issue Tax Reciepts</div></a>
@@ -22,7 +22,7 @@ if (currentPageURL.includes("dashboard.php")) {
 }
 
 // Check if the URL matches the manage people page
-if (currentPageURL.includes("createNewPerson.php")) {
+if (currentPageURL.includes("personSelect.php")) {
   document.getElementById("manage-people").style.border = selected;
 }
 

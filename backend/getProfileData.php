@@ -1,5 +1,5 @@
 <?php
-        require '../backend/serverDetails.php';
+        require 'serverDetails.php';
 
         //Personal ID
         $pid = $_GET['pid'];
