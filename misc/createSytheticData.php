@@ -1,6 +1,6 @@
 <?php
 //HOW TO USE:
-//Go to your browser and type ipaddress/createSytheticData.php?number={number of records to create}
+//Go to your browser and type localhost/misc/createSytheticData.php?number={number of records to create}
 
 
 require '../backend/serverDetails.php';
@@ -121,12 +121,14 @@ for ($i = 0; $i < $number; $i++) {
     $professions = array("Doctor", "Lawyer", "Teacher", "Engineer", "Nurse", "Programmer", "Artist", "Musician", "Athlete", "Writer");
     $random_index = array_rand($professions);
     $profession = $professions[$random_index];
+
+    $attendance = rand(1, 3);
     
     // Insert the record into the database
     //$sql = "INSERT INTO members (f_name, l_name, dob, type) VALUES ('$f_name', '$l_name', '$dob', '$type')";
 
-    $sql = "INSERT INTO members (f_name, l_name, dob, fid, type, baptized, gender, confirmation, confirmation_date, start_date, c_number, w_number, h_number, email, address, city, postal_code, province, profession)
-    VALUES ('$f_name', '$l_name', '$dob', '$fid', '$type', '$baptized', '$gender', '$confirmation', '$confirmation_date', '$start_date', '$c_number', '$w_number', '$h_number', '$email', '$address', '$city', '$postal_code', '$province', '$profession')";
+    $sql = "INSERT INTO members (f_name, l_name, dob, fid, type, baptized, gender, confirmation, confirmation_date, start_date, c_number, w_number, h_number, email, address, city, postal_code, province, profession, attendance)
+    VALUES ('$f_name', '$l_name', '$dob', '$fid', '$type', '$baptized', '$gender', '$confirmation', '$confirmation_date', '$start_date', '$c_number', '$w_number', '$h_number', '$email', '$address', '$city', '$postal_code', '$province', '$profession', '$attendance')";
 
     mysqli_query($conn, $sql);
 }

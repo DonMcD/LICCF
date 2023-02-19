@@ -38,7 +38,7 @@ $.ajax({
   data: { username: $("#username").val(), password: $("#password").val() },
   success: function(result) {
     if (result == "valid") {
-        window.location.href = "../../frontend/private/home.php";
+        window.location.href = "../../frontend/private/dashboard.php";
     } else if (result == "password"){
       toastr.error("Invalid password.");
     }
