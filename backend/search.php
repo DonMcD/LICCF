@@ -1,5 +1,5 @@
 <?php
-require '../backend/serverDetails.php';
+require 'serverDetails.php';
 
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 

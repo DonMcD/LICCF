@@ -14,7 +14,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -24,8 +24,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 </head>
 <body class="backgrounds">
 <?php
-require '../frontend/headers/header.php';
-require '../frontend/headers/topBar.php';
+require '../headers/header.php';
+require '../headers/topBar.php';
 ?>
 <div class='centered-container'>
     <form action="" method="post">

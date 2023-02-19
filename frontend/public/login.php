@@ -4,7 +4,7 @@
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
 
-    <link rel="stylesheet" href="../css/loginStyles.css">
+    <link rel="stylesheet" href="../../css/loginStyles.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -34,11 +34,11 @@
 document.getElementById("submit").addEventListener("click", function() {
 $.ajax({
   type: "POST",
-  url: "../backend/authenticate.php",
+  url: "../../backend/authenticate.php",
   data: { username: $("#username").val(), password: $("#password").val() },
   success: function(result) {
     if (result == "valid") {
-        window.location.href = "../frontend/home.php";
+        window.location.href = "../../frontend/private/home.php";
     } else if (result == "password"){
       toastr.error("Invalid password.");
     }

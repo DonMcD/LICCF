@@ -4,7 +4,7 @@ session_start();
 
 //This checks to see if the user is authenticated or not
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
+    header("Location: ../public/login.php");
     exit;
 }
 ?>
@@ -13,7 +13,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -21,8 +21,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 </head>
 <body class="backgrounds">
 <?php
-require '../frontend/headers/header.php';
-require '../frontend/headers/topBar.php';
+require '../headers/header.php';
+require '../headers/topBar.php';
 ?>
 
 <div class="main-container">
@@ -79,12 +79,13 @@ require '../frontend/headers/topBar.php';
 </div>
     <div>
         <?php
-            require '../frontend/loading.php';
+            //Dont delete
+            //require '../misc/loading.php';
         ?>
     </div>
     <div class="results">
         <?php
-            require '../backend/search.php';
+            require '../../backend/search.php';
         ?>
     </div>
 </div>
@@ -96,7 +97,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "../backend/search.php",
+            url: "../../backend/search.php",
             data: $("form").serialize(),
             success: function(data) {
                 $(".results").html(data);

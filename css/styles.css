@@ -41,7 +41,7 @@ header a {
     align-items: center;
     background-color: var(--white);
     justify-content: space-evenly;
-
+    margin-bottom: 5px;
 }
 .top-bar div {
     display: flex;
@@ -51,6 +51,7 @@ header a {
     align-items: center;
     padding-left: 7px;
     padding-right: 7px;
+    border-radius: 20px;
 }
 .top-bar a {
     display: flex;
