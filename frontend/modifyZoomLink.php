@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
 </head>
-<body style="background-color: rgb(245,245,221)">
+<body class="backgrounds">
 
 <?php
 //USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
@@ -24,8 +24,8 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     exit;
 }
 
-require '../frontend/header.php';
-require '../frontend/topBar.php';
+require '../frontend/headers/header.php';
+require '../frontend/headers/topBar.php';
 ?>
 
 <form>

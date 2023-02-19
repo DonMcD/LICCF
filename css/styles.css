@@ -1,3 +1,15 @@
+:root{
+    --white: #FFFFFF;
+    --light-green: #EFF4E7;
+    --dark: #3e702d;
+    --accent: #CADCB3;
+    --dark-row: #CADCB3;
+    --light-row: #dfe9df;
+    --table-header: #3e702d;
+    --table-border: #751313;
+}
+
+
 * {
     font-family: sans-serif;
 }
@@ -18,13 +30,16 @@ header a {
     text-decoration: none;
     color: black;
 }
+.backgrounds {
+    background-color: var(--light);
+}
 .top-bar{
     width: 100%;
     height: 35px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: rgb(118, 118, 118);
+    background-color: var(--white);
     justify-content: space-evenly;
 
 }
@@ -32,7 +47,7 @@ header a {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: rgb(160, 160, 160);
+    background-color: var(--accent);
     align-items: center;
     padding-left: 7px;
     padding-right: 7px;
@@ -58,7 +73,7 @@ header a {
     height: 575px;
     flex-direction: column;
     text-align: center;
-    background-color: aliceblue;
+    background-color: var(--accent);
     position: fixed;
 }
 .side-bar-header {
@@ -80,10 +95,10 @@ td {
     text-align: center;
 }
 .dark-row{
-    background-color: rgb(158, 187, 199);
+    background-color: var(--dark-row);
 }
 .light-row{
-    background-color: rgb(184, 207, 218);
+    background-color: var(--light-row);
 }
 .light-row, .dark-row {
     height: 35px;
@@ -91,9 +106,11 @@ td {
 thead {
     position: sticky;
     top: 0;
-    z-index: 1;
-    background-color: rgb(184, 207, 218);
+    background-color: var(--table-header);
     height: 30px;
+}
+table {
+    border-color: var(--table-border);
 }
 table tr:hover {
     box-shadow: 0 0 10px #0077FF;

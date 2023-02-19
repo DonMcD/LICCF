@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </head>
-<body style="background-color: rgb(245,245,221)">
+<body class="backgrounds">
     <div class='center-container'>
         <table>
             <tr><h2 style='font-size: 30px;'>LICCF Login</h2></tr>

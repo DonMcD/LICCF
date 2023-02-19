@@ -15,17 +15,14 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <title>LICCF Login</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-
 </head>
-<body style="background-color: rgb(245,245,221)">
+<body class="backgrounds">
 <?php
-
-require '../frontend/header.php';
-require '../frontend/topBar.php';
+require '../frontend/headers/header.php';
+require '../frontend/headers/topBar.php';
 ?>
 
 <div class="main-container">
@@ -79,12 +76,18 @@ require '../frontend/topBar.php';
                 </div>
             </div>
         </form>
+</div>
+    <div>
+        <?php
+            require '../frontend/loading.php';
+        ?>
     </div>
     <div class="results">
         <?php
-        require '../backend/search.php';
+            require '../backend/search.php';
         ?>
     </div>
+</div>
 
 <!--USED FOR AJAX CALL TO SEARCH.PHP - DO NOT TOUCH -->
 <script>
@@ -105,9 +108,12 @@ $(document).ready(function() {
         // Submit the form
         $("form").submit();
     });
+    $(document).on('click', 'input[type="radio"]', function() {
+        // Submit the form
+        $("form").submit();
+    });
 });
 </script>
-</div>
-</body>
-</html>
+
+
 

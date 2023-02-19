@@ -3,7 +3,7 @@
 //Go to your browser and type ipaddress/createSytheticData.php?number={number of records to create}
 
 
-require 'serverDetails.php';
+require '../backend/serverDetails.php';
 
 // Connect to the database
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);

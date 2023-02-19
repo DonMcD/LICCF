@@ -1,5 +1,4 @@
 <?php
-
 require '../backend/serverDetails.php';
 
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
@@ -11,42 +10,24 @@ if (!$conn) {
 // Get the data from the "members" table
 //$query = "SELECT f_name, l_name, dob, type, status FROM members WHERE status = 0";
 
+function getFormData($fieldName, $default = '') {
+  if (isset($_POST[$fieldName])) {
+    return $_POST[$fieldName];
+  } else {
+    return $default;
+  }
+}
+
 //Variables for the filters
-if(isset($_POST['sortBy'])){
-  $sortFor = $_POST['sortBy'];
-} else {
-  $sortFor = 'person';
-}
-if(isset($_POST['baptized'])){
-  $baptized = $_POST['baptized'];
-} else {
-  $baptized = ''; 
-}
-if(isset($_POST['confirmed'])){
-  $confirmed = $_POST['confirmed'];
-} else {
-  $confirmed = '';
-}
-if(isset($_POST['gender'])){
-  $gender = $_POST['gender'];
-} else {
-  $gender = '';
-}
-if(isset($_POST['member'])){
-  $member = $_POST['member'];
-} else {
-  $member = '';
-}
-if(isset($_POST['admin'])){
-  $admin = $_POST['admin'];
-} else {
-  $admin = '';
-}
-if(isset($_POST['volunteer'])){
-  $volunteer = $_POST['volunteer'];
-} else {
-  $volunteer = '';
-}
+$sortFor = getFormData('sortBy', 'person');
+$baptized = getFormData('baptized');
+$confirmed = getFormData('confirmed');
+$gender = getFormData('gender');
+$member = getFormData('member');
+$admin = getFormData('admin');
+$volunteer = getFormData('volunteer');
+
+
 switch($sortFor){
   case 'person':
       if(isset($_POST['searchBar'])){
@@ -73,6 +54,7 @@ switch($sortFor){
       }
       
       $result = mysqli_query($conn, $query);
+
       // Create an HTML table to display the data
       echo "<table id='member-table'>";
       echo "<thead>";
@@ -93,14 +75,11 @@ switch($sortFor){
       echo "<tbody>";
       $i = 0;
       while ($row = mysqli_fetch_assoc($result)) {
-        //Change the background color drom dark to light to make it easier to read
-          if(($i % 2) == 0){
-            echo "<tr class='dark-row' onclick=\"window.location='../frontend/profile.php?pid={$row['pid']}'\">";
-          }
-          else {
-            echo "<tr class='light-row' onclick=\"window.location='../frontend/profile.php?pid={$row['pid']}'\">";
-          }
-          $i = $i + 1;
+        //Change the background color from dark to light to make it easier to read
+        $row_class = ($i % 2 == 0) ? "dark-row" : "light-row";
+        echo "<tr class='$row_class' onclick=\"window.location='../frontend/profile.php?pid={$row['pid']}'\">";
+        $i = $i + 1;
+        
           echo "<td>" . $row["title"] . "</td>";
           echo "<td>" . $row["f_name"] . "</td>";
           echo "<td>" . $row["l_name"] . "</td>";
@@ -165,6 +144,7 @@ switch($sortFor){
     }
 
     $result = mysqli_query($conn, $query);
+
     // Create an HTML table to display the data
     echo "<table id='member-table'>";
     echo "<thead>";
@@ -203,6 +183,7 @@ switch($sortFor){
     WHERE d.status = 0';
 
     $result = mysqli_query($conn, $query);
+
     // Create an HTML table to display the data
     echo "<table id='member-table'>";
     echo "<thead>";
@@ -238,12 +219,9 @@ switch($sortFor){
     echo "</table>";
   break;
 }
-
-
 // Close the database connection
 mysqli_close($conn);
 ?>
-
 
 <script>
 function sortTable(n) {

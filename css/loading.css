@@ -1,0 +1,19 @@
+#loading {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 20, 63, 0.151);
+    text-align: center;
+}
+  
+#loading img {
+    display: block;
+    margin: auto;
+}
+
+#loading h1 {
+    display: block;
+}

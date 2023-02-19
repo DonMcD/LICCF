@@ -1,17 +1,17 @@
-Barbara
+#Barbara
 Eucharist
 Litergies
 Sacraments
 Donate
 
-Renalyn
+#Renalyn
 Special Services and Blessings
 Prayer
 Spiritual Direction
 Contact
 
 
-Abhey
+#Abhey
 Home Page
 About Us Page
 Who we are
@@ -19,14 +19,14 @@ Vision Statement
 Our History
 
 
-Anas
+#Anas
 Community
 News and Events
 Get Involved
 First Nations Allyship
 Javascript for Filters Bar (home.php)
 
-Yousuf
+#Yousuf
 Manage People functionality (Add edit, delete and cancel buttons)
 Manage Families functionality
 Manage Donations functionality
@@ -35,7 +35,7 @@ Modify Zoom Link
 Modify Calendar
 
 
-Donavon
+#Donavon
 CSS for Manage People, Family, Donations
 Issue Tax Reciepts
 Send Mass Email
