@@ -5,7 +5,6 @@
     <title>LICCF Login</title>
 
     <link rel="stylesheet" href="../../css/loginStyles.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
@@ -24,7 +23,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type='button' value='Submit' id='submit' autofocus></td>
+                <td><input type="submit" id="submit" value='Log In'autofocus/></td>
             </tr>
         </table>
     </div>
@@ -66,6 +65,7 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("submit").click();
   }
 });
+
 </script>
 </body>
 </html>
