@@ -163,6 +163,17 @@ function getLatestMembers() {
         $member->start_date = $row['start_date'];
         $member->province = $row['province'];
         $member->attendance = $row['attendance'];
+        switch($member->attendance = $row['attendance']){
+            case 1:
+                $member->attendance = 'In Person';
+            break;
+            case 2:
+                $member->attendance = 'Online';
+            break;
+            case 3:
+                $member->attendance = 'Hybrid';
+            break;
+        }
         $latestMembers->{$row['pid']} = $member;
     }
 
@@ -173,6 +184,36 @@ function getLatestMembers() {
     return $latestMembers;
 }
 
+function MembersJoinedInTheLastMonth() {
+    require 'serverDetails.php';
+    // Connect to your database, for example:
+    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+  
+    // Calculate the date exactly one month ago
+    $one_month_ago = date('Y-m-d', strtotime('-1 month'));
+  
+    // Build the SQL query to count the members who joined in the last month
+    $sql = "SELECT COUNT(*) AS num_members FROM member WHERE start_date >= '$one_month_ago'";
+  
+    // Execute the query and get the result
+    $result = mysqli_query($conn, $sql);
+  
+    // Check if the query was successful
+    if (!$result) {
+      die('Error: ' . mysqli_error($conn));
+    }
+  
+    // Get the number of members who joined in the last month from the result
+    $row = mysqli_fetch_assoc($result);
+    $num_members = $row['num_members'];
+  
+    // Close the database connection
+    mysqli_close($conn);
+  
+    // Return the number of members who joined in the last month
+    return $num_members;
+  }
+  
 
 
 ?>

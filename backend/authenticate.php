@@ -3,7 +3,7 @@
 require '../backend/cleanInput.php';
 
 //Get the username from the user
-$username = cleanInput($_POST['username']);
+$username = strtolower(cleanInput($_POST['username']));
 //Get the password from the user
 $password = cleanInput($_POST['password']);
 
