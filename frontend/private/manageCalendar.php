@@ -2,7 +2,6 @@
 //USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
 session_start();
 
-
 //This checks to see if the user is authenticated or not
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header("Location: ../frontend/login.php");
@@ -27,17 +26,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
+
 <div class='centered-container'>
-    <form action="" method="post">
-        <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject">
-        <br>
-        <label for="message">Message:</label>
-        <textarea name="message" id="message"></textarea>
-        <br>
-        <input type="submit" name="submit" value="Send Emails">
-    </form>
+    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 </body>
 </html>
-

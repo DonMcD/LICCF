@@ -1,3 +1,15 @@
+<?php
+//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
+session_start();
+
+//This checks to see if the user is authenticated or not
+if (isset($_SESSION['authenticated'])) {
+  if($_SESSION['authenticated'] == true){
+    header("Location: ../private/dashboard.php");
+    exit;
+  }
+}
+?>
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">

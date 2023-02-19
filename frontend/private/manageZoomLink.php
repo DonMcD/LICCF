@@ -1,3 +1,13 @@
+<?php
+//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
+session_start();
+
+//This checks to see if the user is authenticated or not
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
+    header("Location: ../frontend/login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
@@ -12,22 +22,19 @@
 
 </head>
 <body class="backgrounds">
+
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
 
-<div class='centered-container'>
-    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
-</div>
+<form>
+    <div class='centered-container'>
+        <h2>Modify Zoom Link</h2>
+        <label>New Link:<label>
+        <input type='text'name='first_name' required>
+        <input type='submit' name='submit' value='Submit'>
+    </div>
+</form>
 </body>
 </html>

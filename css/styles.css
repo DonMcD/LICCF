@@ -176,6 +176,7 @@ body {
     padding-top: 30px;
     flex-direction: row;
 }
+/* The container that surrounds the websites statistics such as total members and total families*/
 .stats-container {
     display: flex;
     justify-content: center;

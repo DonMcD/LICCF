@@ -1,13 +1,13 @@
 <div class="top-bar">
     <a href='../private/dashboard.php'><div id="dashboard">Dashboard</div></a>
-    <a href='../private/personSelect.php'><div id="manage-people">Manage People</div></a>
-    <a href='../private/createNewFamily.php'><div id="manage-families">Manage Families</div></a>
-    <a href=''><div id="manage-donations">Manage Donations</div></a>
-    <a href=''><div id="issue-tax-receipts">Issue Tax Reciepts</div></a>
-    <a href='../private/sendMassEmail.php'><div id="send-mass-email">Send Mass Email</div></a>
-    <a href=''><div id="view-attendance">View Attendance</div></a>
-    <a href='../private/modifyZoomLink.php'><div id="modify-zoom-link">Modify Zoom Link</div></a>
-    <a href='../private/modifyCalendar.php'><div id="modify-calendar">Modify Calendar</div></a>
+    <a href='../private/managePeople.php'><div id="manage-people">Manage People</div></a>
+    <a href='../private/manageFamilies.php'><div id="manage-families">Manage Families</div></a>
+    <a href='../private/manageDonations.php'><div id="manage-donations">Manage Donations</div></a>
+    <a href='../private/manageTaxReciepts.php'><div id="manage-tax-reciepts">Manage Tax Reciepts</div></a>
+    <a href='../private/massEmail.php'><div id="mass-email">Mass Email</div></a>
+    <a href='../private/manageAttendance.php'><div id="manage-attendance">Manage Attendance</div></a>
+    <a href='../private/manageZoomLink.php'><div id="manage-zoom-link">Modify Zoom Link</div></a>
+    <a href='../private/manageCalendar.php'><div id="manage-calendar">Manage Calendar</div></a>
 </div>
 
 <script>
@@ -22,28 +22,43 @@ if (currentPageURL.includes("dashboard.php")) {
 }
 
 // Check if the URL matches the manage people page
-if (currentPageURL.includes("personSelect.php")) {
+if (currentPageURL.includes("managePeople.php")) {
   document.getElementById("manage-people").style.border = selected;
 }
 
 // Check if the URL matches the manage families page
-if (currentPageURL.includes("createNewFamily.php")) {
+if (currentPageURL.includes("manageFamilies.php")) {
   document.getElementById("manage-families").style.border = selected;
 }
 
+// Check if the URL matches the manage people page
+if (currentPageURL.includes("manageDonations.php")) {
+  document.getElementById("manage-donations").style.border = selected;
+}
+
+// Check if the URL matches the manage people page
+if (currentPageURL.includes("manageTaxReciepts.php")) {
+  document.getElementById("manage-tax-reciepts").style.border = selected;
+}
+
 // Check if the URL matches the send mass email page
-if (currentPageURL.includes("sendMassEmail.php")) {
-  document.getElementById("send-mass-email").style.border = selected;
+if (currentPageURL.includes("massEmail.php")) {
+  document.getElementById("mass-email").style.border = selected;
+}
+
+// Check if the URL matches the send mass email page
+if (currentPageURL.includes("manageAttendance.php")) {
+  document.getElementById("manage-attendance").style.border = selected;
 }
 
 // Check if the URL matches the modify zoom link page
-if (currentPageURL.includes("modifyZoomLink.php")) {
-  document.getElementById("modify-zoom-link").style.border = selected;
+if (currentPageURL.includes("manageZoomLink.php")) {
+  document.getElementById("manage-zoom-link").style.border = selected;
 }
 
 // Check if the URL matches the modify calendar page
-if (currentPageURL.includes("modifyCalendar.php")) {
-  document.getElementById("modify-calendar").style.border = selected;
+if (currentPageURL.includes("manageCalendar.php")) {
+  document.getElementById("manage-calendar").style.border = selected;
 }
 
 </script>

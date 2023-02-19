@@ -13,7 +13,7 @@
 <?php
 function displayAuthLink() {
     if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
-      echo '<a href="../../frontend/public/login.php">Logout</a>';
+      echo '<a href="../../backend/logout.php">Logout</a>';
     } else {
       echo '<a href="../../frontend/public/login.php">Login</a>';
     }
