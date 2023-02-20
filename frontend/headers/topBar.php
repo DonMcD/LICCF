@@ -1,13 +1,13 @@
 <div class="top-bar">
-    <a href='../private/dashboard.php'><div id="dashboard">Dashboard</div></a>
-    <a href='../private/managePeople.php'><div id="manage-people">Manage People</div></a>
-    <a href='../private/manageFamilies.php'><div id="manage-families">Manage Families</div></a>
-    <a href='../private/manageDonations.php'><div id="manage-donations">Manage Donations</div></a>
-    <a href='../private/manageTaxReciepts.php'><div id="manage-tax-reciepts">Manage Tax Reciepts</div></a>
-    <a href='../private/massEmail.php'><div id="mass-email">Mass Email</div></a>
-    <a href='../private/manageAttendance.php'><div id="manage-attendance">Manage Attendance</div></a>
-    <a href='../private/manageZoomLink.php'><div id="manage-zoom-link">Modify Zoom Link</div></a>
-    <a href='../private/manageCalendar.php'><div id="manage-calendar">Manage Calendar</div></a>
+    <a href='../private/dashboard.php'><div id="dashboard">Dashboard <img src='../../assets/dashboard.png' width='25' height='25'/></div></a>
+    <a href='../private/managePeople.php'><div id="manage-people">Manage People <img src='../../assets/person.png' width='25' height='25'/></div></a>
+    <a href='../private/manageFamilies.php'><div id="manage-families">Manage Families <img src='../../assets/family.png' width='25' height='25'/></div></a>
+    <a href='../private/manageDonations.php'><div id="manage-donations">Manage Donations <img src='../../assets/donate.png' width='25' height='25'/></div></a>
+    <a href='../private/manageTaxReciepts.php'><div id="manage-tax-reciepts">Manage Tax Reciepts <img src='../../assets/reciept.png' width='25' height='25'/></div></a>
+    <a href='../private/massEmail.php'><div id="mass-email">Mass Email <img src='../../assets/email.png' width='25' height='25'/></div></a>
+    <a href='../private/manageAttendance.php'><div id="manage-attendance">Manage Attendance <img src='../../assets/attendance.png' width='25' height='25'/></div></a>
+    <a href='../private/manageZoomLink.php'><div id="manage-zoom-link">Modify Zoom<img src='../../assets/cam.png' width='25' height='25'/></div></a>
+    <a href='../private/manageCalendar.php'><div id="manage-calendar">Manage Calendar <img src='../../assets/calendar.png' width='25' height='25'/></div></a>
 </div>
 
 <script>
