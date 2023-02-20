@@ -22,22 +22,10 @@
     font-size: 36px;
     margin-top: 2em;
   }
-  
-
-  
-  #upcoming-events {
-    text-align: center;
-    font-size: 24px;  
- 
-    background-color: #C9DCA9;
-    border-radius: 10px;
-  }
-  
   .event {
     text-align: center;
     font-size: 24px;
-    
-
+    padding: 1em;
     background-color: #C9DCA9;
     border-radius: 10px;
   }
@@ -45,8 +33,11 @@
   .event-date {
     text-align: center;
     font-size: 24px;
-  
-
+    padding: 1em;
     background-color: #C9DCA9;
     border-radius: 10px;
   }
+
+  
+
+  

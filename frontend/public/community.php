@@ -27,18 +27,27 @@ require '../headers/header.php';
         </div>
     </div><br><br>
 
-    <h1 id="page-title">NEXT EVENTS</h1>
+    <h1 id="page-title"><u> NEXT EVENTS </u></h1><BR></BR>
     
     
     <div style="background-color: #C9DCA9; padding: 1em; border-radius: 10px;">
       <div class="event">
-      <h2 id="next-event">Upcoming Events</h2>
-      <div class="event-date">FEBRUARY 12TH, 2023</div>
-      <div class="event-name">ZOOM MASS</div>
-      <div class="event-details">TIME 10 A.M</div>
+      <div class="event-date"><b> FEBRUARY 12TH, 2023</b></div>
+      <div class="event-name"><b> ZOOM MASS </b></div>
+      <div class="event-details"><b> TIME 10 A.M </b></div>
     </div>
+    </div><br><br><br>
  
+    <h1 id="donate-title">Donate</h1><br>
 
+    <div style="background-color: #C9DCA9; padding: 1em; border-radius: 10px;">
+    <p>We encourage donations by e-transfer with your mailing address in the message box to <a href="mailto:Liccomm2022@gmail.com">Liccomm2022@gmail.com</a> because they are direct and pose no queries from the Canada Revenue Agency.</p>
+    <p>Tax Receipts - please include your mailing address in the “message box” unless you have signed up with your current address as a member.</p>
+    </div><br><br><br>
+
+    <h1 id="calendar-title">Calendar</h1>
+    <iframe src="https://calendar.google.com/" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe><br>
+   
 
 </body>
 </html>
