@@ -212,7 +212,7 @@ function MembersJoinedInTheLastMonth() {
   
     // Return the number of members who joined in the last month
     return $num_members;
-  }
+}
   
 
 
