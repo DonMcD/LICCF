@@ -9,31 +9,9 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <link rel="stylesheet" href="/css/community.css"
     <style>
-      #container {
-        position: relative;
-        width: 1920px;
-        height: 456px;
-      }
       
-      #image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      
-      #text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 48px;
-        text-align: center;
-        color: white;
-        text-shadow: 2px 2px 4px black;
-      }
     </style>
 </head>
 <body class="backgrounds">
@@ -47,7 +25,19 @@ require '../headers/header.php';
             Welcome to LICCF <br>
             Lethbridge Inclusive Catholic Community Felloship
         </div>
+    </div><br><br>
+
+    <h1 id="page-title">NEXT EVENTS</h1>
+    
+    
+    <div style="background-color: #C9DCA9; padding: 1em; border-radius: 10px;">
+      <div class="event">
+      <h2 id="next-event">Upcoming Events</h2>
+      <div class="event-date">FEBRUARY 12TH, 2023</div>
+      <div class="event-name">ZOOM MASS</div>
+      <div class="event-details">TIME 10 A.M</div>
     </div>
+ 
 
 
 </body>
