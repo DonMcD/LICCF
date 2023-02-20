@@ -27,6 +27,7 @@ if($row){
     session_start();
     if(($row['username'] == $username) && ($row['hash'] == $password)){
         $_SESSION['authenticated'] = true;
+        $_SESSION['username'] = $username;
         echo "valid";
     }
     else {
