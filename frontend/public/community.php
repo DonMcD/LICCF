@@ -9,10 +9,8 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-    <link rel="stylesheet" href="/css/community.css"
-    <style>
-      
-    </style>
+    <link rel="stylesheet" href="/css/community.css">
+  
 </head>
 <body class="backgrounds">
 <?php
@@ -46,8 +44,8 @@ require '../headers/header.php';
     </div><br><br><br>
 
     <h1 id="calendar-title">Calendar</h1>
-    <iframe src="https://calendar.google.com/" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe><br>
+    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe><br>
    
-
+        <?php include_once('C:\Users\afrit\OneDrive\Documents\GitHub\LICCF\frontend\footers\footer.php'); ?>
 </body>
 </html>
