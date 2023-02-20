@@ -27,7 +27,7 @@ require '../headers/topBar.php';
 
 <div class="main-container">
     <div class="side-bar">
-        <form method='POST' action='home.php'>
+        <form method='POST' action='managePeople.php'>
             <div class="side-bar-header">
                 <h2>Filters</h2>
             </div>
@@ -37,27 +37,12 @@ require '../headers/topBar.php';
                 <input type='submit' name='submitSearch' value='Search'>
             </div>
             <div>
-                <h3>Sort For</h3>
-                <div>
-                <label>Person:</label>
-                    <input type='radio' name='sortBy' value='person' checked>
-                </div>
-                <div>
-                <label>Family:</label>
-                    <input type='radio' name='sortBy' value='family'>
-                </div>
-                <div>
-                <label>Donations:</label>
-                    <input type='radio' name='sortBy' value='donations'>
-                </div>
-            </div>
-            <div>
                 <h3>Gender</h3>
                 <select name='gender' id='gender'>
-                    <option value=''>All</option>
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
-                    <option value='other'>Other</option>
+                    <option value='All'>All</option>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
+                    <option value='Other'>Other</option>
                 </select>
             </div>
             <div>
@@ -68,7 +53,7 @@ require '../headers/topBar.php';
                 </div>
                 <div>
                     <label>Admin: </label>
-                    <input type='checkbox' name='admin' value='admin' checked>
+                    <input type='checkbox' name='administrator' value='administrator' checked>
                 </div>
                 <div>
                     <label>Volunteer: </label>
@@ -85,7 +70,7 @@ require '../headers/topBar.php';
     </div>
     <div class="results">
         <?php
-            require '../../backend/search.php';
+            require '../../backend/peopleSearch.php';
         ?>
     </div>
 </div>
@@ -97,7 +82,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "../../backend/search.php",
+            url: "../../backend/peopleSearch.php",
             data: $("form").serialize(),
             success: function(data) {
                 $(".results").html(data);
