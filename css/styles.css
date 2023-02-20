@@ -2,6 +2,7 @@
     --white: #FFFFFF;
     --light-green: #EFF4E7;
     --dark: #3e702d;
+    --hover-green: #b2c598;
     --accent: #CADCB3;
     --dark-row: #CADCB3;
     --light-row: #dfe9df;
@@ -127,7 +128,7 @@ nav .dropdown:hover .dropdown-content {
     background-color: var(--light);
 }
 .top-bar{
-    width: 93%;
+    width: 96%;
     margin: auto;
     padding: 10px;
     display: flex;
@@ -147,6 +148,9 @@ nav .dropdown:hover .dropdown-content {
     padding-right: 8px;
     border-radius: 25px;
     padding: 10px;
+}
+.top-bar div:hover{
+    background-color: var(--hover-green);
 }
 .top-bar a {
     display: flex;
