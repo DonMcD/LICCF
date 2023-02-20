@@ -36,45 +36,6 @@ require '../headers/topBar.php';
                 <input type='text' name='searchBar' placeHolder='Search'>
                 <input type='submit' name='submitSearch' value='Search'>
             </div>
-            <div>
-                <h3>Sort For</h3>
-                <div>
-                <label>Person:</label>
-                    <input type='radio' name='sortBy' value='person'>
-                </div>
-                <div>
-                <label>Family:</label>
-                    <input type='radio' name='sortBy' value='family' checked>
-                </div>
-                <div>
-                <label>Donations:</label>
-                    <input type='radio' name='sortBy' value='donations'>
-                </div>
-            </div>
-            <div>
-                <h3>Gender</h3>
-                <select name='gender' id='gender'>
-                    <option value=''>All</option>
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
-                    <option value='other'>Other</option>
-                </select>
-            </div>
-            <div>
-                <h3>Type</h3>
-                <div>
-                    <label>Member: </label>
-                    <input type='checkbox' name='member' value='member' checked>
-                </div>
-                <div>
-                    <label>Admin: </label>
-                    <input type='checkbox' name='admin' value='admin' checked>
-                </div>
-                <div>
-                    <label>Volunteer: </label>
-                    <input type='checkbox' name='volunteer' value='volunteer' checked>
-                </div>
-            </div>
         </form>
 </div>
     <div>
@@ -85,7 +46,7 @@ require '../headers/topBar.php';
     </div>
     <div class="results">
         <?php
-            require '../../backend/search.php';
+            require '../../backend/familySearch.php';
         ?>
     </div>
 </div>
@@ -97,7 +58,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: "POST",
-            url: "../../backend/search.php",
+            url: "../../backend/familySearch.php",
             data: $("form").serialize(),
             success: function(data) {
                 $(".results").html(data);
