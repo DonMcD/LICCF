@@ -34,7 +34,8 @@ if(isset($_POST['searchBar'])){
   FROM family
   LEFT JOIN members ON family.fid = members.fid
   WHERE family.status = 0 AND
-  family.name LIKE '%$searchBar%'
+  family.name LIKE '%$searchBar%' OR
+  family.email LIKE '%$searchBar%'
   GROUP BY family.fid";} 
   else {
   $query = "SELECT family.fid, family.name, family.email, COUNT(members.fid) AS member_count

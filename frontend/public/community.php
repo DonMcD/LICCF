@@ -46,6 +46,6 @@ require '../headers/header.php';
     <h1 id="calendar-title">Calendar</h1>
     <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe><br>
    
-        <?php include_once('C:\Users\afrit\OneDrive\Documents\GitHub\LICCF\frontend\footers\footer.php'); ?>
+        <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>
 </html>
