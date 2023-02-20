@@ -4,7 +4,7 @@
     <ul>
       <li><a href="../../frontend/public/index.php">Home</a></li>
       <li class="dropdown">
-        <a href="../../frontend/public/eucharist.php">About</a>
+        <a href="../../frontend/public/about.php">About</a>
         <ul class="dropdown-content">
           <li><a href="#">Who we are</a></li>
           <li><a href="#">Vision Statement</a></li>

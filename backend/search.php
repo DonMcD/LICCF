@@ -56,7 +56,7 @@ switch($sortFor){
       $result = mysqli_query($conn, $query);
 
       // Create an HTML table to display the data
-      echo "<table id='member-table'>";
+      echo "<table id='results-table'>";
       echo "<thead>";
       echo "<tr>";
       echo "<th onclick='sortTable(0)'>Title</th>";
@@ -146,7 +146,7 @@ switch($sortFor){
     $result = mysqli_query($conn, $query);
 
     // Create an HTML table to display the data
-    echo "<table id='member-table'>";
+    echo "<table id='results-table'>";
     echo "<thead>";
     echo "<tr>";
     echo "<th onclick='sortTable(0)'>Name</th>";
@@ -185,7 +185,7 @@ switch($sortFor){
     $result = mysqli_query($conn, $query);
 
     // Create an HTML table to display the data
-    echo "<table id='member-table'>";
+    echo "<table id=id='results-table'>";
     echo "<thead>";
     echo "<tr>";
     echo "<th onclick='sortTable(0)'>Amount</th>";
@@ -226,7 +226,7 @@ mysqli_close($conn);
 <script>
 function sortTable(n) {
   let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("member-table");
+  table = document.getElementById("results-table");
   switching = true;
   // Set the sorting direction to ascending
   dir = "asc"; 
