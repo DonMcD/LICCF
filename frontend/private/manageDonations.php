@@ -36,6 +36,27 @@ require '../headers/topBar.php';
                 <input type='text' name='searchBar' placeHolder='Search'>
                 <input type='submit' name='submitSearch' value='Search'>
             </div>
+            <br>
+            <div>
+                <label>Minimum ($)</label>
+                <input type='text' name='min' value='1'/>
+                <label>Maximum ($)</label>
+                <input type='text' name='max' value='5000'/>
+            </div>
+            <br>
+            <div>
+                <select name="year">
+                    <?php
+                    //Dynamically adjusts the dropdown for the current year
+                    $currentYear = date('Y');
+                    echo "<option value=''>Year</option>";
+                    for ($i = $currentYear; $i >= $currentYear - 10; $i--) {
+                        echo '<option value="' . $i . '">' . $i . '</option>';
+                    }
+                    ?>
+                </select>
+
+            </div>
         </form>
 </div>
     <div>

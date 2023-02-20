@@ -17,13 +17,36 @@ function getFormData($fieldName, $default = '') {
 }
 
 //Variables for the filters
-$confirmed = getFormData('confirmed');
+$search = getFormData('searchBar');
+$year = getFormData('year');
+$min = getFormData('min', '1');
+$max = getFormData('max', '99999');
 
-$query = 'SELECT d.amount, d.date, d.type, d.env_number, d.transfer_email, d.did, f.name
+// Initialize the WHERE clause
+$whereClause = 'WHERE d.status = 0';
+
+// Append the year filter if a year is selected
+if (!empty($year)) {
+  $whereClause .= " AND YEAR(d.date) = '$year'";
+}
+
+// Append the price range filter if both min and max prices are set
+if (!empty($min) && !empty($max)) {
+  $whereClause .= " AND d.amount BETWEEN $min AND $max";
+}
+
+// Append the search filter if a search term is entered
+if (!empty($search)) {
+  $whereClause .= " AND (d.env_number LIKE '%$search%' OR d.transfer_email LIKE '%$search%' OR f.name LIKE '%$search%')";
+}
+
+// Construct the final query
+$query = "SELECT d.amount, d.date, d.type, d.env_number, d.transfer_email, d.did, f.name
 FROM donations d
 LEFT JOIN family f
 ON d.fid = f.fid
-WHERE d.status = 0';
+$whereClause";
+
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
 echo "<table id=id='results-table'>";
