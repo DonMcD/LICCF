@@ -10,6 +10,7 @@
     <a href='../private/manageCalendar.php'><div id="manage-calendar">Manage Calendar &nbsp<img src='../../assets/calendar.png' width='25' height='25'/></div></a>
 </div>
 
+
 <script>
 let selected = "3px solid #3e702d"
 

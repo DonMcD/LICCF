@@ -172,11 +172,15 @@ nav .dropdown:hover .dropdown-content {
 .side-bar{
     width: 10%;
     display: flex;
-    height: 575px;
     flex-direction: column;
     text-align: center;
     background-color: var(--accent);
     position: fixed;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 .side-bar-header {
     display: flex;
@@ -184,7 +188,9 @@ nav .dropdown:hover .dropdown-content {
     height: 45px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--dark);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
 }
 
 /*Used for the box where the table displays all the data from the database for members, family, donation*/
@@ -219,7 +225,7 @@ table {
     border-color: var(--table-border);
 }
 #results-table tr:hover {
-    box-shadow: 0 0 10px #0077FF;
+    box-shadow: 0 0 10px rgb(7, 192, 47);
     cursor: pointer;
 }
 tr th {
