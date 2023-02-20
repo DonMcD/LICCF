@@ -21,34 +21,52 @@ function getFormData($fieldName, $default = '') {
 //Variables for the filters
 $baptized = getFormData('baptized');
 $confirmed = getFormData('confirmed');
-$gender = getFormData('gender');
+$gender = getFormData('gender', 'All');
 $member = getFormData('member');
-$admin = getFormData('admin');
+$administrator = getFormData('administrator');
 $volunteer = getFormData('volunteer');
 
+// Build the filters based on the selected checkboxes
+$filters = [];
+if ($member) {
+  $filters[] = "m.type = '1'";
+}
+if ($administrator) {
+  $filters[] = "m.type = '0'";
+}
+if ($volunteer) {
+  $filters[] = "m.type = '2'";
+}
+$filterClause = '';
+if (!empty($filters)) {
+  $filterClause = 'AND (' . implode(' OR ', $filters) . ')';
+}
 
-if(isset($_POST['searchBar'])){
+if ($gender === 'All') {
+  $genderFilter = '';
+} else {
+  $genderFilter = "m.gender = '$gender' AND";
+}
+
+if (isset($_POST['searchBar'])) {
   $searchBar = $_POST['searchBar'];
   $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
   FROM members m
-  LEFT JOIN family f
-  ON m.fid = f.fid
-  LEFT JOIN titles t
-  ON m.pid = t.pid
-  WHERE m.status = 0 AND
-  m.f_name LIKE '%$searchBar%' OR
+  LEFT JOIN family f ON m.fid = f.fid
+  LEFT JOIN titles t ON m.pid = t.pid
+  WHERE $genderFilter m.status = 0 $filterClause AND
+  (m.f_name LIKE '%$searchBar%' OR
   m.l_name LIKE '%$searchBar%' OR
   f.name LIKE '%$searchBar%' OR
-  m.city LIKE '%$searchBar%'";
+  m.city LIKE '%$searchBar%')";
 } else {
-  $query = 'SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
+  $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
   FROM members m
-  LEFT JOIN family f
-  ON m.fid = f.fid
-  LEFT JOIN titles t
-  ON m.pid = t.pid
-  WHERE m.status = 0';
+  LEFT JOIN family f ON m.fid = f.fid
+  LEFT JOIN titles t ON m.pid = t.pid
+  WHERE $genderFilter m.status = 0 $filterClause";
 }
+
 
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
@@ -88,7 +106,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         $type = 'Member';
         break;
       case 2:
-        $type = 'Member';
+        $type = 'Volunteer';
         break;
     }
     echo "<td>" . $type . "</td>";

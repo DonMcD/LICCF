@@ -39,10 +39,10 @@ require '../headers/topBar.php';
             <div>
                 <h3>Gender</h3>
                 <select name='gender' id='gender'>
-                    <option value=''>All</option>
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
-                    <option value='other'>Other</option>
+                    <option value='All'>All</option>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
+                    <option value='Other'>Other</option>
                 </select>
             </div>
             <div>
@@ -53,7 +53,7 @@ require '../headers/topBar.php';
                 </div>
                 <div>
                     <label>Admin: </label>
-                    <input type='checkbox' name='admin' value='admin' checked>
+                    <input type='checkbox' name='administrator' value='administrator' checked>
                 </div>
                 <div>
                     <label>Volunteer: </label>
