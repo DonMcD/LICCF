@@ -20,7 +20,7 @@ require '../headers/header.php';
 <div class="signup-form">
   <h1>Signup</h1>
   <hr class="signup-divider" />
-  <form action="../../backend/processForm.php" method="POST" class="signup-form-container">
+  <form action="../../backend/processSignupForm.php" method="POST" class="signup-form-container">
     <div class="signup-form-section">
       <h2>Personal Information</h2>
       <div class="signup-form-row">
