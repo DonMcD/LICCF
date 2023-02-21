@@ -67,7 +67,6 @@ if (isset($_POST['searchBar'])) {
   WHERE $genderFilter m.status = 0 $filterClause";
 }
 
-
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
 echo "<table id='results-table'>";

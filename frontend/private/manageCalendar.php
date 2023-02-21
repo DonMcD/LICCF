@@ -26,9 +26,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
-
 <div class='centered-container'>
-    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+<div><a href='https://calendar.google.com/calendar/u/2/r/settings/calendar/YmQ0Y2E5OTkwMTFmNmFhMjYyYzJlMDFkZmZlZjE3OTIyYTIwNTQzNDg1OGMyZWVmNzg4OGZhMjU3MDEyYzY5MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Click here to edit</a></div>
+    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
 </div>
 </body>
 </html>

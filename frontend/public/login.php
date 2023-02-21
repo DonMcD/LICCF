@@ -22,24 +22,23 @@ if (isset($_SESSION['authenticated'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </head>
 <body class="backgrounds">
+  <div class='login-container'>
     <div class='center-container'>
-        <table>
-            <tr><h2 style='font-size: 30px;'>LICCF Login</h2></tr>
-            <tr>
-                <td>Username:</td>
-                <td><input type='text' name='username' id='username' required></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type='password' name='password' id='password' required></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" id="submit" value='Log In'autofocus/></td>
-            </tr>
-        </table>
+      <h2 style='font-size: 30px;'>Login</h2>
+      <div class="form">
+        <label>Username</label>
+        <input class="input" name='username' id='username' type="text" placeHolder='Type your username' required>
+        <span class="input-border"></span>
+        </div>
+        <div class="form">
+        <label>Password</label>
+        <input class="input" name='password' id='password' type="password" placeHolder='Type your password' required>
+        <span class="input-border"></span>
+      </div>
+      <br></br>
+      <input class='login-btn' type="submit" id="submit" value='Login' autofocus/>
     </div>
-
+  </div>
 <script>
 //Use ajax to check if the credentials are correct through the authenticate.php script
 document.getElementById("submit").addEventListener("click", function() {

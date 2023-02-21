@@ -1,3 +1,8 @@
+<?php
+//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
+session_start();
+
+?>
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
