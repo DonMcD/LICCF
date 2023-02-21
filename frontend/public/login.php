@@ -22,6 +22,9 @@ if (isset($_SESSION['authenticated'])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </head>
 <body class="backgrounds">
+<?php
+require '../headers/header.php';
+?>
   <div class='login-container'>
     <div class='center-container'>
       <h2 style='font-size: 30px;'>Login</h2>
