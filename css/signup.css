@@ -1,0 +1,128 @@
+/* Layout */
+.signup-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.signup-inner-container {
+  margin-top: 20px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.signup-form-labels {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* Form inputs */
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Form message */
+.form-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* Error highlighting */
+input:invalid:focus {
+  border-color: red;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  /* Force table columns to stack */
+  label, input[type="text"], select {
+    display: block;
+    width: 100%;
+  }
+
+  /* Hide labels */
+  label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  /* Adjust submit button */
+  input[type="submit"] {
+    margin-top: 20px;
+  }
+}
+  

@@ -31,7 +31,7 @@
       </li>
       <li><a href="../../frontend/public/contact.php">Contact</a></li>
       <li><a href="../../frontend/public/donate.php">Donate</a></li>
-      <?php displayAuthticatedLink(); ?>
+      <li><?php displayAuthticatedLink(); ?></li>
     </ul>
   </nav>
 </header>

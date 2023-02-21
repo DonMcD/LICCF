@@ -40,6 +40,8 @@ require '../headers/header.php';
       </div>
       <br></br>
       <input class='login-btn' type="submit" id="submit" value='Login' autofocus/>
+      <br></br>
+      <a href='./signup.php'>Don't have an account? Signup</a>
     </div>
   </div>
 <script>
