@@ -16,7 +16,7 @@ $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT username, hash FROM users where username = '$username'";
+$sql = "SELECT username, hash FROM members where username = '$username'";
 
 $result = $conn->query($sql);
 
@@ -25,7 +25,7 @@ $row = $result->fetch_assoc();
 
 if($row){
     session_start();
-    if(($row['username'] == $username) && ($row['hash'] == $password)){
+    if(($row['username'] == $username) && (password_verify($password, $row['hash']))){
         $_SESSION['authenticated'] = true;
         $_SESSION['username'] = $username;
         echo "valid";
