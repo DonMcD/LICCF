@@ -69,7 +69,7 @@ if (isset($_POST['searchBar'])) {
 
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
-echo "<table id='results-table'>";
+echo "<table id='results-table' border='0'>";
 echo "<thead>";
 echo "<tr>";
 echo "<th onclick='sortTable(0)'>Title</th>";

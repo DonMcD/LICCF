@@ -124,7 +124,7 @@ nav .dropdown:hover .dropdown-content {
 
 /*CSS for the pages and top bar*/
 .backgrounds {
-    background-color: var(--light);
+    background-color: rgb(255, 255, 255);
 }
 .top-bar{
     width: 96%;
@@ -220,15 +220,13 @@ thead {
     background-color: var(--table-header);
     height: 30px;
 }
-table {
-    border-color: var(--table-border);
+table{
+    border: none;
+    border-collapse: collapse;
 }
 #results-table tr:hover {
-    box-shadow: 0 0 10px rgb(7, 192, 47);
+    border: 2px solid black;
     cursor: pointer;
-}
-tr th {
-    border-right: 2px solid rgb(158, 187, 199);;
 }
 
 /*Calendar page CSS*/

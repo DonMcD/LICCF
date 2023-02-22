@@ -31,7 +31,7 @@
       </li>
       <li><a href="../../frontend/public/contact.php">Contact</a></li>
       <li><a href="../../frontend/public/donate.php">Donate</a></li>
-      <li><?php displayAuthticatedLink(); ?></li>
+      <?php displayAuthticatedLink(); ?>
     </ul>
   </nav>
 </header>
@@ -40,9 +40,14 @@
 //This function determines if the button should say login or logout based on the Authenticated SESSION variable
 function displayAuthticatedLink() {
     if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
-      echo "<a href='../../backend/logout.php' id='login-btn'>{$_SESSION['username']}</a>";
+      echo "<li class='dropdown'>
+      <a href='../../frontend/public/login.php'>{$_SESSION['username']}</a>
+      <ul class='dropdown-content'>
+        <li><a href='../../backend/logout.php'>Logout</a></li>
+      </ul>
+    </li>";
     } else {
-      echo "<a href='../../frontend/public/login.php'>Login</a>";
+      echo "<li><a href='../../frontend/public/login.php'>Login</a></li>";
     }
 }
 ?>
