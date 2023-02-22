@@ -59,6 +59,15 @@ require '../headers/header.php';
         <div class="signup-form-input">
           <input type="date" name="dob" id="dob" required>
         </div>
+        <div>
+          <label>Attendance</label>
+          <select name='attendance' id='attendance' required>
+            <option value=''>Select Attendance</option>
+              <option value='0'>In Person</option>
+              <option value='1'>Online</option>
+              <option value='2'>Hybrid</option>
+          </select>
+      </div>
       </div>
     </div>
     <div class="signup-form-section">

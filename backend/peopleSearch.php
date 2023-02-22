@@ -60,7 +60,7 @@ if (isset($_POST['searchBar'])) {
   f.name LIKE '%$searchBar%' OR
   m.city LIKE '%$searchBar%')";
 } else {
-  $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
+  $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city, m.attendance
   FROM members m
   LEFT JOIN family f ON m.fid = f.fid
   LEFT JOIN titles t ON m.pid = t.pid
@@ -75,14 +75,15 @@ echo "<tr>";
 echo "<th onclick='sortTable(0)'>Title</th>";
 echo "<th onclick='sortTable(1)'>First Name</th>";
 echo "<th onclick='sortTable(2)'>Last Name</th>";
-echo "<th onclick='sortTable(3)'>Date of Birth</th>";
-echo "<th onclick='sortTable(4)'>Type</th>";
-echo "<th onclick='sortTable(5)'>Gender</th>";
-echo "<th onclick='sortTable(6)'>Baptized</th>";
-echo "<th onclick='sortTable(7)'>Confirmation</th>";
-echo "<th onclick='sortTable(8)'>Start Date</th>";
-echo "<th onclick='sortTable(9)'>City</th>";
-echo "<th onclick='sortTable(10)'>Family</th>";
+echo "<th onclick='sortTable(3)'>Attendance</th>";
+echo "<th onclick='sortTable(4)'>Date of Birth</th>";
+echo "<th onclick='sortTable(5)'>Type</th>";
+echo "<th onclick='sortTable(6)'>Gender</th>";
+echo "<th onclick='sortTable(7)'>Baptized</th>";
+echo "<th onclick='sortTable(8)'>Confirmation</th>";
+echo "<th onclick='sortTable(9)'>Start Date</th>";
+echo "<th onclick='sortTable(10)'>City</th>";
+echo "<th onclick='sortTable(11)'>Family</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
@@ -90,12 +91,24 @@ $i = 0;
 while ($row = mysqli_fetch_assoc($result)) {
   //Change the background color from dark to light to make it easier to read
   $row_class = ($i % 2 == 0) ? "dark-row" : "light-row";
-  echo "<tr class='$row_class' onclick=\"window.location='../private/profile.php?pid={$row['pid']}'\">";
+  echo "<tr class='$row_class' onclick='submitForm({$row["pid"]})'>";
   $i = $i + 1;
   
     echo "<td>" . $row["title"] . "</td>";
     echo "<td>" . $row["f_name"] . "</td>";
     echo "<td>" . $row["l_name"] . "</td>";
+    switch($row["attendance"]){
+      case 0:
+        $attendance = 'In Person';
+        break;
+      case 1:
+        $attendance = 'Online';
+        break;
+      case 2:
+        $attendance = 'Hybrid';
+        break;
+    }
+    echo "<td>" . $attendance . "</td>";
     echo "<td>" . $row["dob"] . "</td>";
     switch($row["type"]){
       case 0:

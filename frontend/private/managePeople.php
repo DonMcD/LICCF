@@ -100,6 +100,26 @@ $(document).ready(function() {
         $("form").submit();
     });
 });
+
+//Submit using POST instead of GET
+function submitForm(pid) {
+  // Create a new form element
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.action = '../private/profile.php';
+
+  // Add a hidden input field for the pid value
+  var pidInput = document.createElement('input');
+  pidInput.type = 'hidden';
+  pidInput.name = 'pid';
+  pidInput.value = pid;
+  form.appendChild(pidInput);
+
+  // Submit the form
+  document.body.appendChild(form);
+  form.submit();
+}
+
 </script>
 
 

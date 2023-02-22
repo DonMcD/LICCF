@@ -1,7 +1,8 @@
 <?php
 require 'serverDetails.php';
-//Personal ID
-$pid = $_GET['pid'];
+
+
+$pid = $_POST['pid'];
 // Create connection
 $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 // Connect
@@ -37,6 +38,7 @@ $postal_code = $row['postal_code'];
 $province = $row['province'];
 $family = $row['name'];
 $interest = $row['interest'];
+$attendance = $row['attendance'];
 
 mysqli_close($conn);
 

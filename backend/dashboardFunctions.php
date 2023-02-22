@@ -164,13 +164,13 @@ function getLatestMembers() {
         $member->province = $row['province'];
         $member->attendance = $row['attendance'];
         switch($member->attendance = $row['attendance']){
-            case 1:
+            case 0:
                 $member->attendance = 'In Person';
             break;
-            case 2:
+            case 1:
                 $member->attendance = 'Online';
             break;
-            case 3:
+            case 2:
                 $member->attendance = 'Hybrid';
             break;
         }

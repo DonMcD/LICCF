@@ -22,6 +22,7 @@ $address = test_input($_POST["address"]);
 $city = test_input($_POST["city"]);
 $postal_code = test_input($_POST["postalCode"]);
 $province = test_input($_POST["province"]);
+$attendance = test_input($_POST["attendance"]);
 $start_date = date('Y-m-d');
 //Get details for credentials table
 // Collect form data
@@ -30,7 +31,7 @@ $password = test_input($_POST["password"]);
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 // Store form data in database
-$sql = "INSERT INTO members (f_name, l_name, dob, gender, profession, c_number, w_number, h_number, email, address, city, postal_code, province, start_date, username, hash) VALUES ('$f_name', '$l_name', '$dob', '$gender', '$profession', '$c_number', '$w_number', '$h_number', '$email', '$address', '$city', '$postal_code', '$province', '$start_date', '$username', '$hashed_password')";
+$sql = "INSERT INTO members (f_name, l_name, dob, gender, profession, c_number, w_number, h_number, email, address, city, postal_code, province, start_date, username, hash, attendance) VALUES ('$f_name', '$l_name', '$dob', '$gender', '$profession', '$c_number', '$w_number', '$h_number', '$email', '$address', '$city', '$postal_code', '$province', '$start_date', '$username', '$hashed_password', '$attendance')";
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully.";
   header("Location: ../frontend/public/index.php");
