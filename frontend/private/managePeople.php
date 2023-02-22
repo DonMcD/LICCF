@@ -30,6 +30,7 @@ require '../headers/topBar.php';
         <form method='POST' action='managePeople.php'>
             <div class="side-bar-header">
                 <h2>Filters</h2>
+                <button href='createUser.php'>+</button>
             </div>
             <div>
             <br>

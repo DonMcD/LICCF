@@ -426,5 +426,31 @@ input:focus ~ .input-border {
     left: 0;
 }
 
-
-  
+/*Profile screen styles*/
+.profile-main-container{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    background-color: var(--accent);
+    border-radius: 20px;
+    justify-content: center;
+}
+.profile-inner-container {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    background-color: var(--hover-green);
+    justify-content: center;
+}
+.profile-section {
+    display: flex;
+    flex-direction: column;
+}
+.profile-inner-container input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

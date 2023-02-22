@@ -54,14 +54,6 @@ require '../headers/header.php';
       </div>
       <div class="signup-form-row">
         <div class="signup-form-label">
-          <label for="email">Email</label>
-        </div>
-        <div class="signup-form-input">
-          <input type="text" name="email" id="email" placeholder="Enter your email address" required>
-        </div>
-      </div>
-      <div class="signup-form-row">
-        <div class="signup-form-label">
           <label for="dob">Date of Birth</label>
         </div>
         <div class="signup-form-input">
@@ -71,6 +63,14 @@ require '../headers/header.php';
     </div>
     <div class="signup-form-section">
       <h2>Contact Information</h2>
+      <div class="signup-form-row">
+        <div class="signup-form-label">
+          <label for="email">Email</label>
+        </div>
+        <div class="signup-form-input">
+          <input type="text" name="email" id="email" placeholder="Enter your email address" required>
+        </div>
+      </div>
       <div class="signup-form-row">
         <div class="signup-form-label">
           <label for="home_number">Home Number</label>
@@ -128,13 +128,16 @@ require '../headers/header.php';
               <option value='Other'>Other(US)</option>
           </select>
       </div>
-      <div>
-          <label>Work / Former Work</label>
-          <input type='text' name='profession' placeholder="Enter your work / former work">
-      </div>
-      <div>
-          <label>Interests</label>
-          <input type='text' name='interests' placeholder="Enter your interests">
+      <div class='signup-form-section'>
+        <h2>About Yourself</h2>
+        <div>
+            <label>Work / Former Work</label>
+            <input type='text' name='profession' placeholder="Enter your work / former work">
+        </div>
+        <div>
+            <label>Interests</label>
+            <input type='text' name='interests' placeholder="Enter your interests">
+        </div>
       </div>
       <h2>Login Credentials</h2>
         <div>

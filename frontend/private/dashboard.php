@@ -40,7 +40,7 @@ $latestMembers = getLatestMembers();
         </div>
         <div class='stats-container'>
             <h2>Total Families</h2>
-            <?php echo "{$totalFamilies} Members"?>
+            <?php echo "{$totalFamilies} Families"?>
         </div>
         <div class='stats-container'>
         <h2>Total Donations</h2>
