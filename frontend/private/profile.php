@@ -24,7 +24,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require '../headers/topBar.php';
+if($_SESSION['type'] == 0){
+    require '../headers/topBar.php';
+}
 require_once '../../backend/getProfileData.php';
 ?>
 <script>

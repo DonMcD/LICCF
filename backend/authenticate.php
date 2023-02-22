@@ -16,7 +16,7 @@ $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT pid, username, hash FROM members where username = '$username'";
+$sql = "SELECT pid, username, hash, type FROM members where username = '$username'";
 
 $result = $conn->query($sql);
 
@@ -29,6 +29,7 @@ if($row){
         $_SESSION['authenticated'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['pid'] = $row['pid'];
+        $_SESSION['type'] = $row['type'];
         echo "valid";
     }
     else {

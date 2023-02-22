@@ -43,6 +43,7 @@ function displayAuthticatedLink() {
       echo "<li class='dropdown'>
       <a href='../../frontend/public/login.php'>{$_SESSION['username']}</a>
       <ul class='dropdown-content'>
+        <li><a href='../private/profile.php'>Profile</a></li>
         <li><a href='../../backend/logout.php'>Logout</a></li>
       </ul>
     </li>";

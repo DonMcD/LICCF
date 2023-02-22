@@ -52,7 +52,7 @@ for ($i = 0; $i < $number; $i++) {
     $dob = date("Y-m-d", rand(strtotime("1930-01-01"), strtotime("2002-12-31")));
     
     // Randomly select a type (0, 1, or 2)
-    $type = rand(0, 2);
+    $type = rand(1, 2);
 
     //Random Confirmation
     $confirmation = rand(0, 1);

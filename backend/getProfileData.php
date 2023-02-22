@@ -1,8 +1,11 @@
 <?php
 require 'serverDetails.php';
 
-
-$pid = $_POST['pid'];
+if(!isset($_POST['pid'])){
+    $pid = $_SESSION['pid'];
+} else {
+    $pid = $_POST['pid'];
+}
 // Create connection
 $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 // Connect

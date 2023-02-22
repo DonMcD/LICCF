@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require 'serverDetails.php';
 
 // Make sure the PID value is set and is a valid integer
@@ -21,7 +23,11 @@ if (isset($_POST['pid']) && filter_var($_POST['pid'], FILTER_VALIDATE_INT)) {
   // Close the database connection
   $stmt->close();
   $conn->close();
-  header("Refresh: 1; url=../frontend/public/login.php");
+if($_SESSION['type'] == 0){
+  header("Location: ../frontend/private/managePeople.php");
+} else {
+  header("Location: ../backend/logout.php");
+}
 } else {
   echo 'Invalid PID value';
 }
