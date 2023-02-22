@@ -9,8 +9,11 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
+print_r($_POST);
+
 // Collect form data
 $pid = $_POST['pid'];
+$attendance = $_POST["attendance"];
 $f_name = test_input($_POST["first_name"]);
 $l_name = test_input($_POST["last_name"]);
 $dob = test_input($_POST["dob"]);
@@ -24,19 +27,19 @@ $address = test_input($_POST["address"]);
 $city = test_input($_POST["city"]);
 $postal_code = test_input($_POST["postalCode"]);
 $province = test_input($_POST["province"]);
-$attendance = test_input($_POST["attendance"]);
+$interest = test_input($_POST["interest"]);
 
 //Get details for credentials table
 $username = test_input($_POST["username"]);
 $password = test_input($_POST["password"]);
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+
 // Update record in database
-$sql = "UPDATE members SET f_name='$f_name', l_name='$l_name', dob='$dob', gender='$gender', profession='$profession', c_number='$c_number', w_number='$w_number', h_number='$h_number', email='$email', address='$address', city='$city', postal_code='$postal_code', province='$province', username='$username', hash='$hashed_password', attendance='$attendance' WHERE pid='$pid'";
+$sql = "UPDATE members SET f_name='$f_name', l_name='$l_name', dob='$dob', gender='$gender', profession='$profession', c_number='$c_number', w_number='$w_number', h_number='$h_number', email='$email', address='$address', city='$city', postal_code='$postal_code', province='$province', username='$username', hash='$hashed_password', attendance='$attendance', interest='$interest' WHERE pid='$pid'";
 
 if (mysqli_query($conn, $sql)) {
   echo "Record updated successfully.";
-  header("Location: ../../frontend/public/login.php");
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

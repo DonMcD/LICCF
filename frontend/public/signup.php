@@ -145,7 +145,7 @@ require '../headers/header.php';
         </div>
         <div>
             <label>Interests</label>
-            <input type='text' name='interests' placeholder="Enter your interests">
+            <input type='text' name='interest' placeholder="Enter your interests">
         </div>
       </div>
       <h2>Login Credentials</h2>

@@ -11,7 +11,6 @@ if ($conn->connect_error){
 }
 $sql = "SELECT *
 FROM members
-LEFT JOIN family ON members.fid = family.fid
 LEFT JOIN titles ON members.pid = titles.tid
 WHERE members.pid = {$pid}";
 $result = $conn->query($sql);
@@ -21,6 +20,7 @@ $row = $result->fetch_assoc();
 $username = $row['username'];
 $fname = $row['f_name'];
 $lname = $row['l_name'];
+$attendance = $row['attendance'];
 $dob = $row['dob'];
 $gender = $row['gender'];
 $start_date = $row['start_date'];
@@ -36,9 +36,7 @@ $address = $row['address'];
 $city = $row['city'];
 $postal_code = $row['postal_code'];
 $province = $row['province'];
-$family = $row['name'];
 $interest = $row['interest'];
-$attendance = $row['attendance'];
 
 mysqli_close($conn);
 

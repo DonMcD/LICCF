@@ -33,65 +33,93 @@ require_once '../../backend/getProfileData.php';
             $('input[type="text"]').prop('readonly', true);
             $('select').prop('disabled', true);
             $('input[type="date"]').prop('readonly', true);
-        // Hide delete and submit buttons initially
-        $('#deleteButton').hide();
-        $('#submitButton').hide();
-        $('#cancelButton').hide();
-        $('#submitButton2').hide();
-        $('#cancelButton2').hide();
-        
-
-        $('#editButton').click(function(){
-            // Enable all input fields
-            $('input[type="text"]').prop('readonly', false);
-            $('select').prop('disabled', false);
-            $('input[type="date"]').prop('readonly', false);
-
-            // Show delete and submit buttons
-            $('#deleteButton').show();
-            $('#submitButton').show();
-            $('#cancelButton').show();
-            $('#submitButton2').show();
-            $('#cancelButton2').show();
-        });
-        $('#cancelButton').click(function(){
-            // Enable all input fields
-            $('input[type="text"]').prop('readonly', true);
-            $('select').prop('disabled', true);
-            $('input[type="date"]').prop('readonly', true);
-
-            // Show delete and submit buttons
+            // Hide delete and submit buttons initially
             $('#deleteButton').hide();
             $('#submitButton').hide();
             $('#cancelButton').hide();
             $('#submitButton2').hide();
             $('#cancelButton2').hide();
+            
 
+            $('#editButton').click(function(){
+                // Enable all input fields
+                $('input[type="text"]').prop('readonly', false);
+                $('select').prop('disabled', false);
+                $('input[type="date"]').prop('readonly', false);
+
+                // Show delete and submit buttons
+                $('#deleteButton').show();
+                $('#submitButton').show();
+                $('#cancelButton').show();
+                $('#submitButton2').show();
+                $('#cancelButton2').show();
+            });
+            $('#cancelButton').click(function(){
+                // Enable all input fields
+                $('input[type="text"]').prop('readonly', true);
+                $('select').prop('disabled', true);
+                $('input[type="date"]').prop('readonly', true);
+
+                // Show delete and submit buttons
+                $('#deleteButton').hide();
+                $('#submitButton').hide();
+                $('#cancelButton').hide();
+                $('#submitButton2').hide();
+                $('#cancelButton2').hide();
+
+            });
+            $('#cancelButton2').click(function(){
+                // Enable all input fields
+                $('input[type="text"]').prop('readonly', true);
+                $('select').prop('disabled', true);
+                $('input[type="date"]').prop('readonly', true);
+
+                // Show delete and submit buttons
+                $('#deleteButton').hide();
+                $('#submitButton').hide();
+                $('#cancelButton').hide();
+                $('#submitButton2').hide();
+                $('#cancelButton2').hide();
+
+            });
+            $('#submitButton').click(function(){
+                // Enable all input fields
+                $('input[type="text"]').prop('readonly', true);
+                $('select').prop('disabled', true);
+                $('input[type="date"]').prop('readonly', true);
+
+                // Show delete and submit buttons
+                $('#deleteButton').hide();
+                $('#submitButton').hide();
+                $('#cancelButton').hide();
+                $('#submitButton2').hide();
+                $('#cancelButton2').hide();
+
+            });
+            $('#submitButton2').click(function(){
+                // Enable all input fields
+                $('input[type="text"]').prop('readonly', true);
+                $('select').prop('disabled', true);
+                $('input[type="date"]').prop('readonly', true);
+
+                // Show delete and submit buttons
+                $('#deleteButton').hide();
+                $('#submitButton').hide();
+                $('#cancelButton').hide();
+                $('#submitButton2').hide();
+                $('#cancelButton2').hide();
+
+            });
         });
-        $('#cancelButton2').click(function(){
-            // Enable all input fields
-            $('input[type="text"]').prop('readonly', true);
-            $('select').prop('disabled', true);
-            $('input[type="date"]').prop('readonly', true);
-
-            // Show delete and submit buttons
-            $('#deleteButton').hide();
-            $('#submitButton').hide();
-            $('#cancelButton').hide();
-            $('#submitButton2').hide();
-            $('#cancelButton2').hide();
-
-        });
-    });
 </script>
 
 <div class="profile-main-container">
     <div class='profile-inner-container'>
         <div class='profile-section'>
+            <form id="profileForm" action='../../backend/updateProfile.php' method='POST'>
                 <table>
                     <tr>
                         <td colspan="2"><input type='button' id='editButton' value='Edit' name='editButton'></td>
-                <form id="profileForm" action='../../backend/updateProfile.php' method='POST'>
                     </tr>
                     <tr>
                         <td colspan="2"><input type='button' value='Cancel' id='cancelButton'/></td>
@@ -121,11 +149,21 @@ require_once '../../backend/getProfileData.php';
                     <tr>
                         <td><h3>Attendance</h3></td>
                         <td>
-                            <select name='attendance' id='attendance'>
-                                <option value='0' <?php if ($attendance == 0) echo 'selected'; ?>>In Person</option>
-                                <option value='1' <?php if ($attendance == 1) echo 'selected'; ?>>Online</option>
-                                <option value='2' <?php if ($attendance == 2) echo 'selected'; ?>>Hybrid</option>
+                            <select name="atten-drop" id="atten-drop">
+                                <option value='0' id='in-person' <?php if ($attendance == 0) echo 'selected'; ?>>In Person</option>
+                                <option value='1' id='online'<?php if ($attendance == 1) echo 'selected'; ?>>Online</option>
+                                <option value='2' id='hybrid' <?php if ($attendance == 2) echo 'selected'; ?>>Hybrid</option>
                             </select>
+                            <td><input type="text" name="attendance" id="attendance" value='' hidden/></td>
+                        <script>
+                            $dropdown = document.getElementById('atten-drop');
+                            $attendance = document.getElementById('attendance');
+                            $attendance.value = $dropdown.value;
+
+                            $dropdown.addEventListener("click", () => {
+                                $attendance.value = $dropdown.value;
+                            });
+                        </script>
                         </td>
                     </tr>
                     <tr>
@@ -227,6 +265,35 @@ require_once '../../backend/getProfileData.php';
       form.submit();
     }
   });
+
+
+  //Used for AJAX
+    $(document).ready(function() {
+  // Attach a submit handler to the form
+  $("#profileForm").submit(function(event) {
+    // Stop the form from submitting normally
+    event.preventDefault();
+  
+    // Serialize the form data into a JavaScript object
+    var formData = $(this).serialize();
+    
+    // Send an AJAX request to the server
+    $.ajax({
+      type: "POST",
+      url: "../../backend/updateProfile.php",
+      data: formData,
+      success: function(response) {
+        // Handle a successful response from the server here
+        toastr.success('Success! User Profile has been modified');
+        console.log(response);
+      },
+      error: function(xhr, status, error) {
+        // Handle errors here
+        console.error(xhr, status, error);
+      }
+    });
+  });
+});
 </script>
 
 </body>
