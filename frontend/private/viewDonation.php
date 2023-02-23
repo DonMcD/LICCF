@@ -1,7 +1,6 @@
 <?php
 //USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
 session_start();
-
 //This checks to see if the user is authenticated or not
 if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     header("Location: ../frontend/login.php");
@@ -27,7 +26,7 @@ require '../headers/header.php';
 if($_SESSION['type'] == 0){
     require '../headers/topBar.php';
 }
-require_once '../../backend/getProfileData.php';
+require_once '../../backend/getDonationData.php';
 ?>
 <script>
         $(document).ready(function(){
@@ -131,106 +130,57 @@ require_once '../../backend/getProfileData.php';
                         <td><input type='submit' value='Submit' id='submitButton'/></td>
                     </tr>
                     <tr>
-                        <td><h2>Personal Information</h2></td>
+                        <td><h2>Donation Information</h2></td>
                     </tr>
                     <tr>
-                        <td><input type="hidden" name="pid" id="pid" value='<?php echo $pid ?>'/></td>
+                        <td><input type="hidden" name="did" id="did" value='<?php echo $did ?>'/></td>
                     </tr>
                     <tr>
                         <td><h3>First Name</h3></td>
-                        <td><input type="text" name="first_name" id="first_name" value='<?php echo $fname ?>'/></td>
+                        <td><input type="text" name="first_name" id="first_name" value='<?php echo $fName ?>'/></td>
                     </tr>
                     <tr>
                         <td><h3>Last Name</h3></td>
-                        <td><input type="text" name="last_name" id="last_name" value='<?php echo $lname ?>'/></td>
+                        <td><input type="text" name="last_name" id="last_name" value='<?php echo $lName ?>'/></td>
                     </tr>
                     <tr>
-                        <td><h3>Gender</h3></td>
-                        <td><input type="text" name="gender" id="gender" value='<?php echo $gender ?>'/></td>
+                        <td><h3>Amount</h3></td>
+                        <td><input type="text" name="amount" id="amount" value='$<?php echo $amount ?>'/></td>
                     </tr>
                     <tr>
-                        <td><h3>Attendance</h3></td>
+                        <td><h3>Date</h3></td>
+                        <td><input type="date" name="date" id="date" value='<?php echo $date ?>'/></td>
+                    </tr>
+                    <tr>
+                        <td><h3>Type</h3></td>
                         <td>
-                            <select name="atten-drop" id="atten-drop">
-                                <option value='0' id='in-person' <?php if ($attendance == 0) echo 'selected'; ?>>In Person</option>
-                                <option value='1' id='online'<?php if ($attendance == 1) echo 'selected'; ?>>Online</option>
-                                <option value='2' id='hybrid' <?php if ($attendance == 2) echo 'selected'; ?>>Hybrid</option>
+                            <select name="type-drop" id="type-drop">
+                                <option value='0' id='in-person' <?php if ($type == 0) {echo 'selected';} ?>>Cash</option>
+                                <option value='1' id='online'<?php if ($type == 1) {echo 'selected';} ?>>E-Transfer</option>
                             </select>
-                            <td><input type="text" name="attendance" id="attendance" value='' hidden/></td>
-                        <script>
-                            $dropdown = document.getElementById('atten-drop');
-                            $attendance = document.getElementById('attendance');
-                            $attendance.value = $dropdown.value;
+                            <td><input type="text" name="type" id="type" value='' hidden/></td>
+                            <script>
+                                $dropdown = document.getElementById('type-drop');
+                                $type = document.getElementById('type');
+                                $type.value = $dropdown.value;
 
-                            $dropdown.addEventListener("click", () => {
-                                $attendance.value = $dropdown.value;
-                            });
-                        </script>
+                                $dropdown.addEventListener("click", () => {
+                                    $type.value = $dropdown.value;
+                                });
+                            </script>
                         </td>
                     </tr>
                     <tr>
-                        <td><h3>DOB</h3></td>
-                        <td><input type="date" name="dob" id="dob" value='<?php echo $dob ?>'/></td>
+                        <td><h3>Envelope Number</h3></td>
+                        <td><input type="text" name="env_number" id="env_number" value='#<?php echo $envNumber ?>'/></td>
                     </tr>
                     <tr>
-                        <td><h2>Contact Information</h2></td>
+                        <td><h3>E-Transfer Email</h3></td>
+                        <td><input type="text" name="email" id="email" value='<?php echo $transfer_email ?>'/></td>
                     </tr>
                     <tr>
-                        <td><h3>Email</h3></td>
-                        <td><input type="text" name="email" id="email" value='<?php echo $email ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Home Number</h3></td>
-                        <td><input type="text" name="h_number" id="h_number" value='<?php echo $h_number ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Cell Number</h3></td>
-                        <td><input type="text" name="c_number" id="c_number" value='<?php echo $c_number ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Work Number</h3></td>
-                        <td><input type="text" name="w_number" id="w_number" value='<?php echo $w_number ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Address</h2></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Street Address</h3></td>
-                        <td><input type="text" name="address" id="address" value='<?php echo $address ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>City</h3></td>
-                        <td><input type="text" name="city" id="city" value='<?php echo $city ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Postal Code</h3></td>
-                        <td><input type="text" name="postalCode" id="postalCode" value='<?php echo $postal_code ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Province</h3></td>
-                        <td><input type="text" name="province" id="province" value='<?php echo $province ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h2>About Yourself</h2></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Work / Former Work</h3></td>
-                        <td><input type="text" name="profession" id="profession" value='<?php echo $profession ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Interests</h3></td>
-                        <td><input type="text" name="interest" id="interest" value='<?php echo $interest ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h2>Login Credentials</h2></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Username</h3></td>
-                        <td><input type="text" name="username" id="username" value='<?php echo $username ?>'/></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Password</h3></td>
-                        <td><input type="password" name="password" id="password"/></td>
+                        <td><h3>Security Question Answer</h3></td>
+                        <td><input type="text" name="sec_question" id="sec_question" value='<?php echo $secQuestion ?>'/></td>
                     </tr>
                     <tr>
                         <td><input type='button' value='Cancel' id='cancelButton2'/></td>
@@ -242,31 +192,31 @@ require_once '../../backend/getProfileData.php';
     </div>
 </div>
 <script>
-// Get the delete button
-const deleteButton = document.getElementById("deleteButton");
+  // Get the delete button
+  const deleteButton = document.getElementById("deleteButton");
 
-// Add a click event listener to the delete button
-deleteButton.addEventListener("click", () => {
-  // Display a confirmation popup
-  const confirmed = confirm("Are you sure you want to delete this profile?");
+  // Add a click event listener to the delete button
+  deleteButton.addEventListener("click", () => {
+    // Display a confirmation popup
+    const confirmed = confirm("Are you sure you want to delete this profile?");
 
-  // If the user confirmed the deletion, redirect to delete.php with the PID field POSTed
-  if (confirmed) {
-    const pid = document.getElementById("pid").value;
-    const form = document.createElement("form");
-    form.setAttribute("method", "POST");
-    form.setAttribute("action", "../../backend/deleteProfile.php");
+    // If the user confirmed the deletion, redirect to delete.php with the PID field POSTed
+    if (confirmed) {
+      const pid = document.getElementById("pid").value;
+      const form = document.createElement("form");
+      form.setAttribute("method", "POST");
+      form.setAttribute("action", "../../backend/deleteDonation.php");
 
-    const pidInput = document.createElement("input");
-    pidInput.setAttribute("type", "hidden");
-    pidInput.setAttribute("name", "pid");
-    pidInput.setAttribute("value", pid);
+      const pidInput = document.createElement("input");
+      pidInput.setAttribute("type", "hidden");
+      pidInput.setAttribute("name", "pid");
+      pidInput.setAttribute("value", pid);
 
-    form.appendChild(pidInput);
-    document.body.appendChild(form);
-    form.submit();
-  }
-});
+      form.appendChild(pidInput);
+      document.body.appendChild(form);
+      form.submit();
+    }
+  });
 
 
   //Used for AJAX
@@ -282,11 +232,11 @@ deleteButton.addEventListener("click", () => {
     // Send an AJAX request to the server
     $.ajax({
       type: "POST",
-      url: "../../backend/updateProfile.php",
+      url: "../../backend/updateDonation.php",
       data: formData,
       success: function(response) {
         // Handle a successful response from the server here
-        toastr.success('Success! User Profile has been modified');
+        toastr.success('Success! Donatation has been modified');
         console.log(response);
       },
       error: function(xhr, status, error) {
@@ -300,4 +250,3 @@ deleteButton.addEventListener("click", () => {
 
 </body>
 </html>
-

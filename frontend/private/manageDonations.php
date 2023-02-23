@@ -96,6 +96,25 @@ $(document).ready(function() {
         $("form").submit();
     });
 });
+
+//Submit using POST instead of GET
+function submitForm(did) {
+  // Create a new form element
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.action = '../private/viewDonation.php';
+
+  // Add a hidden input field for the pid value
+  var pidInput = document.createElement('input');
+  pidInput.type = 'hidden';
+  pidInput.name = 'did';
+  pidInput.value = did;
+  form.appendChild(pidInput);
+
+  // Submit the form
+  document.body.appendChild(form);
+  form.submit();
+}
 </script>
 
 
