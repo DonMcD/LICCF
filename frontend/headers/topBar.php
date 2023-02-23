@@ -1,7 +1,7 @@
 <div class="top-bar">
     <a href='../private/dashboard.php'><div id="dashboard">Dashboard &nbsp<img src='../../assets/dashboard.png' width='25' height='25'/></div></a>
     <a href='../private/managePeople.php'><div id="manage-people">Manage People &nbsp<img src='../../assets/person.png' width='25' height='25'/></div></a>
-    <a href='../private/manageFamilies.php'><div id="manage-families">Manage Families &nbsp<img src='../../assets/family.png' width='25' height='25'/></div></a>
+    <!--<a href='../private/manageFamilies.php'><div id="manage-families">Manage Families &nbsp<img src='../../assets/family.png' width='25' height='25'/></div></a> -->
     <a href='../private/manageDonations.php'><div id="manage-donations">Manage Donations &nbsp<img src='../../assets/donate.png' width='25' height='25'/></div></a>
     <a href='../private/manageTaxReciepts.php'><div id="manage-tax-reciepts">Manage Tax Reciepts &nbsp<img src='../../assets/reciept.png' width='25' height='25'/></div></a>
     <a href='../private/massEmail.php'><div id="mass-email">Mass Email &nbsp<img src='../../assets/email.png' width='25' height='25'/></div></a>
