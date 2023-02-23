@@ -37,47 +37,49 @@ if (!empty($min) && !empty($max)) {
 
 // Append the search filter if a search term is entered
 if (!empty($search)) {
-  $whereClause .= " AND (d.env_number LIKE '%$search%' OR d.transfer_email LIKE '%$search%' OR f.name LIKE '%$search%')";
+  $whereClause .= " AND (d.env_number LIKE '%$search%' OR d.transfer_email LIKE '%$search%' OR m.f_name LIKE '%$search%' OR d.amount LIKE '%$search%' OR m.l_name LIKE '%$search%')";
 }
 
 // Construct the final query
-$query = "SELECT d.amount, d.date, d.type, d.env_number, d.transfer_email, d.did, f.name
+$query = "SELECT d.amount, d.date, d.type, d.env_number, d.transfer_email, d.did, m.f_name, m.l_name
 FROM donations d
-LEFT JOIN family f
-ON d.fid = f.fid
+LEFT JOIN members m
+ON d.mid = m.pid
 $whereClause";
 
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
-echo "<table id=id='results-table'>";
+echo "<table id='results-table'>";
 echo "<thead>";
 echo "<tr>";
-echo "<th onclick='sortTable(0)'>Amount</th>";
-echo "<th onclick='sortTable(1)'>Type</th>";
-echo "<th onclick='sortTable(2)'>Envelope Number</th>";
-echo "<th onclick='sortTable(3)'>Email</th>";
-echo "<th onclick='sortTable(4)'>From</th>";
-echo "<th onclick='sortTable(5)'>Date</th>";
+echo "<th onclick='sortTable(0)'>First</th>";
+echo "<th onclick='sortTable(1)'>Last</th>";
+echo "<th onclick='sortTable(2)'>Amount</th>";
+echo "<th onclick='sortTable(3)'>Type</th>";
+echo "<th onclick='sortTable(4)'>Envelope Number</th>";
+echo "<th onclick='sortTable(5)'>Email</th>";
+echo "<th onclick='sortTable(6)'>Date</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
 $i = 0;
 while ($row = mysqli_fetch_assoc($result)) {
-    //Change the background color drom dark to light to make it easier to read
-    if(($i % 2) == 0){
-      echo "<tr class='dark-row' onclick=\"window.location='../private/profile.php?pid={$row['did']}'\">";
-    }
-    else {
-      echo "<tr class='light-row' onclick=\"window.location='../private/profile.php?pid={$row['did']}'\">";
-    }
-    $i = $i + 1;
-    echo "<td>$" . $row["amount"] . "</td>";
-    echo "<td>" . $row["type"] . "</td>";
-    echo "<td>" . $row["env_number"] . "</td>";
-    echo "<td>" . $row["transfer_email"] . "</td>";
-    echo "<td>" . $row["name"] . "</td>";
-    echo "<td>" . $row["date"] . "</td>";
-    echo "</tr>";
+  //Change the background color from dark to light to make it easier to read
+  $row_class = ($i % 2 == 0) ? "dark-row" : "light-row";
+  echo "<tr class='$row_class' onclick='submitForm({$row["did"]})'>";
+  $i = $i + 1;
+  echo "<td>" . $row["f_name"] . "</td>";
+  echo "<td>" . $row["l_name"] . "</td>";
+  echo "<td>$" . $row["amount"] . "</td>";
+  if($row["type"] == 0){
+    echo "<td>" . "Cash" . "</td>";
+  } else {
+    echo "<td>" . "E-Transfer" . "</td>";
+  }
+  echo "<td>" . $row["env_number"] . "</td>";
+  echo "<td>" . $row["transfer_email"] . "</td>";
+  echo "<td>" . $row["date"] . "</td>";
+  echo "</tr>";
 }
 echo "</tbody>";
 echo "</table>";
