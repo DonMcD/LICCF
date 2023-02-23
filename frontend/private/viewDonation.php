@@ -200,19 +200,19 @@ require_once '../../backend/getDonationData.php';
     // Display a confirmation popup
     const confirmed = confirm("Are you sure you want to delete this profile?");
 
-    // If the user confirmed the deletion, redirect to delete.php with the PID field POSTed
+    // If the user confirmed the deletion, redirect to delete.php with the DID field POSTed
     if (confirmed) {
-      const pid = document.getElementById("pid").value;
+      const did = document.getElementById("did").value;
       const form = document.createElement("form");
       form.setAttribute("method", "POST");
       form.setAttribute("action", "../../backend/deleteDonation.php");
 
-      const pidInput = document.createElement("input");
-      pidInput.setAttribute("type", "hidden");
-      pidInput.setAttribute("name", "pid");
-      pidInput.setAttribute("value", pid);
+      const didInput = document.createElement("input");
+      didInput.setAttribute("type", "hidden");
+      didInput.setAttribute("name", "did");
+      didInput.setAttribute("value", did);
 
-      form.appendChild(pidInput);
+      form.appendChild(didInput);
       document.body.appendChild(form);
       form.submit();
     }

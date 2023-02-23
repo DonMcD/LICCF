@@ -37,7 +37,7 @@ if (!empty($min) && !empty($max)) {
 
 // Append the search filter if a search term is entered
 if (!empty($search)) {
-  $whereClause .= " AND (d.env_number LIKE '%$search%' OR d.transfer_email LIKE '%$search%' OR f.name LIKE '%$search%')";
+  $whereClause .= " AND (d.env_number LIKE '%$search%' OR d.transfer_email LIKE '%$search%' OR m.f_name LIKE '%$search%' OR d.amount LIKE '%$search%' OR m.l_name LIKE '%$search%')";
 }
 
 // Construct the final query
