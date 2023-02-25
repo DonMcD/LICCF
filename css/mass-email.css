@@ -23,4 +23,5 @@ input[type="button"], select {
     border-radius: 4px;
     box-sizing: border-box;
     margin: 0 auto;
+    background-color: rgb(63, 158, 63);
 }
