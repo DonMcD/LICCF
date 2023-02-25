@@ -19,6 +19,27 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+	<script src="https://cdn.tiny.cloud/1/3ixd8xadl4obkb31b97r2gtqs2olb4p3vcf03l10xohr9cd8/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+	<style>
+		.textarea-container {
+			position: relative;
+		}
+		.formatting-btns {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		textarea {
+			padding-top: 30px;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			width: 100%;
+			height: 400px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+	</style>
 
 </head>
 <body class="backgrounds">
@@ -26,17 +47,23 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
-<div class='centered-container'>
-    <form action="" method="post">
-        <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject">
-        <br>
-        <label for="message">Message:</label>
-        <textarea name="message" id="message"></textarea>
-        <br>
-        <input type="submit" name="submit" value="Send Emails">
-    </form>
-</div>
+<body>
+<textarea>
+     Welcome to TinyMCE!
+  </textarea>
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ]
+    });
+  </script>
 </body>
 </html>
 
