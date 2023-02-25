@@ -14,6 +14,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <meta name= "author" content= "Donavon McDowell">
     <title>LICCF Login</title>
     <link rel="stylesheet" href="../../css/styles.css">
+	<link rel="stylesheet" href="../../css/mass-email.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -48,22 +49,49 @@ require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
 <body>
-<textarea>
-     Welcome to TinyMCE!
-  </textarea>
-  <script>
-    tinymce.init({
-      selector: 'textarea',
-      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-      tinycomments_mode: 'embedded',
-      tinycomments_author: 'Author name',
-      mergetags_list: [
-        { value: 'First.Name', title: 'First Name' },
-        { value: 'Email', title: 'Email' },
-      ]
+<div class="center">
+	<form action="../../backend/massEmail.php" method="POST" id="mass-email-form" class="mass-email-form">
+		<input name='subject' type='text'placeHolder="Subject"/>
+		<textarea id="mytextarea" name="content" placeHolder="Email Content"></textarea>
+		<input type="button" id="submit-btn" value="Send Mass Email"/>
+	</form>
+</div>
+
+<script>
+  tinymce.init({
+    selector: 'textarea',
+	height: 650,
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ]
+  });
+
+  //Used to submit
+  document.getElementById('submit-btn').addEventListener('click', function(e) {
+    e.preventDefault(); // prevent the form from submitting in the traditional way
+    var content = tinymce.get('mytextarea').getContent();
+    // Send an AJAX request to the server to submit the form data
+    $.ajax({
+      type: "POST",
+      url: "../../backend/massEmail.php",
+      data: {
+        subject: $("input[name='subject']").val(),
+        content: content
+      },
+      success: function(data) {
+        toastr.success(data);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        toastr.error("An error occurred while sending the email.");
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
 
