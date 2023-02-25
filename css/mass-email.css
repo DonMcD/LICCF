@@ -1,4 +1,4 @@
-input[type="text"], select {
+input[type="text"] {
     display: flex;
     width: 60%;
     padding: 10px;
@@ -14,7 +14,7 @@ input[type="text"], select {
     justify-content: center;
     align-items: center;
 }
-input[type="button"], select {
+input[type="button"] {
     display: flex;
     width: 25%;
     padding: 10px;
@@ -24,4 +24,9 @@ input[type="button"], select {
     box-sizing: border-box;
     margin: 0 auto;
     background-color: rgb(63, 158, 63);
+}
+
+input[type="button"]:active {
+    background-color: rgb(255, 255, 255);
+    color: white;
 }
