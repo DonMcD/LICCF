@@ -27,10 +27,7 @@ First Nations Allyship
 Javascript for Filters Bar (home.php)
 
 #Yousuf
-Manage People functionality (Add edit, delete and cancel buttons)
-Manage Families functionality
-Manage Donations functionality
-View Attendance 
+Manage Attendance 
 Modify Zoom Link
 Modify Calendar
 
@@ -39,8 +36,8 @@ Modify Calendar
 CSS for Manage People, Family, Donations
 Issue Tax Reciepts
 Send Mass Email
-Profile Screen (for user and admin)
 Add Password Hashing functionality
+Authenticate admins for dashboard
 
 
 
