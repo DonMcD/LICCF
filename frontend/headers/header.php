@@ -7,8 +7,8 @@
         <a href="../../frontend/public/about.php">About</a>
         <ul class="dropdown-content">
           <li><a href="../../frontend/public/whoWeAre.php">Who we are</a></li>
-          <li><a href="#">Vision Statement</a></li>
-          <li><a href="#">Our History</a></li>
+          <li><a href="../../frontend/public/ourVision.php">Vision Statement</a></li>
+          <li><a href="../../frontend/public/ourHistory.php">Our History</a></li>
         </ul>
       </li>
       <li class="dropdown">
