@@ -4,7 +4,7 @@
     <!--<a href='../private/manageFamilies.php'><div id="manage-families">Manage Families &nbsp<img src='../../assets/family.png' width='25' height='25'/></div></a> -->
     <a href='../private/manageDonations.php'><div id="manage-donations">Manage Donations &nbsp<img src='../../assets/donate.png' width='25' height='25'/></div></a>
     <a href='../private/manageTaxReciepts.php'><div id="manage-tax-reciepts">Manage Tax Reciepts &nbsp<img src='../../assets/reciept.png' width='25' height='25'/></div></a>
-    <a href='../private/massEmail.php'><div id="mass-email">Mass Email &nbsp<img src='../../assets/email.png' width='25' height='25'/></div></a>
+    <a href='../private/massEmail.php'><div id="mass-email">Email &nbsp<img src='../../assets/email.png' width='25' height='25'/></div></a>
     <a href='../private/manageAttendance.php'><div id="manage-attendance">Manage Attendance &nbsp<img src='../../assets/attendance.png' width='25' height='25'/></div></a>
     <a href='../private/manageZoomLink.php'><div id="manage-zoom-link">Modify Zoom &nbsp<img src='../../assets/cam.png' width='25' height='25'/></div></a>
     <a href='../private/manageCalendar.php'><div id="manage-calendar">Manage Calendar &nbsp<img src='../../assets/calendar.png' width='25' height='25'/></div></a>

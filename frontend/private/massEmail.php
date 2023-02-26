@@ -53,6 +53,7 @@ require '../headers/topBar.php';
 	<form action="../../backend/massEmail.php" method="POST" id="mass-email-form" class="mass-email-form">
 		<input name='subject' type='text'placeHolder="Subject"/>
 		<textarea id="mytextarea" name="content" placeHolder="Email Content"></textarea>
+    <br>
 		<input type="button" id="submit-btn" value="Send Mass Email"/>
 	</form>
 </div>
