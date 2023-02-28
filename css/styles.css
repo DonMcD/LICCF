@@ -141,11 +141,12 @@ nav .dropdown:hover .dropdown-content {
 .top-bar div {
     display: flex;
     width: 100%;
+    height: auto;
+    justify-content: center;
     background-color: var(--accent);
     align-items: center;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
     padding: 10px;
 }
 .top-bar div:hover{
@@ -219,7 +220,7 @@ td {
     background-color: var(--light-row);
 }
 .light-row, .dark-row {
-    height: 35px;
+    height: 45px;
 }
 /*Table CSS for the db results */
 thead {
