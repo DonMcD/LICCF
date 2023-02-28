@@ -191,7 +191,7 @@ nav .dropdown:hover .dropdown-content {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
-.side-bar input[type="text"], select, input[type="submit"] {
+.side-bar input[type="text"], .side-bar select, .side-bar input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;

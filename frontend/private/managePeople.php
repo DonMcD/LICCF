@@ -62,8 +62,8 @@ require '../headers/topBar.php';
                 </div>
             </div>
         </form>
-</div>
-    <div>
+    </div>
+<div>
         <?php
             //Dont delete
             //require '../misc/loading.php';
