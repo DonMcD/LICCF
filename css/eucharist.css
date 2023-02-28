@@ -9,7 +9,11 @@ body {
   padding-left: 10px;
   margin: 0 auto;
 }
-
+/*This makes it so that the page fit properly in the browser*/
+body, html{
+  margin:0;
+  padding:0;
+}
 
 .different-li {
   margin-left: 0px;
