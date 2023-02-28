@@ -169,7 +169,7 @@ nav .dropdown:hover .dropdown-content {
 
 /*The side bar is the filters tab on the left side of the page*/
 .side-bar{
-    width: 10%;
+    width: 13%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -191,13 +191,21 @@ nav .dropdown:hover .dropdown-content {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
+.side-bar input[type="text"], select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 /*Used for the box where the table displays all the data from the database for members, family, donation*/
 .results {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 13%;
     background-color: rgb(184, 207, 218);
 }
 td {
@@ -515,9 +523,6 @@ input:focus ~ .input-border {
 }
 
 /*Used for mass emails*/
-.mass-email-form{
-
-}
 
 .mass-email-form input[type="text"] {
     width: 100%;
