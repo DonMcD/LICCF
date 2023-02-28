@@ -1,8 +1,8 @@
 #Barbara
 Eucharist
-Litergies
-Sacraments
-Donate
+Litergies Done
+Sacraments Done
+Donate Done
 
 #Renalyn
 Special Services and Blessings
