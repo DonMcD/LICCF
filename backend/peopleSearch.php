@@ -50,19 +50,16 @@ if ($gender === 'All') {
 
 if (isset($_POST['searchBar'])) {
   $searchBar = $_POST['searchBar'];
-  $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
+  $query = "SELECT m.f_name, m.attendance, m.l_name, m.dob, m.type, m.status, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
   FROM members m
-  LEFT JOIN family f ON m.fid = f.fid
   LEFT JOIN titles t ON m.pid = t.pid
   WHERE $genderFilter m.status = 0 $filterClause AND
   (m.f_name LIKE '%$searchBar%' OR
   m.l_name LIKE '%$searchBar%' OR
-  f.name LIKE '%$searchBar%' OR
   m.city LIKE '%$searchBar%')";
 } else {
-  $query = "SELECT m.f_name, m.l_name, m.dob, m.type, m.status, f.name, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city, m.attendance
+  $query = "SELECT m.f_name, m.attendance, m.l_name, m.dob, m.type, m.status, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
   FROM members m
-  LEFT JOIN family f ON m.fid = f.fid
   LEFT JOIN titles t ON m.pid = t.pid
   WHERE $genderFilter m.status = 0 $filterClause";
 }
@@ -83,7 +80,6 @@ echo "<th onclick='sortTable(7)'>Baptized</th>";
 echo "<th onclick='sortTable(8)'>Confirmation</th>";
 echo "<th onclick='sortTable(9)'>Start Date</th>";
 echo "<th onclick='sortTable(10)'>City</th>";
-echo "<th onclick='sortTable(11)'>Family</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
@@ -143,7 +139,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>" . $confirmed . "</td>";
     echo "<td>" . $row["start_date"] . "</td>";
     echo "<td>" . $row["city"] . "</td>";
-    echo "<td>" . $row["name"] . "</td>";
     echo "</tr>";
 }
 echo "</tbody>";

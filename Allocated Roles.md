@@ -30,13 +30,11 @@ Javascript for Filters Bar (home.php)
 Manage Attendance 
 Modify Zoom Link
 Modify Calendar
+Issue Tax Reciepts
 
 
 #Donavon
 CSS for Manage People, Family, Donations
-Issue Tax Reciepts
-Send Mass Email
-Add Password Hashing functionality
 Authenticate admins for dashboard
 
 

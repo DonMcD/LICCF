@@ -211,6 +211,7 @@ nav .dropdown:hover .dropdown-content {
 }
 td {
     text-align: center;
+    box-sizing: border-box;
 }
 /*These are the table rows that display the db records*/
 .dark-row{
@@ -228,10 +229,12 @@ thead {
     top: 0;
     background-color: var(--table-header);
     height: 30px;
+    box-sizing: border-box;
 }
 table{
     border: none;
     border-collapse: collapse;
+    box-sizing: border-box;
 }
 #results-table tr:hover {
     border: 2px solid black;
