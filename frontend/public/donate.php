@@ -21,9 +21,11 @@ session_start();
 require '../headers/header.php';
 ?>
  <main>
-      <section class="donate-hero">
-        <h1>Donate</h1>
-      </section>
+        <div id="container">
+        <img class="banner-gif" src="../../assets/banner7.gif" alt="">
+        <div id="text">
+            Donate
+        </div>
       <section class="donate-content">
         <div class="donate-top">
           <div class="mailing-recomendation">
