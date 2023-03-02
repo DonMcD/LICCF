@@ -23,10 +23,9 @@ require '../headers/header.php';
 ?>
 <!--This code create the Image and the text in the page-->
     <div id="container">
-        <img src="" alt="">
+        <img class="banner-gif" src="../../assets/banner1.gif" alt="">
         <div id="text">
-            Welcome to LICCF <br>
-            Lethbridge Inclusive Catholic Community Felloship
+            Lethbridge Inclusive Catholic Community Fellowship
         </div>
     </div><br><br>
 

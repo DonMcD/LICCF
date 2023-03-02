@@ -2,10 +2,9 @@
     position: relative;
     width: 1920px;
     height: 421px;
-    background: url('/assets/crossSignForCommunityPage.jpg') no-repeat center center;
     background-size: contain;
+    
   }
-  
   
   #text {
     position: absolute;
