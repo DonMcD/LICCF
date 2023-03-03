@@ -19,7 +19,10 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
-<img class="banner-gif" src="../../assets/banner2.gif" alt="">
+<div class="gif-container">
+        <img class="gif" src="../../assets/banner2.gif">
+        <div class="text">About us</div>
+    </div>
 
 
 

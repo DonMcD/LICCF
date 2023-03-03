@@ -137,7 +137,6 @@ nav .dropdown:hover .dropdown-content {
     justify-content: space-evenly;
     margin-bottom: 5px;
     margin-top: 1px;
-    background-color: #f7f7f7;
 }
 .top-bar div {
     display: flex;

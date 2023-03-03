@@ -21,7 +21,10 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
-<img class="banner-gif" src="../../assets/banner4.gif" alt="">
+<div class="gif-container">
+        <img class="gif" src="../../assets/banner4.gif">
+        <div class="text">Our Community</div>
+    </div>
    
         <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>

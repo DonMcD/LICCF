@@ -21,10 +21,10 @@ session_start();
 require '../headers/header.php';
 ?>
  <main>
-        <div class="gif-container">
-          <img class="gif" src="../../assets/banner7.gif" alt="">
+    <div class="gif-container">
+          <img class="gif" src="../../assets/banner7.gif">
           <div class="text">Donate</div>
-        </div>
+      </div>
         
         <section class="donate-content">
         <div class="donate-top">

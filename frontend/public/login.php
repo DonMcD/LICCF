@@ -4,9 +4,12 @@ session_start();
 
 //This checks to see if the user is authenticated or not
 if (isset($_SESSION['authenticated'])) {
-  if($_SESSION['authenticated'] == true){
+  if($_SESSION['authenticated'] == true && $_SESSION['type'] == 0){
     header("Location: ../private/dashboard.php");
     exit;
+  }
+  else if($_SESSION['authenticated'] == true && $_SESSION['type'] == 1){
+    header("Location: ./index.php");
   }
 }
 ?>
