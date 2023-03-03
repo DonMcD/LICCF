@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+    <title>LICCF Community</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -20,6 +20,7 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
 <div class="gif-container">
         <img class="gif" src="../../assets/banner4.gif">
@@ -27,5 +28,6 @@ require '../headers/header.php';
     </div>
    
         <?php include_once('..\..\frontend\footers\footer.php'); ?>
+        <script src="../../js/sidebar.js"></script>
 </body>
 </html>

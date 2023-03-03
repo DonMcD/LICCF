@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>Donate</title>
+    <title>LICCF Donate</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="stylesheet" href="../../css/eucharist.css">
@@ -19,6 +19,7 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
  <main>
     <div class="gif-container">
@@ -64,7 +65,7 @@ require '../headers/header.php';
       </section>
     </main>
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
-
+    <script src="../../js/sidebar.js"></script>
     </body>
 </html>
 

@@ -42,8 +42,9 @@ header {
 }
 
 header h2 {
-    margin-left: 2%;
+    margin-left: 25px;
     font-size: 35px;
+    color: #000000;
     font-family: 'Lusitana', serif;
 }
   
@@ -114,6 +115,119 @@ nav .dropdown:hover .dropdown-content {
 
 .dropdown{
     padding: 20px;
+}
+
+/*Styles for the hambuger menu */
+/*--====== Global Variables ======--*/
+:root {
+    --bg-color: #13131f;
+    --bg-color-2: #161623;
+    --text-color: #a9afc3;
+  }
+  /*--====== Sidebar ======--*/
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    max-width: 300px;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--dark);
+    box-shadow: 0 10px 20px -4px #000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.3s ease;
+    color: white;
+  }
+  /* when the sidebar has 'show' class */
+  #sidebar.show {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .sidebar_content {
+    padding: 2.8rem 0;
+    pointer-events: none;
+    /* so that the Sidebar does not get closed while clicking on sidebar_content */
+  }
+  .sidebar_content a {
+    pointer-events: all;
+    color: white;
+    text-decoration: none;
+    /* so that all the a inside sidebar_content are clickable */
+  }
+  .sidebar_body {
+    border-top: 1px dashed var(--text-color);
+    border-bottom: 1px dashed var(--text-color);
+  }
+  .side_navlinks ul {
+    display: grid;
+    gap: 2rem;
+  }
+  .side_navlinks li a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+  .side_navlinks a:hover {
+    opacity: 1;
+  }
+/* Styles for the hambuger button */
+/*---- Sidebar-Toggler ----*/
+.sidebar_toggler {
+  visibility: hidden;
+  margin-right: 20px;
+  top: 4vh;
+  right: 3vw;
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+}
+.sidebar_toggler span {
+  background-color: var(--dark);
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  /* so that it doesn't overlap the sidebar_toggler */
+}
+/* if the sidebar has 'show' class then their adjacent-sibling (i.e., sidebar_toggler) will... */
+#sidebar.show + .sidebar_toggler {
+  justify-content: center;
+}
+#sidebar.show + .sidebar_toggler span {
+  margin-top: -1.2px;
+  margin-bottom: -1.2px;
+}
+#sidebar.show + .sidebar_toggler span:first-child {
+  transform: rotate(45deg);
+}
+#sidebar.show + .sidebar_toggler span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+#sidebar.show + .sidebar_toggler span:last-child {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 1300px) {
+    .sidebar_toggler {
+        visibility: visible;
+    }
+    .nav-head {
+        visibility: hidden;
+    }
 }
 
 /*Styles for the login screen container*/
@@ -586,4 +700,16 @@ input:focus ~ .input-border {
 
 .letter-highlight{
     color: var(--highlight);
+}
+
+@media only screen and (max-width: 900px) {
+    .text {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text {
+        font-size: 20px;
+    }
 }

@@ -1,9 +1,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@700&family=Quintessential&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../../assets/icon.svg">
 <header>
-  <h2>LICCF</h2>
-  <nav>
+<a href="../../frontend/public/index.php"><h2>LICCF</h2></a>
+  <nav class='nav-head'>
     <ul>
       <li><a href="../../frontend/public/index.php">Home</a></li>
       <li class="dropdown">
@@ -37,6 +38,11 @@
       <?php displayAuthticatedLink(); ?>
     </ul>
   </nav>
+  <div class="sidebar_toggler">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
 <?php

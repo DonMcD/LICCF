@@ -27,6 +27,7 @@ if (isset($_SESSION['authenticated'])) {
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
   <div class='login-container'>
     <div class='center-container'>
@@ -86,5 +87,6 @@ input.addEventListener("keypress", function(event) {
 });
 
 </script>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
