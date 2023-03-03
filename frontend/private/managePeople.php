@@ -27,41 +27,40 @@ require '../headers/topBar.php';
 
 <div class="main-container">
     <div class="side-bar">
-        <form method='POST' action='managePeople.php'>
-            <div class="side-bar-header">
+        <div class="inner-side-bar">
+            <form method='POST' action='managePeople.php'>
                 <h2>Filters</h2>
-                <button href='createUser.php'>+</button>
-            </div>
-            <div>
-            <br>
-                <input type='text' name='searchBar' placeHolder='Search'>
-                <input type='submit' name='submitSearch' value='Search'>
-            </div>
-            <div>
-                <h3>Gender</h3>
-                <select name='gender' id='gender'>
-                    <option value='All'>All</option>
-                    <option value='Male'>Male</option>
-                    <option value='Female'>Female</option>
-                    <option value='Other'>Other</option>
-                </select>
-            </div>
-            <div>
-                <h3>Type</h3>
                 <div>
-                    <label>Member: </label>
-                    <input type='checkbox' name='member' value='member' checked>
+                    <br>
+                        <input type='text' name='searchBar' placeHolder='Search'>
+                        <input type='submit' name='submitSearch' value='Search'>
+                    </div>
+                    <div>
+                        <h3>Gender</h3>
+                        <select name='gender' id='gender'>
+                            <option value='All'>All</option>
+                            <option value='Male'>Male</option>
+                            <option value='Female'>Female</option>
+                            <option value='Other'>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h3>Type</h3>
+                        <div>
+                            <label>Member: </label>
+                            <input type='checkbox' name='member' value='member' checked>
+                        </div>
+                        <div>
+                            <label>Admin: </label>
+                            <input type='checkbox' name='administrator' value='administrator' checked>
+                        </div>
+                        <div>
+                            <label>Volunteer: </label>
+                            <input type='checkbox' name='volunteer' value='volunteer' checked>
+                        </div>
                 </div>
-                <div>
-                    <label>Admin: </label>
-                    <input type='checkbox' name='administrator' value='administrator' checked>
-                </div>
-                <div>
-                    <label>Volunteer: </label>
-                    <input type='checkbox' name='volunteer' value='volunteer' checked>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 <div>
         <?php

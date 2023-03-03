@@ -27,37 +27,37 @@ require '../headers/topBar.php';
 
 <div class="main-container">
     <div class="side-bar">
-        <form method='POST' action='home.php'>
-            <div class="side-bar-header">
+        <div class="inner-side-bar">
+            <form method='POST' action='home.php'>
                 <h2>Filters</h2>
-            </div>
-            <div>
-            <br>
-                <input type='text' name='searchBar' placeHolder='Search'>
-                <input type='submit' name='submitSearch' value='Search'>
-            </div>
-            <br>
-            <div>
-                <label>Minimum ($)</label>
-                <input type='text' name='min' value='1'/>
-                <label>Maximum ($)</label>
-                <input type='text' name='max' value='5000'/>
-            </div>
-            <br>
-            <div>
-                <select name="year">
-                    <?php
-                    //Dynamically adjusts the dropdown for the current year
-                    $currentYear = date('Y');
-                    echo "<option value=''>Year</option>";
-                    for ($i = $currentYear; $i >= $currentYear - 10; $i--) {
-                        echo '<option value="' . $i . '">' . $i . '</option>';
-                    }
-                    ?>
-                </select>
+                <div>
+                <br>
+                    <input type='text' name='searchBar' placeHolder='Search'>
+                    <input type='submit' name='submitSearch' value='Search'>
+                </div>
+                <br>
+                <div>
+                    <label>Minimum ($)</label>
+                    <input type='text' name='min' value='1'/>
+                    <label>Maximum ($)</label>
+                    <input type='text' name='max' value='5000'/>
+                </div>
+                <br>
+                <div>
+                    <select name="year">
+                        <?php
+                        //Dynamically adjusts the dropdown for the current year
+                        $currentYear = date('Y');
+                        echo "<option value=''>Year</option>";
+                        for ($i = $currentYear; $i >= $currentYear - 10; $i--) {
+                            echo '<option value="' . $i . '">' . $i . '</option>';
+                        }
+                        ?>
+                    </select>
 
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>
 </div>
     <div>
         <?php
