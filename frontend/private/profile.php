@@ -1,6 +1,4 @@
-<?php
-require '../../backend/authenticatePage.php'
-?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
@@ -15,6 +13,7 @@ require '../../backend/authenticatePage.php'
 </head>
 <body class="backgrounds">
 <?php
+session_start();
 require '../headers/header.php';
 if($_SESSION['type'] == 0){
     require '../headers/topBar.php';
@@ -213,6 +212,29 @@ require_once '../../backend/getProfileData.php';
                         <td><h3>Interests</h3></td>
                         <td><input type="text" name="interest" id="interest" value='<?php echo $interest ?>'/></td>
                     </tr>
+                    <tr>
+                        <td><h3>Role</h3></td>
+                        <td>
+                            <select name="type-drop" id="type-drop">
+                                <?php if($_SESSION['type'] == 0): ?>
+                                    <option value="0" id="admin"<?php if ($type == 0) echo ' selected'; ?>>Admin</option>
+                                <?php endif; ?>
+                                <option value="1" id="member"<?php if ($type == 1) echo ' selected'; ?>>Member</option>
+                                <option value="2" id="volunteer"<?php if ($type == 2) echo ' selected'; ?>>Volunteer</option>
+                            </select>
+                            <input type="hidden" name="type" id="type" value="">
+                            <script>
+                                const dropdown = document.getElementById('type-drop');
+                                const attendance = document.getElementById('type');
+                                attendance.value = dropdown.value;
+
+                                dropdown.addEventListener("change", () => {
+                                    attendance.value = dropdown.value;
+                                });
+                            </script>
+                        </td>
+                    </tr>
+
                     <tr>
                         <td><h2>Login Credentials</h2></td>
                     </tr>
