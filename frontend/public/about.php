@@ -56,7 +56,7 @@ require '../headers/header.php';
 ?>
 
 <div class="wrapper">
-    <img src="../../assets/banner6.gif" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
+    <img src="../../assets/crossSignForCommunityPage.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
     <div class="centered">About us</div>
     </div>
     <div class="shadow-box">
