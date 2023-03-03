@@ -36,7 +36,8 @@ Issue Tax Reciepts
 #Donavon
 CSS for Manage People, Family, Donations
 Authenticate admins for dashboard
-
+Add Member button
+Add Donation button
 
 
 

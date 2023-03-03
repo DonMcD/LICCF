@@ -81,7 +81,7 @@ In our inclusive church, you will find a diverse community of people from all wa
 Whether you are a lifelong Christian, new to the faith, or exploring spirituality for the first time, you are welcome in our inclusive church. We invite you to come and see for yourself what makes our community so special and to join us on our journey of faith and service.
 </p>
     </div>
-<?php include_once('..\..\frontend\footers\footer.php'); ?>
+<?php include_once('../footers/footer.php'); ?>
 
 
 <script src="../../js/sidebar.js"></script>

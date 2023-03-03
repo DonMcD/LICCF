@@ -23,7 +23,11 @@ require './sidebar.php';
 ?>
 <!--This code create the Image and the text in the page-->
     <div class="gif-container">
-        <img class="gif" src="../../assets/banner1.gif">
+        <video autoplay muted loop>
+            <source class="gif" src="../../assets/banner1.mp4" type="video/mp4">
+            <source src="banner1.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video> 
         <div class="text"><span class="letter-highlight">L</span>ethbridge <span class="letter-highlight">I</span>nclusive <br><span class="letter-highlight">C</span>atholic <span class="letter-highlight">C</span>ommunity <span class="letter-highlight">F</span>ellowship</div>
     </div><br><br>
 

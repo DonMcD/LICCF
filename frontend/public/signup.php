@@ -85,7 +85,7 @@ require '../headers/header.php';
           <label for="home_number">Home Number</label>
         </div>
         <div class="signup-form-input">
-          <input type="tel" name="home_number" id="home_number" placeholder="Enter your home number">
+          <input type="tel" name="home_number" id="home_number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Enter your home number">
         </div>
       </div>
       <div class="signup-form-row">
@@ -93,7 +93,7 @@ require '../headers/header.php';
           <label for="cell_number">Cell Number</label>
         </div>
         <div class="signup-form-input">
-          <input type="tel" name="cell_number" id="cell_number" placeholder="Enter your cell number">
+          <input type="tel" name="cell_number" id="cell_number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Enter your cell number">
         </div>
       </div>
       <div class="signup-form-row">
@@ -101,7 +101,7 @@ require '../headers/header.php';
           <label for="work_number">Work Number</label>
         </div>
         <div class="signup-form-input">
-          <input type="tel" name="work_number" id="work_number" placeholder="Enter your work number">
+          <input type="tel" name="work_number" id="work_number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Enter your work number">
         </div>
       </div>
     </div>
