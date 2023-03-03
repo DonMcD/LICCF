@@ -12,7 +12,8 @@ session_start();
                 left: 50%;
                 transform: translate(-50%, -50%);
                 font-size: 60px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
+                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                color: white;    
 }
         .txt {
                 width: 300px;
