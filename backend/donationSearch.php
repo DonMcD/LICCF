@@ -45,7 +45,9 @@ $query = "SELECT d.amount, d.date, d.type, d.env_number, d.transfer_email, d.did
 FROM donations d
 LEFT JOIN members m
 ON d.mid = m.pid
-$whereClause";
+$whereClause
+ORDER BY d.date DESC";
+
 
 $result = mysqli_query($conn, $query);
 // Create an HTML table to display the data
