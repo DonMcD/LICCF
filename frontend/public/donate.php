@@ -21,10 +21,14 @@ require '../headers/header.php';
 require './sidebar.php';
 ?>
  <main>
-    <div class="gif-container">
-          <img class="gif" src="../../assets/banner7.gif">
-          <div class="text">Donate</div>
-      </div>
+ <div class="gif-container">
+    <video autoplay muted loop>
+        <source class="gif" src="../../assets/banner1.mp4" type="video/mp4">
+        <source src="banner1.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video> 
+    <div class="text">Donate</div>
+</div><br><br>
         
         <section class="donate-content">
         <div class="donate-top">

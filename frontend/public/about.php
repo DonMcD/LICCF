@@ -55,14 +55,15 @@ require '../headers/header.php';
 require './sidebar.php';
 ?>
 <div class="gif-container">
-        <img class="gif" src="../../assets/banner2.gif">
-        <div class="text">About us</div>
-    </div>
+    <video autoplay muted loop>
+        <source class="gif" src="../../assets/banner2.mp4" type="video/mp4">
+        <source src="banner2.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video> 
+    <div class="text">About Us</div>
+</div><br><br>
 
 <div class="wrapper">
-    <img src="../../assets/crossSignForCommunityPage.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
-    <div class="centered">About us</div>
-    </div>
     <div class="shadow-box">
     <h1>LICCF</h1>
     </div>
