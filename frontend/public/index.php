@@ -22,11 +22,9 @@ session_start();
 require '../headers/header.php';
 ?>
 <!--This code create the Image and the text in the page-->
-    <div id="container">
-        <img class="banner-gif" src="../../assets/banner1.gif" alt="">
-        <div id="text">
-            Lethbridge Inclusive Catholic Community Fellowship
-        </div>
+    <div class="gif-container">
+        <img class="gif" src="../../assets/banner1.gif">
+        <div class="text">Lethbridge Inclusive Catholic Community Fellowship</div>
     </div><br><br>
 
     <h1 id="page-title"><u> NEXT EVENTS </u></h1><BR></BR>
