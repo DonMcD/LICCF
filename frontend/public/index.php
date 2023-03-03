@@ -7,9 +7,8 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+    <title>LICCF Home</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -20,14 +19,12 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
 <!--This code create the Image and the text in the page-->
-    <div id="container">
-        <img src="" alt="">
-        <div id="text">
-            Welcome to LICCF <br>
-            Lethbridge Inclusive Catholic Community Felloship
-        </div>
+    <div class="gif-container">
+        <img class="gif" src="../../assets/banner1.gif">
+        <div class="text"><span class="letter-highlight">L</span>ethbridge <span class="letter-highlight">I</span>nclusive <br><span class="letter-highlight">C</span>atholic <span class="letter-highlight">C</span>ommunity <span class="letter-highlight">F</span>ellowship</div>
     </div><br><br>
 
     <h1 id="page-title"><u> NEXT EVENTS </u></h1><BR></BR>
@@ -50,7 +47,7 @@ require '../headers/header.php';
 
     <h1 id="calendar-title">Calendar</h1>
     <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe><br>
-   
-        <?php include_once('..\..\frontend\footers\footer.php'); ?>
+    <?php include_once('..\..\frontend\footers\footer.php'); ?>
+    <script src="../../js/sidebar.js"></script>
 </body>
 </html>

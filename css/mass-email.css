@@ -1,0 +1,32 @@
+input[type="text"] {
+    display: flex;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="button"] {
+    display: flex;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgb(63, 158, 63);
+}
+
+input[type="button"]:active {
+    background-color: rgb(255, 255, 255);
+    color: white;
+}

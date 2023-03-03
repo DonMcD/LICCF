@@ -1,12 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../public/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 <!DOCTYPE html>
 <head>
@@ -23,7 +16,6 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require '../headers/topBar.php';
 require '../../backend/dashboardFunctions.php';
 $totalMembers = countMembers();
 $totalFamilies = countFamily();
@@ -31,8 +23,8 @@ $totalDonations = sumDonations();
 $latestMember = getLatestMember();
 $latestMembers = getLatestMembers();
 ?>
-
 <div class="dashboard-main-container">
+    <?php require '../headers/topBar.php'; ?>
     <div class='stats-row-container'>
         <div class='stats-container'>
             <h2>Total Members</h2>

@@ -44,7 +44,6 @@ session_start();
     <meta name= "author" content= "VARchitects">
     <title>About us</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -53,7 +52,12 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
+<div class="gif-container">
+        <img class="gif" src="../../assets/banner2.gif">
+        <div class="text">About us</div>
+    </div>
 
 <div class="wrapper">
     <img src="../../assets/crossSignForCommunityPage.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
@@ -80,5 +84,6 @@ Whether you are a lifelong Christian, new to the faith, or exploring spiritualit
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 
 
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

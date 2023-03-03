@@ -8,6 +8,7 @@
     --light-row: #dfe9df;
     --table-header: #3e702d;
     --table-border: #751313;
+    --highlight: #4fa547;
 }
 
 * {
@@ -35,20 +36,22 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 50px;
+    height: 70px;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    margin-bottom: 25px;
 }
 
 header h2 {
-    margin-left: 2%;
+    margin-left: 25px;
     font-size: 35px;
+    color: #000000;
+    font-family: 'Lusitana', serif;
 }
   
 header a {
     text-decoration: none;
-    color: black;
+    color: var(--dark);
+    font-family: 'Lusitana', serif;
 }
 
 nav {
@@ -58,6 +61,7 @@ nav {
 
 nav a{
     font-size: 23px;
+    height: 50px;
 }
 
 nav ul {
@@ -84,8 +88,8 @@ nav .dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     width: 100%;
@@ -94,11 +98,11 @@ nav .dropdown-content {
 }
 
 nav .dropdown-content li {
-    border: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
     margin-bottom: 4px;
+    background-color: white;
 }
 
 nav .dropdown-content li:hover{
@@ -107,6 +111,123 @@ nav .dropdown-content li:hover{
 
 nav .dropdown:hover .dropdown-content {
     display: inline-block;
+}
+
+.dropdown{
+    padding: 20px;
+}
+
+/*Styles for the hambuger menu */
+/*--====== Global Variables ======--*/
+:root {
+    --bg-color: #13131f;
+    --bg-color-2: #161623;
+    --text-color: #a9afc3;
+  }
+  /*--====== Sidebar ======--*/
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    max-width: 300px;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--dark);
+    box-shadow: 0 10px 20px -4px #000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, visibility 0.2s ease, transform 0.3s ease;
+    color: white;
+  }
+  /* when the sidebar has 'show' class */
+  #sidebar.show {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .sidebar_content {
+    padding: 2.8rem 0;
+    pointer-events: none;
+    /* so that the Sidebar does not get closed while clicking on sidebar_content */
+  }
+  .sidebar_content a {
+    pointer-events: all;
+    color: white;
+    text-decoration: none;
+    /* so that all the a inside sidebar_content are clickable */
+  }
+  .sidebar_body {
+    border-top: 1px dashed var(--text-color);
+    border-bottom: 1px dashed var(--text-color);
+  }
+  .side_navlinks ul {
+    display: grid;
+    gap: 2rem;
+  }
+  .side_navlinks li a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+  }
+  .side_navlinks a:hover {
+    opacity: 1;
+  }
+/* Styles for the hambuger button */
+/*---- Sidebar-Toggler ----*/
+.sidebar_toggler {
+  visibility: hidden;
+  margin-right: 20px;
+  top: 4vh;
+  right: 3vw;
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  overflow: hidden;
+}
+.sidebar_toggler span {
+  background-color: var(--dark);
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  /* so that it doesn't overlap the sidebar_toggler */
+}
+/* if the sidebar has 'show' class then their adjacent-sibling (i.e., sidebar_toggler) will... */
+#sidebar.show + .sidebar_toggler {
+  justify-content: center;
+}
+#sidebar.show + .sidebar_toggler span {
+  margin-top: -1.2px;
+  margin-bottom: -1.2px;
+}
+#sidebar.show + .sidebar_toggler span:first-child {
+  transform: rotate(45deg);
+}
+#sidebar.show + .sidebar_toggler span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+#sidebar.show + .sidebar_toggler span:last-child {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 1300px) {
+    .sidebar_toggler {
+        visibility: visible;
+    }
+    .nav-head {
+        visibility: hidden;
+    }
 }
 
 /*Styles for the login screen container*/
@@ -127,13 +248,12 @@ nav .dropdown:hover .dropdown-content {
     background-color: rgb(255, 255, 255);
 }
 .top-bar{
-    width: 96%;
+    width: 100%;
     margin: auto;
     padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: transparent;
     justify-content: space-evenly;
     margin-bottom: 5px;
     margin-top: 1px;
@@ -141,15 +261,28 @@ nav .dropdown:hover .dropdown-content {
 .top-bar div {
     display: flex;
     width: 100%;
-    background-color: var(--accent);
+    height: auto;
+    justify-content: center;
+    background-color: transparent;
     align-items: center;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 25px;
+    box-sizing: border-box;
+    border-radius: 30px;
     padding: 10px;
+    flex-wrap: nowrap;
 }
+@media screen and (max-width: 1200px) {
+    .top-bar p {
+      font-size: 14px; /* Reduce font size when screen width is smaller than 600px */
+    }
+    .top-bar .reciepts {
+        display: none;
+    }
+    .top-bar img {
+      display: none; /* Hide the image when font size is smaller than 14px */
+    }
+  }
 .top-bar div:hover{
-    background-color: var(--hover-green);
+    color: var(--hover-green);
 }
 .top-bar a {
     display: flex;
@@ -161,6 +294,9 @@ nav .dropdown:hover .dropdown-content {
     padding-right: 7px;
     align-items: center;
 }
+.top-bar h3 {
+    
+}
 .main-container{
     display: flex;
     flex-direction: row;
@@ -169,17 +305,17 @@ nav .dropdown:hover .dropdown-content {
 
 /*The side bar is the filters tab on the left side of the page*/
 .side-bar{
-    width: 10%;
+    width: 13%;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: var(--accent);
     position: fixed;
     padding-bottom: 20px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+}
+.inner-side-bar{
+    width: 95%;
+    margin: 0 auto;
 }
 .side-bar-header {
     display: flex;
@@ -191,17 +327,26 @@ nav .dropdown:hover .dropdown-content {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
+.side-bar input[type="text"], .side-bar select, .side-bar input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 /*Used for the box where the table displays all the data from the database for members, family, donation*/
 .results {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 13%;
     background-color: rgb(184, 207, 218);
 }
 td {
     text-align: center;
+    box-sizing: border-box;
 }
 /*These are the table rows that display the db records*/
 .dark-row{
@@ -211,7 +356,7 @@ td {
     background-color: var(--light-row);
 }
 .light-row, .dark-row {
-    height: 35px;
+    height: 45px;
 }
 /*Table CSS for the db results */
 thead {
@@ -219,10 +364,12 @@ thead {
     top: 0;
     background-color: var(--table-header);
     height: 30px;
+    box-sizing: border-box;
 }
 table{
     border: none;
     border-collapse: collapse;
+    box-sizing: border-box;
 }
 #results-table tr:hover {
     border: 2px solid black;
@@ -385,7 +532,7 @@ input:focus ~ .input-border {
 }
 
 .login-container {
-    background: url('../../assets/train-bridge.jpg') no-repeat center center fixed;
+    background: url('../assets/train-bridge.jpg') no-repeat center center fixed;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -512,4 +659,57 @@ input:focus ~ .input-border {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+/*Used for mass emails*/
+
+.mass-email-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/*Banner Gifs*/
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.gif {
+    border-top: 6px solid var(--dark);
+    border-bottom: 6px solid var(--dark);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lusitana', serif;
+    font-size: 60px;
+}
+
+.letter-highlight{
+    color: var(--highlight);
+}
+
+@media only screen and (max-width: 900px) {
+    .text {
+        font-size: 35px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text {
+        font-size: 20px;
+    }
 }

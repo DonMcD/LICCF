@@ -1,8 +1,8 @@
 #Barbara
 Eucharist
-Litergies
-Sacraments
-Donate
+Litergies Done
+Sacraments Done
+Donate Done
 
 #Renalyn
 Special Services and Blessings
@@ -27,20 +27,15 @@ First Nations Allyship
 Javascript for Filters Bar (home.php)
 
 #Yousuf
-Manage People functionality (Add edit, delete and cancel buttons)
-Manage Families functionality
-Manage Donations functionality
-View Attendance 
+Manage Attendance 
 Modify Zoom Link
 Modify Calendar
+Issue Tax Reciepts
 
 
 #Donavon
 CSS for Manage People, Family, Donations
-Issue Tax Reciepts
-Send Mass Email
-Profile Screen (for user and admin)
-Add Password Hashing functionality
+Authenticate admins for dashboard
 
 
 

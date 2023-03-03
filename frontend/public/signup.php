@@ -148,6 +148,17 @@ require '../headers/header.php';
             <input type='text' name='interest' placeholder="Enter your interests">
         </div>
       </div>
+      <div class="signup-form-row">
+        <div>
+          <label>Role</label>
+          <select name='type' id='type' required>
+            <option value=''>Select Role</option>
+              <option value='1'>Member</option>
+              <option value='2'>Volunteer</option>
+          </select>
+      </div>
+      </div>
+    </div>
       <h2>Login Credentials</h2>
         <div>
             <label>Username</label>

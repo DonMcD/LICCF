@@ -1,13 +1,3 @@
-<?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
-?>
 
 <!DOCTYPE html>
 <head>
@@ -23,6 +13,7 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 </head>
 <body class="backgrounds">
 <?php
+session_start();
 require '../headers/header.php';
 if($_SESSION['type'] == 0){
     require '../headers/topBar.php';
@@ -222,6 +213,29 @@ require_once '../../backend/getProfileData.php';
                         <td><input type="text" name="interest" id="interest" value='<?php echo $interest ?>'/></td>
                     </tr>
                     <tr>
+                        <td><h3>Role</h3></td>
+                        <td>
+                            <select name="type-drop" id="type-drop">
+                                <?php if($_SESSION['type'] == 0): ?>
+                                    <option value="0" id="admin"<?php if ($type == 0) echo ' selected'; ?>>Admin</option>
+                                <?php endif; ?>
+                                <option value="1" id="member"<?php if ($type == 1) echo ' selected'; ?>>Member</option>
+                                <option value="2" id="volunteer"<?php if ($type == 2) echo ' selected'; ?>>Volunteer</option>
+                            </select>
+                            <input type="hidden" name="type" id="type" value="">
+                            <script>
+                                const dropdown = document.getElementById('type-drop');
+                                const attendance = document.getElementById('type');
+                                attendance.value = dropdown.value;
+
+                                dropdown.addEventListener("change", () => {
+                                    attendance.value = dropdown.value;
+                                });
+                            </script>
+                        </td>
+                    </tr>
+
+                    <tr>
                         <td><h2>Login Credentials</h2></td>
                     </tr>
                     <tr>
@@ -242,31 +256,31 @@ require_once '../../backend/getProfileData.php';
     </div>
 </div>
 <script>
-  // Get the delete button
-  const deleteButton = document.getElementById("deleteButton");
+// Get the delete button
+const deleteButton = document.getElementById("deleteButton");
 
-  // Add a click event listener to the delete button
-  deleteButton.addEventListener("click", () => {
-    // Display a confirmation popup
-    const confirmed = confirm("Are you sure you want to delete this profile?");
+// Add a click event listener to the delete button
+deleteButton.addEventListener("click", () => {
+  // Display a confirmation popup
+  const confirmed = confirm("Are you sure you want to delete this profile?");
 
-    // If the user confirmed the deletion, redirect to delete.php with the PID field POSTed
-    if (confirmed) {
-      const pid = document.getElementById("pid").value;
-      const form = document.createElement("form");
-      form.setAttribute("method", "POST");
-      form.setAttribute("action", "../../backend/deleteProfile.php");
+  // If the user confirmed the deletion, redirect to delete.php with the PID field POSTed
+  if (confirmed) {
+    const pid = document.getElementById("pid").value;
+    const form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", "../../backend/deleteProfile.php");
 
-      const pidInput = document.createElement("input");
-      pidInput.setAttribute("type", "hidden");
-      pidInput.setAttribute("name", "pid");
-      pidInput.setAttribute("value", pid);
+    const pidInput = document.createElement("input");
+    pidInput.setAttribute("type", "hidden");
+    pidInput.setAttribute("name", "pid");
+    pidInput.setAttribute("value", pid);
 
-      form.appendChild(pidInput);
-      document.body.appendChild(form);
-      form.submit();
-    }
-  });
+    form.appendChild(pidInput);
+    document.body.appendChild(form);
+    form.submit();
+  }
+});
 
 
   //Used for AJAX
