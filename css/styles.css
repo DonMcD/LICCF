@@ -59,6 +59,7 @@ nav {
 
 nav a{
     font-size: 23px;
+    height: 50px;
 }
 
 nav ul {
@@ -85,8 +86,8 @@ nav .dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
     width: 100%;
@@ -95,11 +96,11 @@ nav .dropdown-content {
 }
 
 nav .dropdown-content li {
-    border: 1px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 5px;
     margin-bottom: 4px;
+    background-color: white;
 }
 
 nav .dropdown-content li:hover{
@@ -108,6 +109,10 @@ nav .dropdown-content li:hover{
 
 nav .dropdown:hover .dropdown-content {
     display: inline-block;
+}
+
+.dropdown{
+    padding: 20px;
 }
 
 /*Styles for the login screen container*/
