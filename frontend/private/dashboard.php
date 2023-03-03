@@ -16,7 +16,6 @@ require '../../backend/authenticatePage.php'
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require '../headers/topBar.php';
 require '../../backend/dashboardFunctions.php';
 $totalMembers = countMembers();
 $totalFamilies = countFamily();
@@ -24,8 +23,8 @@ $totalDonations = sumDonations();
 $latestMember = getLatestMember();
 $latestMembers = getLatestMembers();
 ?>
-
 <div class="dashboard-main-container">
+    <?php require '../headers/topBar.php'; ?>
     <div class='stats-row-container'>
         <div class='stats-container'>
             <h2>Total Members</h2>

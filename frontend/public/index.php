@@ -24,7 +24,7 @@ require '../headers/header.php';
 <!--This code create the Image and the text in the page-->
     <div class="gif-container">
         <img class="gif" src="../../assets/banner1.gif">
-        <div class="text">Lethbridge Inclusive Catholic Community Fellowship</div>
+        <div class="text"><span class="letter-highlight">L</span>ethbridge <span class="letter-highlight">I</span>nclusive <br><span class="letter-highlight">C</span>atholic <span class="letter-highlight">C</span>ommunity <span class="letter-highlight">F</span>ellowship</div>
     </div><br><br>
 
     <h1 id="page-title"><u> NEXT EVENTS </u></h1><BR></BR>

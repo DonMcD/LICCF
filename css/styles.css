@@ -8,6 +8,7 @@
     --light-row: #dfe9df;
     --table-header: #3e702d;
     --table-border: #751313;
+    --highlight: #4fa547;
 }
 
 * {
@@ -579,7 +580,10 @@ input:focus ~ .input-border {
     text-align: center;
     color: white;
     font-weight: bold;
-    text-shadow: 2px 2px black;
     font-family: 'Lusitana', serif;
-    font-size: 40px;
+    font-size: 60px;
+}
+
+.letter-highlight{
+    color: var(--highlight);
 }
