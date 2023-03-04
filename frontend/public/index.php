@@ -19,7 +19,6 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require './sidebar.php';
 ?>
 <!--This code create the Image and the text in the page-->
     <div class="gif-container">

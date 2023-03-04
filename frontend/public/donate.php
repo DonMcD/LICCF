@@ -18,7 +18,6 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require './sidebar.php';
 ?>
  <div class="gif-container">
     <video autoplay muted loop class="gif">

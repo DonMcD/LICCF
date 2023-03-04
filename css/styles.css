@@ -203,15 +203,12 @@ nav .dropdown:hover .dropdown-content {
   transition: all 0.3s ease;
   pointer-events: none;
   border-radius: 6px;
-  background-color: white;
-  border: 2px solid var(--dark);
+  background-color: var(--dark);
   /* so that it doesn't overlap the sidebar_toggler */
 }
 /* if the sidebar has 'show' class then their adjacent-sibling (i.e., sidebar_toggler) will... */
 #sidebar.show + .sidebar_toggler {
   justify-content: center;
-
-
 }
 #sidebar.show + .sidebar_toggler span {
   margin-top: -1.2px;
@@ -219,13 +216,16 @@ nav .dropdown:hover .dropdown-content {
 }
 #sidebar.show + .sidebar_toggler span:first-child {
   transform: rotate(45deg);
+  background-color: white;
 }
 #sidebar.show + .sidebar_toggler span:nth-child(2) {
   opacity: 0;
   transform: translateX(-100%);
+  background-color: white;
 }
 #sidebar.show + .sidebar_toggler span:last-child {
   transform: rotate(-45deg);
+  background-color: white;
 }
 
 @media only screen and (max-width: 1000px) {

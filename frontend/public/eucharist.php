@@ -17,12 +17,11 @@ session_start();
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
-require './sidebar.php';
 ?>
 <div class="gif-container">
     <video autoplay muted loop class="gif">
-        <source src="../../assets/banner2.mp4" type="video/mp4">
-        <source src="banner2.ogg" type="video/ogg">
+        <source src="../../assets/banner3.mp4" type="video/mp4">
+        <source src="banner3.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video> 
     <div class="text">Eucharist</div>
