@@ -21,8 +21,8 @@ require '../headers/header.php';
 ?>
  <div class="gif-container">
     <video autoplay muted loop class="gif">
-        <source src="../../assets/banner2.mp4" type="video/mp4">
-        <source src="banner2.ogg" type="video/ogg">
+        <source src="../../assets/banner6.mp4" type="video/mp4">
+        <source src="banner6.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video> 
     <div class="text">Donate</div>
