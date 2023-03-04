@@ -20,9 +20,9 @@ require '../headers/header.php';
 require './sidebar.php';
 ?>
 <div class="gif-container">
-    <video autoplay muted loop>
-        <source class="gif" src="../../assets/banner1.mp4" type="video/mp4">
-        <source src="banner1.ogg" type="video/ogg">
+    <video autoplay muted loop class="gif">
+        <source src="../../assets/banner2.mp4" type="video/mp4">
+        <source src="banner2.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video> 
     <div class="text">Contact</div>

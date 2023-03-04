@@ -23,8 +23,8 @@ require './sidebar.php';
 ?>
 <!--This code create the Image and the text in the page-->
     <div class="gif-container">
-        <video autoplay muted loop>
-            <source class="gif" src="../../assets/banner1.mp4" type="video/mp4">
+        <video autoplay muted loop class="gif">
+            <source src="../../assets/banner1.mp4" type="video/mp4">
             <source src="banner1.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
