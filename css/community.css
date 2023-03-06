@@ -14,19 +14,4 @@
   background-color: #C9DCA9;
   border-radius: 10px;
 }
-#mass-times {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#mass-times img {
-  max-width: 150px;
-  margin-right: 1em;
-}
-#mass-times h2 {
-  margin: 0;
-}
-#mass-times p {
-  margin: 0;
-}
   

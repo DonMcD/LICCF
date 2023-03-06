@@ -724,7 +724,7 @@ input:focus ~ .input-border {
     }
 }
 
-
+/*Styles for the footer*/
 footer {
     background-color: #C9DCA9;
     padding: 2em;
@@ -732,4 +732,19 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+#mass-times {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  #mass-times img {
+    max-width: 150px;
+    margin-right: 1em;
+}
+  #mass-times h2 {
+    margin: 0;
+}
+  #mass-times p {
+    margin: 0;
 }
