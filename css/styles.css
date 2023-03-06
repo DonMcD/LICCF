@@ -55,7 +55,7 @@ header a {
 }
 
 header a:hover {
-    color: var(--hover-green);
+    color: #182c11;
 }
 
 nav {
