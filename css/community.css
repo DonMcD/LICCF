@@ -14,15 +14,6 @@
   background-color: #C9DCA9;
   border-radius: 10px;
 }
-
-footer {
-  background-color: #C9DCA9;
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
 #mass-times {
   display: flex;
   align-items: center;

@@ -39,6 +39,7 @@ header {
     height: 70px;
     align-items: center;
     background-color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 header h2 {
@@ -306,6 +307,7 @@ nav .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: row;
     width: 100%;
+    overflow: hidden;
 }
 
 /*The side bar is the filters tab on the left side of the page*/
@@ -720,4 +722,14 @@ input:focus ~ .input-border {
     .text {
         font-size: 20px;
     }
+}
+
+
+footer {
+    background-color: #C9DCA9;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
