@@ -84,7 +84,6 @@ require '../headers/header.php';
 
     <img src="../../assets/churchstainglass.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
     <div class="centered">Who We Are</div>
-
 <div class="container">
     <div class="img-OP">
         <img src="../../assets/ourPriestimg.png" alt="Our Priest img " class="center">
