@@ -131,11 +131,11 @@ require_once '../../backend/getDonationData.php';
                     </tr>
                     <tr>
                         <td><h3>First Name</h3></td>
-                        <td><input type="text" name="first_name" id="first_name" value='<?php echo $fName ?>'/></td>
+                        <td><h4><?php echo $fName ?></h4></td>
                     </tr>
                     <tr>
                         <td><h3>Last Name</h3></td>
-                        <td><input type="text" name="last_name" id="last_name" value='<?php echo $lName ?>'/></td>
+                        <td><h4><?php echo $lName ?></h4></td>
                     </tr>
                     <tr>
                         <td><h3>Amount</h3></td>

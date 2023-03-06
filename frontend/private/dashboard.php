@@ -20,8 +20,7 @@ require '../../backend/dashboardFunctions.php';
 $totalMembers = countMembers();
 $totalInPerson =  getAttendanceInPerson();
 $totalOnline =  getAttendanceOnline();
-$totalDonations = sumDonations();
-$latestMember = getLatestMember();
+$monthMembers = MembersJoinedInTheLastMonth();
 $latestMembers = getLatestMembers();
 ?>
 <div class="dashboard-main-container">
@@ -39,8 +38,8 @@ $latestMembers = getLatestMembers();
             
         </div>
         <div class='stats-container'>
-        <h2>Total Donations</h2>
-            <?php echo "$"."{$totalDonations}"?>
+        <h2>Growth This Month</h2>
+            <?php echo "{$monthMembers} People"?>
         </div>
     </div>
     <div class='latest-members-main-container'>
