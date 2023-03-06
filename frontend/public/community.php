@@ -29,7 +29,7 @@ require '../headers/header.php';
     <div class="text">Community</div>
 </div><br><br>
    
-        <?php include_once('..\..\frontend\footers\footer.php'); ?>
+<?php include_once('..\..\frontend\footers\footer.php'); ?>
         <script src="../../js/sidebar.js"></script>
 </body>
 </html>

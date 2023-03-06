@@ -64,7 +64,7 @@ require '../headers/topBar.php';
         ?>
     </div>
 </div>
-
+<script src="../../js/sidebar.js"></script>
 <!--USED FOR AJAX CALL TO SEARCH.PHP - DO NOT TOUCH -->
 <script>
 $(document).ready(function() {
@@ -109,6 +109,7 @@ function submitForm(did) {
   form.submit();
 }
 </script>
-
+</body>
+</html>
 
 

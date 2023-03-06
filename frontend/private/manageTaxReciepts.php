@@ -19,6 +19,6 @@ require '../../backend/authenticatePage.php'
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
-
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

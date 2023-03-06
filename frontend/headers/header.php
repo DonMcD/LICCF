@@ -39,7 +39,7 @@
     </ul>
   </nav>
   <?php
-    //require './sidebar.php';
+    require '../../frontend/public/sidebar.php';
 ?>
   <div class="sidebar_toggler">
     <span></span>

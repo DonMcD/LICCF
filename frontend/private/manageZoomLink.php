@@ -29,5 +29,6 @@ require '../headers/topBar.php';
         <input type='submit' name='submit' value='Submit'>
     </div>
 </form>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

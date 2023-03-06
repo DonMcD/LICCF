@@ -126,5 +126,6 @@ require '../headers/topBar.php';
         </div>
     </div>
 </form>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
