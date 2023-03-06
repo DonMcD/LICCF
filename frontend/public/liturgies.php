@@ -26,7 +26,7 @@ require '../headers/header.php';
             <source src="banner7.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text">Litergies</div>
+        <div class="text">Liturgies</div>
     </div><br><br>
 <section class="donate-content">
   <div class="donate-top">
