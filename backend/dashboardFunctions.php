@@ -213,7 +213,66 @@ function MembersJoinedInTheLastMonth() {
     // Return the number of members who joined in the last month
     return $num_members;
 }
+
+function getAttendanceInPerson() {
+    require 'serverDetails.php';
+    // Connect to your database, for example:
+    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
   
+    // Build the SQL query to count the members who joined in the last month
+    $sql = "SELECT in_person 
+    FROM attendance 
+    ORDER BY date DESC";
+  
+    // Execute the query and get the result
+    $result = mysqli_query($conn, $sql);
+  
+    // Check if the query was successful
+    if (!$result) {
+      die('Error: ' . mysqli_error($conn));
+    }
+  
+    // Get the number of members who joined in the last month from the result
+    $row = mysqli_fetch_assoc($result);
+    
+    $num_inperson = $row['in_person'];
+  
+    // Close the database connection
+    mysqli_close($conn);
+  
+    // Return the number of members who joined in the last month
+    return $num_inperson;
+}
+
+function getAttendanceOnline() {
+    require 'serverDetails.php';
+    // Connect to your database, for example:
+    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+  
+    // Build the SQL query to count the members who joined in the last month
+    $sql = "SELECT online 
+    FROM attendance 
+    ORDER BY date DESC";
+  
+    // Execute the query and get the result
+    $result = mysqli_query($conn, $sql);
+  
+    // Check if the query was successful
+    if (!$result) {
+      die('Error: ' . mysqli_error($conn));
+    }
+  
+    // Get the number of members who joined in the last month from the result
+    $row = mysqli_fetch_assoc($result);
+    
+    $num_online = $row['online'];
+  
+    // Close the database connection
+    mysqli_close($conn);
+  
+    // Return the number of members who joined in the last month
+    return $num_online;
+}
 
 
 ?>

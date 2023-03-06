@@ -262,13 +262,10 @@ nav .dropdown:hover .dropdown-content {
 .top-bar{
     width: 100%;
     margin: auto;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 5px;
-    margin-top: 1px;
 }
 .top-bar div {
     display: flex;
@@ -279,7 +276,6 @@ nav .dropdown:hover .dropdown-content {
     align-items: center;
     box-sizing: border-box;
     border-radius: 30px;
-    padding: 10px;
     flex-wrap: nowrap;
 }
 @media screen and (max-width: 1200px) {
@@ -418,6 +414,7 @@ table{
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
 }
 .stats-row-container{
     margin-top: 50px;
