@@ -30,6 +30,6 @@ require '../headers/header.php';
 </div><br><br>
    
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
-        <script src="../../js/sidebar.js"></script>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
