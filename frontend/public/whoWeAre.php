@@ -16,16 +16,33 @@ session_start();
 
 }
         .txt {
+    	        height: auto;
+	            display: block;
+	            margin: 0 auto;
                 width: 200px;
                 border: 1px solid black;
-                padding: 50px;
-                margin: 120px;
-                margin-left:200px;
                 border-radius: 30px;
                 width: 400px;
                 font-size: 25px;
                 font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                 text-align:center;   
+}
+        .img-OP{
+            max-width: 200px;
+	        height: auto;
+	        display: block;
+	        margin: 0 auto;
+
+            
+        }
+        .img-Council{
+            max-width: 100%;
+	        height: auto;
+	        display: block;
+	        margin: 0 auto;
+	        border: 2px solid #ccc;
+	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            
 }
         .div{
                 width:100%;
@@ -81,31 +98,24 @@ require '../headers/header.php';
         </video> 
         <div class="text">Who we <br>are </div>
     </div><br><br>
+
+<!--This code is to create Council image-->
+<div class="img-Council">
+        <img src="../../assets/council-img.png" alt="Council img">
+    </div>
+<br><br><br><br>
+<!--This code is to show our priest and its images-->
+
 <div class="container">
     <div class="img-OP">
-        <img src="../../assets/ourPriestimg.png" alt="Our Priest img " class="center">
+        <img src="../../assets/ourPriestimg.png" alt="Our Priest img">
     </div>
     <div class="txt">
     <h2><u><i>Teresa Hanlon</i></u><h2>
-    <img src="../../assets/ourPriestimage.png" alt="Our Priest img" style="width:300px">
-    </div>
-    <div class="img-Council">
-        <img src="../../assets/council-img.png" alt="Council img" class="center">
+    <img src="../../assets/ourPriestimage.png" alt="Our Priest img" style="height: 300px">
     </div>
 </div>
-<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
 
-<div class="div">
-            <div class="one">
-            <h3>Treaty People</h3>
-            </div>
-            <div class="two">
-            <h3>A moment for Church Renewal</h3>
-                <h3>1. Servant Leadership</h3>
-                <h3>2. Roman Catholic Women Priest Canada</h3>
-            </div>
-    </div>
-    <?php include_once('..\..\frontend\footers\footer.php'); ?>
 
 </body>
 </html>
