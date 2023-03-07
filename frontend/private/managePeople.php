@@ -22,6 +22,7 @@ require '../headers/topBar.php';
     <div class="side-bar">
         <div class="inner-side-bar">
             <form method='POST' action='managePeople.php'>
+                <input type='button' value='New' id='newMemberButton'>
                 <h2>Filters</h2>
                 <div>
                     <br>
@@ -111,6 +112,11 @@ function submitForm(pid) {
   document.body.appendChild(form);
   form.submit();
 }
+
+const newDonationButton = document.getElementById('newMemberButton');
+  newDonationButton.addEventListener('click', () => {
+    window.location.href = './addMember.php';
+  });
 
 </script>
 <script src="../../js/sidebar.js"></script>

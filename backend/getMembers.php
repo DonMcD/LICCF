@@ -17,14 +17,13 @@ $sql = "SELECT * FROM members WHERE f_name LIKE '%$searchTerm%' OR l_name LIKE '
 
 $result = mysqli_query($conn, $sql);
 
-$row = mysqli_fetch_assoc($result);
 
 // Output the results as a dropdown list
 while ($row = $result->fetch_assoc()) {
     $pid = $row['pid'];
     $fname = $row['f_name'];
     $lname = $row['l_name'];
-    echo "<option type='text' value='{$pid}'>{$fname} {$lname}</option>";
+    echo "<option value='{$pid}'>{$fname} {$lname}</option>";
 }
 
 // Close the database connection

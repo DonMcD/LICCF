@@ -22,6 +22,7 @@ require '../headers/topBar.php';
     <div class="side-bar">
         <div class="inner-side-bar">
             <form method='POST' action='home.php'>
+                <input type='button' value='New' id='newDonationButton'>
                 <h2>Filters</h2>
                 <div>
                 <br>
@@ -108,6 +109,12 @@ function submitForm(did) {
   document.body.appendChild(form);
   form.submit();
 }
+
+
+  const newDonationButton = document.getElementById('newDonationButton');
+  newDonationButton.addEventListener('click', () => {
+    window.location.href = 'addDonation.php';
+  });
 </script>
 </body>
 </html>

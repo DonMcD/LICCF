@@ -12,7 +12,7 @@ require '../../backend/authenticatePage.php'
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-
+    
 </head>
 <body class="backgrounds">
 <?php
@@ -25,7 +25,7 @@ if($_SESSION['type'] == 0){
 <div class="profile-main-container">
     <div class='profile-inner-container'>
         <div class='profile-section'>
-            <form id="profileForm" action='../../backend/updateProfile.php' method='POST'>
+            <form id="profileForm" method='POST'>
                 <table>
                     <tr>
                         <td><h2>Donation Information</h2></td>
@@ -33,7 +33,18 @@ if($_SESSION['type'] == 0){
                         <td><h3>Member</h3></td>
                         <td>
                         <input type="text" id="searchField" placeholder="Search for a member...">
-                        <select name='type-drop' id='searchResults'required></select>
+                        <select name='searchResults' id='searchResults' required><?php require '../../backend/getMembers.php'; ?></select>
+                        <input type="text" name="pid" id="pid" value='' hidden>
+                        <script>
+                            const dropdown = document.getElementById('searchResults');
+                            const pid = document.getElementById('pid');
+                            pid.value = dropdown.value;
+                            
+                            dropdown.addEventListener('change', () => {
+                                pid.value = dropdown.value;
+                            });
+                        </script>
+
                         </td>
                     <tr>
                         <td><h3>Amount</h3></td>
@@ -85,58 +96,34 @@ if($_SESSION['type'] == 0){
 </div>
 <script>
 
-  //Used for AJAX
-    $(document).ready(function() {
-  // Attach a submit handler to the form
+
+
+
+$(document).ready(function() {
   $("#profileForm").submit(function(event) {
-    // Stop the form from submitting normally
+    // Prevent default form submission
     event.preventDefault();
-  
-    // Serialize the form data into a JavaScript object
+
+    // Serialize form data
     var formData = $(this).serialize();
-    
-    // Send an AJAX request to the server
+
+    // Send AJAX request
     $.ajax({
+      url: "../../backend/createDonation.php",
       type: "POST",
-      url: "../../backend/updateDonation.php",
       data: formData,
       success: function(response) {
-        // Handle a successful response from the server here
-        toastr.success('Success! Donatation has been modified');
-        console.log(response);
+        // Display toastr alert
+        toastr.success("Donation successfully created!");
       },
       error: function(xhr, status, error) {
-        // Handle errors here
-        console.error(xhr, status, error);
+        toastr.error("Error: " + error);
       }
     });
   });
 });
 
-// Get the text input field and the div to display the search results
-var searchField = document.getElementById('searchField');
-var searchResults = document.getElementById('searchResults');
 
-// Listen for changes in the text input field
-searchField.addEventListener('input', function() {
-  // Get the search term from the text input field
-  var searchTerm = searchField.value;
-
-  // Send an AJAX request to the PHP script
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        // Update the div with the search results
-        searchResults.innerHTML = xhr.responseText;
-      } else {
-        console.error('Error: ' + xhr.status);
-      }
-    }
-  };
-  xhr.open('GET', '../../backend/getMembers.php?term=' + searchTerm, true);
-  xhr.send();
-});
 
 </script>
 <script src="../../js/sidebar.js"></script>

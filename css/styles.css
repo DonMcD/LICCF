@@ -341,6 +341,23 @@ nav .dropdown:hover .dropdown-content {
     border-radius: 4px;
     box-sizing: border-box;
 }
+.side-bar input[type="text"], .side-bar select, .side-bar input[type="submit"]:hover {
+    cursor: pointer;
+}
+.side-bar input[type="button"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    margin-top: 1px;
+}
+.side-bar input[type="button"]:hover {
+    background-color: #2f6c31;
+    cursor: pointer;
+}
 
 /*Used for the box where the table displays all the data from the database for members, family, donation*/
 .results {
