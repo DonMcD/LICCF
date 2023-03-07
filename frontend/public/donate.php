@@ -34,7 +34,7 @@ require '../headers/header.php';
       <p>
         We encourage donations by e-transfer with your mailing address in
         the message box to
-        <a href="mailto:LICCmm2022@gmail.com">LICCmm2022@gmail.com</a>
+        <a href="mailto:LICComm2022@gmail.com">LICCmm2022@gmail.com</a>
         because they are direct and pose no queries from the Canada
         revenue agency.
       </p>
@@ -47,6 +47,7 @@ require '../headers/header.php';
   </div>
   <div class="donate-bottom">
     <div>
+      
       <p>Unique Identifier Numbers</p>
       <p class="para">
         Each member who donates has a unique Identifier Number which is

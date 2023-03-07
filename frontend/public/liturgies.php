@@ -30,6 +30,7 @@ require '../headers/header.php';
     </div><br><br>
 <section class="donate-content">
   <div class="donate-top">
+  <div style="border: 5px solid #C9DCA9; border-radius: 10px; padding: 10px; text-align: center;">
   <p>
   Centrally located, the Theatre Galley site is barrier free and spacious. To protect those who are immune 
   comprised we ask that you wear a mask. We celebrate with chairs in a circular arrangement to emphasize 
