@@ -96,7 +96,7 @@ require '../headers/header.php';
             <source src="banner13.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <br><span class="letter-highlight">a</span>re </div>
+        <div class="text">Who we <br>are </div>
     </div><br><br>
 
 <!--This code is to create Council image-->
@@ -105,6 +105,7 @@ require '../headers/header.php';
     </div>
 <br><br><br><br>
 <!--This code is to show our priest and its images-->
+
 <div class="container">
     <div class="img-OP">
         <img src="../../assets/ourPriestimg.png" alt="Our Priest img">

@@ -20,8 +20,14 @@ require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
 <div>
+<br>
+<form action='' method='POST' class='tax-center-container'>
+    <h2>Would you like to send out tax receipt's?</h2>
+    <p>Beware, before pressing the submit button be sure all donations have been filed before you continue because this can not be undone</p>
+    <input name='submit' type='submit' id='submit' value='Submit' class='tax-btn'/>
+</form>
 <script>
-    window.location.href = '../../backend/createTaxReceipt.php';
+    //window.location.href = '../../backend/createTaxReceipt.php';
 </script>
 </div>
 
