@@ -110,7 +110,6 @@ function submitForm(did) {
   form.submit();
 }
 
-</script>
 
   const newDonationButton = document.getElementById('newDonationButton');
   newDonationButton.addEventListener('click', () => {
@@ -119,6 +118,5 @@ function submitForm(did) {
 </script>
 </body>
 </html>
-
 
 
