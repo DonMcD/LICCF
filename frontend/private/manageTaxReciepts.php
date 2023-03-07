@@ -19,6 +19,12 @@ require '../../backend/authenticatePage.php'
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
+<div>
+<script>
+    window.location.href = '../../backend/createTaxReceipt.php';
+</script>
+</div>
+
 <script src="../../js/sidebar.js"></script>
 </body>
 </html>

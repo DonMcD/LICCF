@@ -19,8 +19,8 @@ function getFormData($fieldName, $default = '') {
 //Variables for the filters
 $search = getFormData('searchBar');
 $year = getFormData('year');
-$min = getFormData('min', '1');
-$max = getFormData('max', '99999');
+$min = getFormData('min', '0');
+$max = getFormData('max', '0');
 
 
 // Construct the final query
@@ -34,9 +34,9 @@ echo "<table id='results-table'>";
 echo "<thead>";
 echo "<tr>";
 //echo "<th onclick='sortTable(0)'>ID</th>"; // since we are not showing the ID on the page
-echo "<th onclick='sortTable(2)'>Date</th>";
-echo "<th onclick='sortTable(4)'>In Person</th>";
-echo "<th onclick='sortTable(6)'>Online</th>";
+echo "<th onclick='sortTable(0)'>Date</th>";
+echo "<th onclick='sortTable(1)'>In Person</th>";
+echo "<th onclick='sortTable(2)'>Online</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   $row_class = ($i % 2 == 0) ? "dark-row" : "light-row";
   echo "<tr class='$row_class' onclick='submitForm({$row["aid"]})'>";
   $i = $i + 1;
-  // echo "<td>" . $row["aid"] . "</td>";
+  //echo "<td>" . $row["aid"] . "</td>";
   echo "<td>" . $row["date"] . "</td>";
   echo "<td>" . $row["in_person"] . "</td>";
   echo "<td>" . $row["online"] . "</td>";

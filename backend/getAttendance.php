@@ -9,7 +9,8 @@ if ($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
 $sql = "SELECT *
-FROM attendance";
+FROM attendance
+WHERE aid = '{$aid}'";
 
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
