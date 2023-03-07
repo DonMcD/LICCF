@@ -4,9 +4,12 @@ session_start();
 
 //This checks to see if the user is authenticated or not
 if (isset($_SESSION['authenticated'])) {
-  if($_SESSION['authenticated'] == true){
+  if($_SESSION['authenticated'] == true && $_SESSION['type'] == 0){
     header("Location: ../private/dashboard.php");
     exit;
+  }
+  else if($_SESSION['authenticated'] == true && $_SESSION['type'] == 1){
+    header("Location: ./index.php");
   }
 }
 ?>
@@ -24,6 +27,7 @@ if (isset($_SESSION['authenticated'])) {
 <body class="backgrounds">
 <?php
 require '../headers/header.php';
+require './sidebar.php';
 ?>
   <div class='login-container'>
     <div class='center-container'>
@@ -83,5 +87,6 @@ input.addEventListener("keypress", function(event) {
 });
 
 </script>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

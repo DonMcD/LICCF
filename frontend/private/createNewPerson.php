@@ -1,12 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 <!DOCTYPE html>
 <head>
@@ -18,7 +11,6 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-
 </head>
 <body class="backgrounds">
 
@@ -134,5 +126,6 @@ require '../headers/topBar.php';
         </div>
     </div>
 </form>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

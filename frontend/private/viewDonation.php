@@ -1,11 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 
 <!DOCTYPE html>
@@ -137,11 +131,11 @@ require_once '../../backend/getDonationData.php';
                     </tr>
                     <tr>
                         <td><h3>First Name</h3></td>
-                        <td><input type="text" name="first_name" id="first_name" value='<?php echo $fName ?>'/></td>
+                        <td><h4><?php echo $fName ?></h4></td>
                     </tr>
                     <tr>
                         <td><h3>Last Name</h3></td>
-                        <td><input type="text" name="last_name" id="last_name" value='<?php echo $lName ?>'/></td>
+                        <td><h4><?php echo $lName ?></h4></td>
                     </tr>
                     <tr>
                         <td><h3>Amount</h3></td>
@@ -247,6 +241,6 @@ require_once '../../backend/getDonationData.php';
   });
 });
 </script>
-
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

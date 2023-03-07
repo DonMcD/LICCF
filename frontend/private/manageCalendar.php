@@ -1,12 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 <!DOCTYPE html>
 <head>
@@ -30,5 +23,6 @@ require '../headers/topBar.php';
 <div><a href='https://calendar.google.com/calendar/u/2/r/settings/calendar/YmQ0Y2E5OTkwMTFmNmFhMjYyYzJlMDFkZmZlZjE3OTIyYTIwNTQzNDg1OGMyZWVmNzg4OGZhMjU3MDEyYzY5MkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t'>Click here to edit</a></div>
     <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="100%" height="700" frameborder="0" scrolling="no"></iframe>
 </div>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>

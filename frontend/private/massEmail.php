@@ -1,12 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 <!DOCTYPE html>
 <head>
@@ -61,7 +54,7 @@ require '../headers/topBar.php';
 <script>
   tinymce.init({
     selector: 'textarea',
-	height: 650,
+	  height: 550,
     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
     tinycomments_mode: 'embedded',
@@ -93,6 +86,7 @@ require '../headers/topBar.php';
     });
   });
 </script>
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
 

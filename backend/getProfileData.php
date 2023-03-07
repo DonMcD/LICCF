@@ -40,6 +40,7 @@ $city = $row['city'];
 $postal_code = $row['postal_code'];
 $province = $row['province'];
 $interest = $row['interest'];
+$type = $row['type'];
 
 mysqli_close($conn);
 

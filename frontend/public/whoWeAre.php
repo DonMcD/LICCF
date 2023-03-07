@@ -5,62 +5,102 @@ session_start();
 ?>
 <!DOCTYPE html>
 <head>
-    <style>
-        .wrapper{
+<style>
+        .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 60px;
+                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                color: white;    
+}
+        .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 40px;
+                width: 30%;
+
+}
+        .txt {
+                width: 200px;
+                border: 1px solid black;
+                padding: 50px;
+                margin: 120px;
+                margin-left:200px;
+                border-radius: 30px;
+                width: 400px;
+                font-size: 25px;
+                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                text-align:center;   
+}
+        .div{
                 width:100%;
+                margin: 100px;
         }
         .one{
             background-color:#C9DCA9;
             width:33.33%;
             float:left;
             text-align: center;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 90px;
+            padding-bottom: 90px;
+            margin-left:20px;
             border-radius: 10px;
             border: 1px solid black;
+            font-size: 25px;
+            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align:center;  
         }
         .two{
             background-color:#C9DCA9;
-            width:33.33%;
+            width: 40%;
             float:right;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding: 50px;
+            margin-right:20px;
             border-radius: 10px;
             border: 1px solid black;
+            font-size: 25px;
+            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
         }
+
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-<<<<<<< Updated upstream
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Who we are</title>
-=======
-    <title>LICCF Login</title>    
->>>>>>> Stashed changes
+
     <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </head>
 <body class="backgrounds">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
 require '../headers/header.php';
 ?>
-<img src="../../assets/churchstainglass.jpg" class="img-fluid" alt="church Stainles Glass" style = "width:1600px;height:800px;border-top: 6px solid #3E702D;">
-        <div class = "container">
-        <div class = "about-priest">
-        <div class="text-center">
-        <img src="../../assets/ourPriest1.png" class="img-fluid my-5" alt="This is a picture of Priest">
-        </div>
-        <div class="card" style="width: 16rem; margin-left: 40%;">
-        <img src="../../assets/ourPriestPic.png" class="card-img-top rounded" alt="Teresa-Img">
-        <div class="card-body">
-        <p class="card-text text-center"><u>Teresa Hanlon</u></p>
+
+
+    <img src="../../assets/churchstainglass.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
+    <div class="centered">Who We Are</div>
+
+<div class="container">
+    <div class="img-OP">
+        <img src="../../assets/ourPriestimg.png" alt="Our Priest img " class="center">
+    </div>
+    <div class="txt">
+    <h2><u><i>Teresa Hanlon</i></u><h2>
+    <img src="../../assets/ourPriestimage.png" alt="Our Priest img" style="width:300px">
+    </div>
+    <div class="img-Council">
+        <img src="../../assets/council-img.png" alt="Council img" class="center">
     </div>
 </div>
-<<<<<<< Updated upstream
+
         <div class="text-center">
         <img src="../../assets/council-img.png" class="img-fluid my-5" alt="council-img">
         </div>
@@ -69,6 +109,11 @@ require '../headers/header.php';
 </div>
 </div>
         <div class = "wrapper">
+
+<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
+
+<div class="div">
+
             <div class="one">
             <h3>Treaty People</h3>
             </div>
@@ -78,12 +123,10 @@ require '../headers/header.php';
                 <h3>2. Roman Catholic Women Priest Canada</h3>
             </div>
     </div>
-    </div>
-    <br><br><br>
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
-    
+
 </body>
-=======
+
 <center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
 
 <div class="div">
@@ -98,5 +141,5 @@ require '../headers/header.php';
 </div>
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 <script src="../../js/sidebar.js"></script>
->>>>>>> Stashed changes
+
 </html>

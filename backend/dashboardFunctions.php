@@ -23,31 +23,6 @@ function countMembers() {
 
     return $count;
 }
-
-function countFamily() {
-    require 'serverDetails.php';
-    // Create a connection
-    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
-
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    // Run a query to count the number of records
-    $sql = "SELECT COUNT(*) as total_family FROM family";
-    $result = mysqli_query($conn, $sql);
-
-    // Get the result
-    $row = mysqli_fetch_assoc($result);
-    $count = $row['total_family'];
-
-    // Close the connection
-    mysqli_close($conn);
-
-    return $count;
-}
-
 function sumDonations() {
     require 'serverDetails.php';
     // Create a connection
@@ -72,75 +47,6 @@ function sumDonations() {
     return round($total, 2);
 }
 
-function getLatestMember() {
-    require 'serverDetails.php';
-    // Create a connection to the database
-    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare the query
-    $sql = "SELECT * FROM members ORDER BY start_date DESC LIMIT 1";
-
-    // Execute the query
-    $result = $conn->query($sql);
-
-    // Check if there is a result
-    if ($result->num_rows > 0) {
-        // Fetch the result as an associative array
-        $row = $result->fetch_assoc();
-
-        // Close the database connection
-        $conn->close();
-
-        // Return the result as an object
-        return (object) $row;
-    } else {
-        // Close the database connection
-        $conn->close();
-
-        // Return null if there is no result
-        return null;
-    }
-}
-
-function getLatestDonation() {
-    require 'serverDetails.php';
-    // Create a connection to the database
-    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
-
-    // Check the connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare the query
-    $sql = "SELECT * FROM donations ORDER BY date DESC LIMIT 1";
-
-    // Execute the query
-    $result = $conn->query($sql);
-
-    // Check if there is a result
-    if ($result->num_rows > 0) {
-        // Fetch the result as an associative array
-        $row = $result->fetch_assoc();
-
-        // Close the database connection
-        $conn->close();
-
-        // Return the result as an object
-        return (object) $row;
-    } else {
-        // Close the database connection
-        $conn->close();
-
-        // Return null if there is no result
-        return null;
-    }
-}
 
 function getLatestMembers() {
     require 'serverDetails.php';
@@ -193,7 +99,7 @@ function MembersJoinedInTheLastMonth() {
     $one_month_ago = date('Y-m-d', strtotime('-1 month'));
   
     // Build the SQL query to count the members who joined in the last month
-    $sql = "SELECT COUNT(*) AS num_members FROM member WHERE start_date >= '$one_month_ago'";
+    $sql = "SELECT COUNT(*) as total FROM members WHERE start_date >= '$one_month_ago'";
   
     // Execute the query and get the result
     $result = mysqli_query($conn, $sql);
@@ -205,15 +111,74 @@ function MembersJoinedInTheLastMonth() {
   
     // Get the number of members who joined in the last month from the result
     $row = mysqli_fetch_assoc($result);
-    $num_members = $row['num_members'];
+    $count = $row['total'];
   
     // Close the database connection
     mysqli_close($conn);
   
     // Return the number of members who joined in the last month
-    return $num_members;
+    return $count;
 }
+
+function getAttendanceInPerson() {
+    require 'serverDetails.php';
+    // Connect to your database, for example:
+    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
   
+    // Build the SQL query to count the members who joined in the last month
+    $sql = "SELECT in_person 
+    FROM attendance 
+    ORDER BY date DESC";
+  
+    // Execute the query and get the result
+    $result = mysqli_query($conn, $sql);
+  
+    // Check if the query was successful
+    if (!$result) {
+      die('Error: ' . mysqli_error($conn));
+    }
+  
+    // Get the number of members who joined in the last month from the result
+    $row = mysqli_fetch_assoc($result);
+    
+    $num_inperson = $row['in_person'];
+  
+    // Close the database connection
+    mysqli_close($conn);
+  
+    // Return the number of members who joined in the last month
+    return $num_inperson;
+}
+
+function getAttendanceOnline() {
+    require 'serverDetails.php';
+    // Connect to your database, for example:
+    $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
+  
+    // Build the SQL query to count the members who joined in the last month
+    $sql = "SELECT online 
+    FROM attendance 
+    ORDER BY date DESC";
+  
+    // Execute the query and get the result
+    $result = mysqli_query($conn, $sql);
+  
+    // Check if the query was successful
+    if (!$result) {
+      die('Error: ' . mysqli_error($conn));
+    }
+  
+    // Get the number of members who joined in the last month from the result
+    $row = mysqli_fetch_assoc($result);
+    
+    $num_online = $row['online'];
+  
+    // Close the database connection
+    mysqli_close($conn);
+  
+    // Return the number of members who joined in the last month
+    return $num_online;
+}
 
 
 ?>

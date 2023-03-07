@@ -1,12 +1,5 @@
 <?php
-//USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
-session_start();
-
-//This checks to see if the user is authenticated or not
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
-    header("Location: ../frontend/login.php");
-    exit;
-}
+require '../../backend/authenticatePage.php'
 ?>
 <!DOCTYPE html>
 <head>
@@ -26,6 +19,6 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] !== true) {
 require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
-
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
