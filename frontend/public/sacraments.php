@@ -49,7 +49,7 @@ require '../headers/header.php';
     </div>
     <div class="row">
       <div class="card">
-        <img src="../../assets/pic.jpg" alt="" />
+        <img src="../../assets/comm.jpg" alt="" />
         <br />
         <button class="card-btn">First Communion</button>
       </div>

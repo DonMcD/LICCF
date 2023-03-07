@@ -21,21 +21,18 @@ require '../headers/topBar.php';
 <div class="main-container">
     <div class="side-bar">
         <div class="inner-side-bar">
-            <form method='POST' action='home.php'>
+            <form method='POST'>
+                <input type='button' value='New' id='newDonationButton'>
                 <h2>Filters</h2>
                 <div>
-                <br>
-                    <input type='text' name='searchBar' placeHolder='Search'>
-                    <input type='submit' name='submitSearch' value='Search'>
+                    <input type='text' name='searchBar' id='searchBar' placeHolder='Search'>
                 </div>
-                <br>
                 <div>
                     <label>Minimum ($)</label>
                     <input type='text' name='min' value='1'/>
                     <label>Maximum ($)</label>
                     <input type='text' name='max' value='5000'/>
                 </div>
-                <br>
                 <div>
                     <select name="year">
                         <?php
@@ -47,7 +44,6 @@ require '../headers/topBar.php';
                         }
                         ?>
                     </select>
-
                 </div>
             </form>
         </div>
@@ -68,6 +64,16 @@ require '../headers/topBar.php';
 <!--USED FOR AJAX CALL TO SEARCH.PHP - DO NOT TOUCH -->
 <script>
 $(document).ready(function() {
+    // Attach event handlers to all checkboxes, radio buttons, textbox, and dropdown
+    $("input[type='checkbox'], input[type='radio'], input[type='text'], select").change(function() {
+        // Submit the form
+        $("form").submit();
+    });
+    $("#searchBar").on('input', function() {
+        // Submit the form
+        $("form").submit();
+    });
+
     $("form").submit(function(e) {
         e.preventDefault();
         $.ajax({
@@ -78,15 +84,6 @@ $(document).ready(function() {
                 $(".results").html(data);
             }
         });
-    });
-    // Attach event handlers to all checkboxes, radio buttons, textbox, and dropdown
-    $("input[type='checkbox'], input[type='radio'], input[type='text'], select").change(function() {
-        // Submit the form
-        $("form").submit();
-    });
-    $(document).on('click', 'input[type="radio"]', function() {
-        // Submit the form
-        $("form").submit();
     });
 });
 
@@ -108,6 +105,11 @@ function submitForm(did) {
   document.body.appendChild(form);
   form.submit();
 }
+
+const newDonationButton = document.getElementById('newDonationButton');
+newDonationButton.addEventListener('click', () => {
+  window.location.href = 'addDonation.php';
+});
 </script>
 </body>
 </html>

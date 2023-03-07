@@ -40,6 +40,11 @@ header {
     align-items: center;
     background-color: rgb(255, 255, 255);
 }
+@media only screen and (max-width: 1000px) {
+    header {
+        height: 120px;
+    }
+}
 
 header h2 {
     margin-left: 25px;
@@ -240,6 +245,13 @@ nav .dropdown:hover .dropdown-content {
     .nav-head {
         visibility: hidden;
     }
+    .sidebar_toggler{
+        width: 3.6rem;
+        height: 2.6rem;
+    }
+    .sidebar_toggler span {
+        height: 4px;
+    }
 }
 
 /*Styles for the login screen container*/
@@ -262,13 +274,10 @@ nav .dropdown:hover .dropdown-content {
 .top-bar{
     width: 100%;
     margin: auto;
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 5px;
-    margin-top: 1px;
 }
 .top-bar div {
     display: flex;
@@ -279,7 +288,6 @@ nav .dropdown:hover .dropdown-content {
     align-items: center;
     box-sizing: border-box;
     border-radius: 30px;
-    padding: 10px;
     flex-wrap: nowrap;
 }
 @media screen and (max-width: 1200px) {
@@ -310,6 +318,7 @@ nav .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: row;
     width: 100%;
+    overflow: hidden;
 }
 
 /*The side bar is the filters tab on the left side of the page*/
@@ -330,7 +339,6 @@ nav .dropdown:hover .dropdown-content {
     display: flex;
     width: 100%;
     height: 45px;
-    align-items: center;
     justify-content: center;
     background-color: var(--dark);
     border-top-right-radius: 15px;
@@ -343,6 +351,23 @@ nav .dropdown:hover .dropdown-content {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+}
+.side-bar input[type="text"], .side-bar select, .side-bar input[type="submit"]:hover {
+    cursor: pointer;
+}
+.side-bar input[type="button"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    margin-top: 1px;
+}
+.side-bar input[type="button"]:hover {
+    background-color: #2f6c31;
+    cursor: pointer;
 }
 
 /*Used for the box where the table displays all the data from the database for members, family, donation*/
@@ -374,7 +399,9 @@ thead {
     background-color: var(--table-header);
     height: 30px;
     box-sizing: border-box;
+    z-index: 1;
 }
+
 table{
     border: none;
     border-collapse: collapse;
@@ -418,6 +445,7 @@ table{
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
 }
 .stats-row-container{
     margin-top: 50px;
@@ -724,3 +752,40 @@ input:focus ~ .input-border {
         font-size: 20px;
     }
 }
+
+/*Styles for the footer*/
+footer {
+    background-color: #C9DCA9;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#mass-times {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  #mass-times img {
+    max-width: 150px;
+    margin-right: 1em;
+}
+  #mass-times h2 {
+    margin: 0;
+}
+  #mass-times p {
+    margin: 0;
+}
+/* Hide the edit button by default */
+.edit-button {
+    display: none;
+}
+  
+  /* Show the edit button when hovering over a row */
+  .dark-row:hover .edit-button,
+  .light-row:hover .edit-button {
+    display: inline-block;
+}
+
+

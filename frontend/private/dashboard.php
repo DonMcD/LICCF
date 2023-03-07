@@ -18,9 +18,9 @@ require '../../backend/authenticatePage.php'
 require '../headers/header.php';
 require '../../backend/dashboardFunctions.php';
 $totalMembers = countMembers();
-$totalFamilies = countFamily();
-$totalDonations = sumDonations();
-$latestMember = getLatestMember();
+$totalInPerson =  getAttendanceInPerson();
+$totalOnline =  getAttendanceOnline();
+$monthMembers = MembersJoinedInTheLastMonth();
 $latestMembers = getLatestMembers();
 ?>
 <div class="dashboard-main-container">
@@ -31,12 +31,15 @@ $latestMembers = getLatestMembers();
             <?php echo "{$totalMembers} Members"?>
         </div>
         <div class='stats-container'>
-            <h2>Total Families</h2>
-            <?php echo "{$totalFamilies} Families"?>
+            <h2>Previous Attendance</h2>
+            <?php echo "In Person: {$totalInPerson}"?>
+            <br>
+            <?php echo "Online: {$totalOnline}"?>
+            
         </div>
         <div class='stats-container'>
-        <h2>Total Donations</h2>
-            <?php echo "$"."{$totalDonations}"?>
+        <h2>Growth This Month</h2>
+            <?php echo "{$monthMembers} People"?>
         </div>
     </div>
     <div class='latest-members-main-container'>
