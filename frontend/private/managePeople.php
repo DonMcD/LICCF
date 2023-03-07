@@ -25,7 +25,6 @@ require '../headers/topBar.php';
                 <input type='button' value='New' id='newMemberButton'>
                 <h2>Filters</h2>
                 <div>
-                    <br>
                         <input type='text' name='searchBar' placeHolder='Search'>
                         <input type='submit' name='submitSearch' value='Search'>
                     </div>

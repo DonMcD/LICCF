@@ -25,18 +25,15 @@ require '../headers/topBar.php';
                 <input type='button' value='New' id='newAttendanceButton'>
                 <h2>Filters</h2>
                 <div>
-                <br>
                     <input type='text' name='searchBar' placeHolder='Search'>
                     <input type='submit' name='submitSearch' value='Search'>
                 </div>
-                <br>
                 <div>
                     <label>Minimum ($)</label>
                     <input type='text' name='min' value='1'/>
                     <label>Maximum ($)</label>
                     <input type='text' name='max' value='5000'/>
                 </div>
-                <br>
                 <div>
                     <select name="year">
                         <?php

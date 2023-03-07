@@ -10,6 +10,7 @@
                 <li><a href="./about.php">About</a></li>
                 <li><a href="./eucharist.php">Eucharist</a></li>
                 <li><a href="./community.php">Community</a></li>
+                <li><a href="./contact.php">Contact</a></li>
                 <li><a href="./donate.php">Donate</a></li>
                 <li><a href="./login.php">Login</a></li>
             </ul>
