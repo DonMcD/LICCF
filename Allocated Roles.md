@@ -1,14 +1,16 @@
 #Barbara
 Eucharist
-Litergies Done
-Sacraments Done
-Donate Done
+Liturgies 
+Sacraments 
+Donate 
 
 #Renalyn
-Special Services and Blessings
-Prayer
-Spiritual Direction
-Contact
+
+Special Services and Blessings done
+Prayer done
+Spiritual Direction done
+Contact done
+
 
 
 #Abhey

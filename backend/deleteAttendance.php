@@ -5,7 +5,7 @@ require 'serverDetails.php';
 
 // Make sure the PID value is set and is a valid integer
 if (isset($_POST['aid']) && filter_var($_POST['aid'], FILTER_VALIDATE_INT)) {
-  // Connect to the database
+// Connect to the database
   $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
   if ($conn->connect_error) {
     die('Failed to connect to the database: ' . $conn->connect_error);
