@@ -116,6 +116,3 @@ function submitForm(did) {
   form.submit();
 }
 </script>
-
-
-

@@ -31,8 +31,12 @@ session_start();
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
+<<<<<<< Updated upstream
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Who we are</title>
+=======
+    <title>LICCF Login</title>    
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
@@ -56,6 +60,7 @@ require '../headers/header.php';
         <p class="card-text text-center"><u>Teresa Hanlon</u></p>
     </div>
 </div>
+<<<<<<< Updated upstream
         <div class="text-center">
         <img src="../../assets/council-img.png" class="img-fluid my-5" alt="council-img">
         </div>
@@ -78,4 +83,20 @@ require '../headers/header.php';
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
     
 </body>
+=======
+<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
+
+<div class="div">
+    <div class="one">
+        <h3>Treaty People</h3>
+    </div>
+    <div class="two">
+        <h3>A moment for Church Renewal</h3>
+        <h3>1. Servant Leadership</h3>
+        <h3>2. Roman Catholic Women Priest Canada</h3>
+    </div>
+</div>
+<?php include_once('..\..\frontend\footers\footer.php'); ?>
+<script src="../../js/sidebar.js"></script>
+>>>>>>> Stashed changes
 </html>
