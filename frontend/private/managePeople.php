@@ -25,8 +25,7 @@ require '../headers/topBar.php';
                 <input type='button' value='New' id='newMemberButton'>
                 <h2>Filters</h2>
                 <div>
-                        <input type='text' name='searchBar' placeHolder='Search'>
-                        <input type='submit' name='submitSearch' value='Search'>
+                        <input type='text' name='searchBar' id='searchBar' placeHolder='Search'>
                     </div>
                     <div>
                         <h3>Gender</h3>
@@ -71,6 +70,16 @@ require '../headers/topBar.php';
 <!--USED FOR AJAX CALL TO SEARCH.PHP - DO NOT TOUCH -->
 <script>
 $(document).ready(function() {
+    // Attach event handlers to all checkboxes, radio buttons, textbox, and dropdown
+    $("input[type='checkbox'], input[type='radio'], input[type='text'], select").change(function() {
+        // Submit the form
+        $("form").submit();
+    });
+    $("#searchBar").on('input', function() {
+        // Submit the form
+        $("form").submit();
+    });
+
     $("form").submit(function(e) {
         e.preventDefault();
         $.ajax({
@@ -82,16 +91,9 @@ $(document).ready(function() {
             }
         });
     });
-    // Attach event handlers to all checkboxes, radio buttons, textbox, and dropdown
-    $("input[type='checkbox'], input[type='radio'], input[type='text'], select").change(function() {
-        // Submit the form
-        $("form").submit();
-    });
-    $(document).on('click', 'input[type="radio"]', function() {
-        // Submit the form
-        $("form").submit();
-    });
 });
+
+
 
 //Submit using POST instead of GET
 function submitForm(pid) {

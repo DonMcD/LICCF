@@ -123,6 +123,30 @@ $(document).ready(function() {
   });
 });
 
+// Get the text input field and the div to display the search results
+var searchField = document.getElementById('searchField');
+var searchResults = document.getElementById('searchResults');
+
+// Listen for changes in the text input field
+searchField.addEventListener('input', function() {
+  // Get the search term from the text input field
+  var searchTerm = searchField.value;
+
+  // Send an AJAX request to the PHP script
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        // Update the div with the search results
+        searchResults.innerHTML = xhr.responseText;
+      } else {
+        console.error('Error: ' + xhr.status);
+      }
+    }
+  };
+  xhr.open('GET', '../../backend/getMembers.php?term=' + searchTerm, true);
+  xhr.send();
+});
 
 
 </script>
