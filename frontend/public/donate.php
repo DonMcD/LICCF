@@ -19,53 +19,6 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
- <main>
-        <div id="container">
-        <img class="banner-gif" src="../../assets/banner7.gif" alt="">
-        <div id="text">
-            Donate
-        </div>
-      <section class="donate-content">
-        <div class="donate-top">
-          <div class="mailing-recomendation">
-            <p>
-              We encourage donations by e-transfer with your mailing address in
-              the message box to
-              <a href="mailto:LICCmm2022@gmail.com">LICCmm2022@gmail.com</a>
-              because they are direct and pose no queries from the Canada
-              revenue agency.
-            </p>
-            <p>
-              Tax Recipts - Please include your mailing address in the "message
-              box" unless you have signed up with your current address as a
-              number.
-            </p>
-          </div>
-        </div>
-        <div class="donate-bottom">
-          <div>
-            <p>Unique Identifier Numbers</p>
-            <p class="para">
-              Each member who donates has a unique Identifier Number which is
-              used for taxt reasons _______________________ contact for your
-              number.
-            </p>
-          </div>
-          <div class="second">
-            <p>Cash & Cheque Donations</p>
-            <p class="para">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-              vero neque iste optio voluptatem soluta modi assumenda aperiam
-              accusantium facere officia pariatur.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <?php include_once('..\..\frontend\footers\footer.php'); ?>
-
-    </body>
-
  <div class="gif-container">
     <video autoplay muted loop class="gif">
         <source src="../../assets/banner6.mp4" type="video/mp4">
@@ -111,16 +64,11 @@ require '../headers/header.php';
     </div>
   </div>
 </section>
-
-<?php include_once('../footers/footer.php'); ?>
-<script src="../../js/sidebar.js"></script>
-</body>
-
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 <script src="../../js/sidebar.js"></script>
 </body>
-
 </html>
+
    
    
     
