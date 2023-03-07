@@ -16,13 +16,12 @@ session_start();
                 color: white; 
 }
         .txt {
-                width: 300px;
+                display: flex;
+                justify-content: center;
+                width: 60%;
                 border: 1px solid black;
-                padding: 50px;
-                margin: 40px;
-                margin-left:150px;
+                padding: 20px;
                 border-radius: 30px;
-                width: 1000px;
                 font-size: 25px;
                 font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
 }
@@ -69,7 +68,7 @@ require '../headers/header.php';
 </div>
 
 <div class="txt">
-    <h1><i><u><center></center></u></i></h1>
+    <h1><i><u></u></i></h1>
     <p>Welcome to our inclusive church, a community of faith that is committed to celebrating diversity, welcoming everyone, and creating a safe and inclusive space for all people.
 
 We believe that every person is created in the image of God and has inherent worth and dignity, regardless of their race, ethnicity, gender identity, sexual orientation, age, ability, or socio-economic status. We are committed to affirming and supporting the full inclusion and participation of all people in the life and ministry of our church.
