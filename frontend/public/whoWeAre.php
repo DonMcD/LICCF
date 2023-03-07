@@ -79,13 +79,8 @@ require '../headers/header.php';
             <source src="banner13.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <br><span class="letter-highlight">a</span>re </div>
+        <div class="text">Who we <br>are </div>
     </div><br><br>
-
-
-<<<<<<< Updated upstream
-    <img src="../../assets/churchstainglass.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
-    <div class="centered">Who We Are</div>
 <div class="container">
     <div class="img-OP">
         <img src="../../assets/ourPriestimg.png" alt="Our Priest img " class="center">
@@ -112,8 +107,5 @@ require '../headers/header.php';
     </div>
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
 
-=======
-<?php include_once('../footers/footer.php'); ?>
->>>>>>> Stashed changes
 </body>
 </html>
