@@ -68,7 +68,10 @@ session_start();
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Who we are</title>
+
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -97,9 +100,20 @@ require '../headers/header.php';
         <img src="../../assets/council-img.png" alt="Council img" class="center">
     </div>
 </div>
+
+        <div class="text-center">
+        <img src="../../assets/council-img.png" class="img-fluid my-5" alt="council-img">
+        </div>
+        <div class="text-center">
+        <img src="../../assets/books.png" class="img-fluid my-5" alt="Books image in who we are" style="width: 800px; height:400px; border: 4px solid black; border-radius: 7px;">
+</div>
+</div>
+        <div class = "wrapper">
+
 <center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
 
 <div class="div">
+
             <div class="one">
             <h3>Treaty People</h3>
             </div>
@@ -112,4 +126,20 @@ require '../headers/header.php';
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
 
 </body>
+
+<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
+
+<div class="div">
+    <div class="one">
+        <h3>Treaty People</h3>
+    </div>
+    <div class="two">
+        <h3>A moment for Church Renewal</h3>
+        <h3>1. Servant Leadership</h3>
+        <h3>2. Roman Catholic Women Priest Canada</h3>
+    </div>
+</div>
+<?php include_once('..\..\frontend\footers\footer.php'); ?>
+<script src="../../js/sidebar.js"></script>
+
 </html>
