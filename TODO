@@ -1,8 +1,7 @@
-// ADD functionality to all of the buttons on the top bar.
-// ADD proper header to all pages
-// ADD new way of sorting using php request to database rather than using javascript - JS TOO SLOW
-// ADD search functionality
-// ADD javascript to filters to enable and disable certain filters based on if selection is Person, Family or Donation
-// ADD scroll bar to Donation filters to filter out low and high end of amount
-// ADD page for users to make their own profile without admin access
-// 
+Fix Dropdown menu on header(Make look nicer)
+Fix header (Make look nicer)
+Fix fonts
+Make footer more dynamic
+Mobile optomize the public side of the website (Dont worry about the dashboard and everything like that)
+Add green <hr> to each page at the top by the banner
+Allow users to sign in with email and username

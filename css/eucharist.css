@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+body {
+  padding-left: 10px;
+  margin: 0 auto;
+}
+/*This makes it so that the page fit properly in the browser*/
+body, html{
+  margin:0;
+  padding:0;
+}
+
+.different-li {
+  margin-left: 0px;
+  list-style-type: none;
+}
+
+.hero {
+  width: 98vw;
+  height: 250px;
+  background-image: url("../../assets/pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 98vw 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "OxoniaRomanW01-Regular" !important;
+  border-top: 10px solid rgb(0, 128, 0);
+  border-bottom: 10px solid rgb(0, 128, 0);
+}
+
+.donate-hero {
+  width: 98vw;
+  height: 250px;
+  background-image: url("../../assets/pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 98vw 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "OxoniaRomanW01-Regular" !important;
+  border-top: 10px solid rgb(0, 128, 0);
+  border-bottom: 10px solid rgb(0, 128, 0);
+}
+
+.liturgies-hero {
+  width: 98vw;
+  height: 250px;
+  background-image: url("../../assets/pic.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 98vw 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "OxoniaRomanW01-Regular" !important;
+  border-top: 10px solid rgb(0, 128, 0);
+  border-bottom: 10px solid rgb(0, 128, 0);
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin: 20px;
+  background-color: rgb(211, 236, 174);
+}
+
+.card img {
+  width: 275px;
+  height: 275px;
+}
+
+.card-btn {
+  background-color: rgb(0, 156, 0);
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px 0px;
+  border: none;
+}
+
+.sacrements {
+  margin: 100px 0px;
+}
+
+.sacrements h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.donate-content {
+  margin: 100px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate-top {
+  position: relative;
+  width: 900px;
+  display: flex;
+  justify-content: center;
+}
+
+.mailing-recomendation {
+  background-color: rgb(211, 236, 174);
+  padding: 10px;
+  max-width: 620px;
+  box-shadow: 5px 7px 0px rgb(0, 156, 0);
+  margin-bottom: 20px;
+}
+
+.mailing-recomendation p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.donate-bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.donate-bottom p {
+  margin-bottom: 20px;
+}
+.donate-bottom .para {
+  text-indent: 20px;
+}
+.donate-bottom div {
+  border: 1px solid grey;
+  border-radius: 25px;
+  padding: 25px 5px;
+  max-width: 400px;
+  margin: 0px 15px;
+  height: 65%;
+}
+
+.second {
+  align-self: flex-end;
+}
+
+.donate-content p,
+.hero h1 {
+  font-family: "OxoniaRomanW01-Regular" !important;
+}
