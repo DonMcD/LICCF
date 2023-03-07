@@ -764,3 +764,14 @@ footer {
   #mass-times p {
     margin: 0;
 }
+/* Hide the edit button by default */
+.edit-button {
+    display: none;
+  }
+  
+  /* Show the edit button when hovering over a row */
+  .dark-row:hover .edit-button,
+  .light-row:hover .edit-button {
+    display: inline-block;
+  }
+  

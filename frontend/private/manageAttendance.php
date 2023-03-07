@@ -21,7 +21,8 @@ require '../headers/topBar.php';
 <div class="main-container">
     <div class="side-bar">
         <div class="inner-side-bar">
-            <form method='POST' action='home.php'>
+            <form method='POST'>
+                <input type='button' value='New' id='newAttendanceButton'>
                 <h2>Filters</h2>
                 <div>
                 <br>
@@ -108,4 +109,9 @@ function submitForm(aid) {
   document.body.appendChild(form);
   form.submit();
 }
+
+const newDonationButton = document.getElementById('newAttendanceButton');
+newDonationButton.addEventListener('click', () => {
+  window.location.href = 'addAttendance.php';
+});
 </script>
