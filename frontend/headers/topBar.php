@@ -3,7 +3,7 @@
     <a href='../private/managePeople.php' id="manage-people"><div ><h3>People &nbsp</h3><img src='../../assets/person.png' width='25' height='25'/></div></a>
     <!--<a href='../private/manageFamilies.php'><div id="manage-families">Manage Families &nbsp<img src='../../assets/family.png' width='25' height='25'/></div></a> -->
     <a href='../private/manageDonations.php' id="manage-donations"><div ><h3>Donations &nbsp</h3><img src='../../assets/donate.png' width='25' height='25'/></div></a>
-    <a href='../private/manageTaxReciepts.php' id="manage-tax-reciepts"><div ><h3>Tax <span class='reciepts'>Reciepts</span> &nbsp</h3><img src='../../assets/reciept.png' width='25' height='25'/></div></a>
+    <a href='../private/manageTaxReciepts.php' id="manage-tax-reciepts"><div ><h3>Tax <span class='reciepts'>Receipts</span> &nbsp</h3><img src='../../assets/reciept.png' width='25' height='25'/></div></a>
     <a href='../private/massEmail.php' id="mass-email"><div><h3>Email &nbsp</h3><img src='../../assets/email.png' width='25' height='25'/></div></a>
     <a href='../private/manageAttendance.php' id="manage-attendance"><div><h3>Attendance &nbsp</h3><img src='../../assets/attendance.png' width='25' height='25'/></div></a>
     <a href='../private/manageZoomLink.php' id="manage-zoom-link"><div><h3>Zoom &nbsp</h3><img src='../../assets/cam.png' width='25' height='25'/></div></a>
