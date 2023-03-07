@@ -6,15 +6,7 @@ session_start();
 <!DOCTYPE html>
 <head>
 <style>
-        .centered {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 60px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-                color: white;    
-}
+
         .center {
                 display: block;
                 margin-left: auto;
@@ -80,11 +72,20 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
+<!--This code create the Image and the text in the page-->
+<div class="gif-container">
+        <video autoplay muted loop class="gif">
+            <source src="../../assets/banner13.mp4" type="video/mp4">
+            <source src="banner13.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video> 
+        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <br><span class="letter-highlight">a</span>re </div>
+    </div><br><br>
 
 
+<<<<<<< Updated upstream
     <img src="../../assets/churchstainglass.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
     <div class="centered">Who We Are</div>
-
 <div class="container">
     <div class="img-OP">
         <img src="../../assets/ourPriestimg.png" alt="Our Priest img " class="center">
@@ -111,5 +112,8 @@ require '../headers/header.php';
     </div>
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
 
+=======
+<?php include_once('../footers/footer.php'); ?>
+>>>>>>> Stashed changes
 </body>
 </html>
