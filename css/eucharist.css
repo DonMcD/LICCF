@@ -147,7 +147,7 @@ body, html{
   text-indent: 20px;
 }
 .donate-bottom div {
-  border: 1px solid grey;
+  border: 5px solid #C9DCA9;
   border-radius: 25px;
   padding: 25px 5px;
   max-width: 400px;
