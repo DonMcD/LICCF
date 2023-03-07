@@ -114,7 +114,13 @@ require '../headers/header.php';
     <h2><u><i>Teresa Hanlon</i></u><h2>
     <img src="../../assets/ourPriestimage.png" alt="Our Priest img" style="height: 300px">
     </div>
-</div>
+</div><br><br>
+
+<!--This code is to create liturgy-->
+<div class="img-Council">
+        <img src="../../assets/" alt="Council img">
+    </div>
+<br><br>
 
 
 </body>
