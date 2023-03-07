@@ -1,8 +1,8 @@
 #Barbara
 Eucharist
-Litergies Done
-Sacraments Done
-Donate Done
+Liturgies 
+Sacraments 
+Donate 
 
 #Renalyn
 
