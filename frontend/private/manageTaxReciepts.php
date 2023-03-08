@@ -21,7 +21,7 @@ require '../headers/topBar.php';
 ?>
 <div>
 <br>
-<form action='../../backend/createTaxReceipt.php' method='POST' class='tax-center-container'>
+<form action='../../backend/Modules/Tax/createTaxReceipt.php' method='POST' class='tax-center-container'>
     <h2>Would you like to send out tax receipt's?</h2>
     <p>Beware, before pressing the submit button be sure all donations have been filed before you continue because this can not be undone</p>
     <br></br>

@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -48,7 +48,7 @@ foreach ($members as $member) {
         '{email}' => $member['email'],
     ];
 
-    $spreadsheet = IOFactory::load('receipt template.xlsx');
+    $spreadsheet = IOFactory::load('../../Files/receipt template.xlsx');
     $worksheet = $spreadsheet->getActiveSheet();
 
     // Replace variables in spreadsheet with member data
@@ -101,13 +101,14 @@ foreach ($members as $member) {
     } else {
         echo 'An error occurred while sending the email to ' . $to . ': ' . $mail->ErrorInfo . '<br>';
     }
+    unlink($fileName);
     $mail->clearAllRecipients();
 }
 
 
 
 function getMemberDonations($year) {
-    require_once 'serverDetails.php';
+    require_once '../../serverDetails.php';
     // Connect to database
     $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
     if (!$conn) {
