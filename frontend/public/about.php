@@ -16,11 +16,13 @@ session_start();
                 color: white; 
 }
         .txt {
-                display: flex;
-                justify-content: center;
-                width: 60%;
-                border: 1px solid black;
-                padding: 20px;
+                max-width: 90%;
+	            height: auto;
+	            display: block;
+	            margin: 0 auto;
+	            border: 2px solid #ccc;
+	            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                background: linear-gradient(to bottom, #EFF4E7 0%, #CADCB3 100%);
                 border-radius: 30px;
                 font-size: 25px;
                 font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
@@ -52,39 +54,35 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
+
+<!--This code create the Image and the text in the page-->
 <div class="gif-container">
     <video autoplay muted loop class="gif">
         <source src="../../assets/banner2.mp4" type="video/mp4">
         <source src="banner2.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video> 
-    <div class="text">About us</div>
+    <div class="text"><span class="letter-highlight">A</span>bout <span class="letter-highlight">u</span>s</div>
 </div><br><br>
-
-<div class="wrapper">
-    <div class="shadow-box">
-    <h1>LICCF</h1>
-    </div>
-</div>
-
+<br><br>
 <div class="txt">
-    <h1><i><u></u></i></h1>
-    <p>Welcome to our inclusive church, a community of faith that is committed to celebrating diversity, welcoming everyone, and creating a safe and inclusive space for all people.
-
-We believe that every person is created in the image of God and has inherent worth and dignity, regardless of their race, ethnicity, gender identity, sexual orientation, age, ability, or socio-economic status. We are committed to affirming and supporting the full inclusion and participation of all people in the life and ministry of our church.
-
-Our community is rooted in the teachings of Jesus, who taught us to love one another as ourselves, to welcome the stranger, and to care for the vulnerable. We strive to live out these teachings by creating a welcoming and inclusive environment where all people can come and experience the love and grace of God.
-
-In our inclusive church, you will find a diverse community of people from all walks of life who are committed to living out their faith in meaningful and impactful ways. We offer a variety of worship services, educational programs, and service opportunities that are designed to meet the needs of our diverse community.
-
-Whether you are a lifelong Christian, new to the faith, or exploring spirituality for the first time, you are welcome in our inclusive church. We invite you to come and see for yourself what makes our community so special and to join us on our journey of faith and service.
-</p>
+<p>Teresa’s story of call to ordination can be read <a href="https://rcwpcanada.altervista.org/2021-docs/TeresaHanlonDiaconateOrdination/TeresaDiaconateOrdination.html">here</a>.</p>
+<p>Working priests:</p>
+<ul>
+  <li>are not salaried by an institution</li>
+  <li>continue to earn a living as they did prior to saying ‘yes’ to ordination (unless they were employed a Catholic institution in which case they lose their jobs)</li>
+  <li>work as spiritual care providers, others lawyers, educators, social workers, spiritual directors or pastoral care ministers</li>
+  <li>are led by the Spirit</li>
+  <li>practice contemplative listening with their communities</li>
+  <li>Gathering for Sunday worship by zoom and in person</li>
+  <li>share liturgy planning, social justice outreach, and leave governance and financial matters to their communities</li>
+</ul>
+<p>Sunday Eucharist:</p>
+<p>New communities gather initially in homes and then find larger spaces as their numbers grow.</p>
     </div>
-
+<br><br><br><br>
 <?php include_once('../../frontend/footers/footer.php'); ?>
 <script src="../../js/sidebar.js"></script>
-
-<?php include_once('../footers/footer.php'); ?>
 
 </body>
 </html>
