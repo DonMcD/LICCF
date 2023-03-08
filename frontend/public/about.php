@@ -79,6 +79,19 @@ require '../headers/header.php';
 </ul>
 <p>Sunday Eucharist:</p>
 <p>New communities gather initially in homes and then find larger spaces as their numbers grow.</p>
+<p>Beginning in 2022 
+LICCF’s name is registered with the Alberta Registries and has been meeting for worship since May 1, 2022, the day after Teresa Hanlon’s priestly ordination.</p>
+<p>We now offer a zoom eucharist at 10 AM  MT First Sundays of the month. FIND a zoom link <a href="zoom-link">here</a>.</p>
+<p>Mass in the Library Theatre Gallery<br>
+3rd Sundays of the month LICCF celebrates an in-person eucharist at the downtown Lethbridge public library Theatre Gallery at 11 AM.</p>
+<p>Weekday Mass<br>
+Since August 2022 we have celebrated eucharist in Teresa & Vincent’s home Wednesdays at 11 AM. Call 403-381-1845 for directions.</p>
+<p>Collage of Pictures “All Souls Day” “First Eucharist in the Theatre Gallery” “Celebrating at Hanlons” “Ordination to Diaconate” “Ashes for Lent” “Ordination to Priesthood” “Tobacco Ceremony at Thanksgiving”</p>
+<p>Whatever your journey or background, you are welcome to<a href="get-involved">“join us”</a> which links to Get Involved (found under Community).</p>
+
+
+
+
     </div>
 <br><br><br><br>
 <?php include_once('../../frontend/footers/footer.php'); ?>
