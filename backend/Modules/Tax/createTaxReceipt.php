@@ -1,5 +1,6 @@
 <?php
 require_once '../../vendor/autoload.php';
+require_once '../Authentication/mailAuthentication.php';
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -21,8 +22,8 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
-$mail->Username = 'liccftest@gmail.com';
-$mail->Password = 'citgxpzhmtoticrv';
+$mail->Username = $emailUsername;
+$mail->Password = $emailKey;
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 

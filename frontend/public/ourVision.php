@@ -7,6 +7,8 @@ session_start();
 <head>
 <style>
         .centered {
+            display: flex;
+            justify-content: center;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -19,7 +21,7 @@ session_start();
                 width: 300px;
                 border: 1px solid black;
                 padding: 50px;
-                margin: 120px;
+                margin: 0 auto;
                 margin-left:220px;
                 border-radius: 30px;
                 width: 1000px;
@@ -29,7 +31,7 @@ session_start();
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+    <title>Vision</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>

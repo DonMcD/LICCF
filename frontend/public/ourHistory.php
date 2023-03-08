@@ -29,7 +29,7 @@ session_start();
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+    <title>History</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
