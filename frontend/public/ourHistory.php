@@ -40,22 +40,32 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
-<div class="container">
-    <div class="wrapper">
-    <img src="../../assets/history.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
-    <div class="centered">Our History</div>
-    </div>
+
+<!--This code create the Image and the text in the page-->
+<div class="gif-container">
+        <video autoplay muted loop class="gif">
+            <source src="../../assets/banner18.mp4" type="video/mp4">
+            <source src="banner18.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video> 
+        <div class="text"><span class="letter-highlight">O</span>ur <span class="letter-highlight">H</span>istory </div>
+    </div><br><br>
+<!---->
     <div class="txt">
-    <p>Centrally located, the Theatre Galley site is barrier free and spacious. To protect <br>
-    those who are immune comprised we ask that you wear a mask. We celebrate <br>
-    with chairs in a circular arrangement to emphasize equality of all. The liturgical <br>
-    prayers and readings are in inclusive language and often representative of contemporary<br> 
-    spiritual writers. Readings are guided by the Comprehensive Catholic Lectionary <br>
-    (Women’s Ordination Conference) and the Christian scripture is often read from the First <br>
-    Nations  Version of the New Testament translation.<br>
-    We prepare both wheat and gluten-free breads for consecration. Come sing with live <br>
-    musicians. Come celebrate as one body. All are welcome at the table of thanksgiving.</p>
-    </div>
+    <p>Roman Catholic Women Priests Canada
+<ul>
+    <li>In the 1970s Catholic women, called to the priesthood, many of them religious, believed their call to ordination would be realized as a fulfillment of Vatican II documents which called for the Church to pay attention to the “signs of the times.”</li>
+    <li>One by one Episcopalian (in the USA), Anglican, Lutheran and other main line protestant denominations opened their doors to women clergy.</li>
+    <li>After several decades of not being listened to by the Catholic hierarchy which was backed by Pope John Paul II’s prohibition of speaking about the ordination of women, groups of educated women ready for female ordination realized that necessary change included more than the issue of female priesthood.</li>
+</ul>
+<p>The Danube Seven:</p>
+<ul>
+    <li>2002: The first RC women priests and bishop ordained by male bishops. Ordinations took place on ships, the first seven ordinations taking place on the Danube River in June.</li>
+    <li>2005: Nine ordinations on the St. Lawrence River in July.</li>
+    <li>The women created changes to hierarchical structures, clericalism and prejudices embedded in canon law was essential in a movement of renewal.</li>
+    <li>RCWP liturgies now embrace inclusive language, contemporary spiritual writings and prayers and share the homily with participation from the community.</li>
+    <li>The movement is also inclusive of all genders and colours, non-clerical, non-hierarchical servant leaders and structured by communal governance rather than institutions.</li>
+</ul>.</p>
 </div>
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>

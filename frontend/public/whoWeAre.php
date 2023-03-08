@@ -15,6 +15,7 @@ session_start();
                 width: 30%;
 
 }
+
         .txt {
     	        height: auto;
 	            display: block;
@@ -34,7 +35,7 @@ session_start();
 	        margin: 0 auto;
 
             
-        }
+}
         .img-Council{
             max-width: 100%;
 	        height: auto;
@@ -44,10 +45,16 @@ session_start();
 	        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             
 }
+        .img-liturgy{
+            max-width: 200px;
+	        height: auto;
+	        display: block;
+	        margin: 0 auto;     
+}
         .div{
                 width:100%;
                 margin: 100px;
-        }
+}
         .one{
             background-color:#C9DCA9;
             width:33.33%;
@@ -61,7 +68,7 @@ session_start();
             font-size: 25px;
             font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             text-align:center;  
-        }
+}
         .two{
             background-color:#C9DCA9;
             width: 40%;
@@ -72,7 +79,7 @@ session_start();
             border: 1px solid black;
             font-size: 25px;
             font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
-        }
+}
 
     </style>
     <meta charset="utf-8">
@@ -96,7 +103,7 @@ require '../headers/header.php';
             <source src="banner13.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text">Who we <br>are </div>
+        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <span class="letter-highlight">a</span>re </div>
     </div><br><br>
 
 <!--This code is to create Council image-->
@@ -114,8 +121,38 @@ require '../headers/header.php';
     <h2><u><i>Teresa Hanlon</i></u><h2>
     <img src="../../assets/ourPriestimage.png" alt="Our Priest img" style="height: 300px">
     </div>
-</div>
+</div><br><br>
 
+<!--This code is to create liturgy-->
+<div class="img-liturgy">
+        <img src="../../assets/liturgy.png" alt="Liturgy img">
+    </div>
+    
+<br><br>
+
+<!--This code is to create Social Justice-->
+<div class="img-socialjustice">
+        <img src="../../assets/socialjustice.png" alt="Social Justice img">
+    </div>
+<br><br>
+
+<!--Books Images-->
+<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
+
+<div class="div">
+            <div class="one">
+            <h3>Treaty People</h3>
+            </div>
+            <div class="two">
+            <h3>A moment for Church Renewal</h3>
+                <h3>1. Servant Leadership</h3>
+                <h3>2. Roman Catholic Women Priest Canada</h3>
+            </div>
+    </div>
+
+
+    <?php include_once('../footers/footer.php'); ?>
+<script src="../../js/sidebar.js"></script>
 
 </body>
 </html>
