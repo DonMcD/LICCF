@@ -811,3 +811,13 @@ footer {
     margin: 0 auto;
     justify-content: center;
 }
+
+.tax-center-container input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
