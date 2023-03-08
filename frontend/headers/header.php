@@ -20,9 +20,9 @@
         <ul class="dropdown-content">
           <li><a href="../../frontend/public/liturgies.php">Liturgies</a></li>
           <li><a href="../../frontend/public/sacraments.php">Sacraments</a></li>
-          <li><a href="#">Special Services and Blessings</a></li>
-          <li><a href="#">Prayer</a></li>
-          <li><a href="#">Spiritual Direction</a></li>
+          <li><a href="../../frontend/public/SpecialServices.php">Special Services and Blessings</a></li>
+          <li><a href="../../frontend/public/prayer.php">Prayer</a></li>
+          <li><a href="../../frontend/public/SpiritualDirection.php">Spiritual Direction</a></li>
         </ul>
       </li>
       <li class="dropdown">

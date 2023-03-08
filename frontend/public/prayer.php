@@ -35,6 +35,7 @@ require '../headers/header.php';
 			margin: 10px auto;
 			width: 80%;
 			max-width: 500px;
+			margin-bottom: 20px;
 		}
 	</style>
 </head>

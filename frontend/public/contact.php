@@ -124,7 +124,7 @@ require '../headers/header.php';
     </div>
 
     <h1><u>Territorial Acknowledgment</u></h1>
-    <div style="text-align:center; width:50%; border: 10px solid #3E702D; border-radius: 10px; background-color: #C9DCA9;">
+    <div style="text-align:center; width:50%; border: 10px solid #3E702D; border-radius: 10px; background-color: #C9DCA9; margin-bottom: 20px;">
         <p>Treaty 7 territory is both grassland and mountainous territory with water running through from several rivers including the Oldman, Belly and Milk Rivers. It is home to the Blackfoot Confederacy including the First Nations Kainai, Siksika, Piikani, Tsuut‘ina and Stoney Nakoda Nations. It is homeland to the Métis Nation of Region 3 in Alberta.</p>
         <p>Settlers here are responsible to educate themselves about the history of residential schools and what it means to live as treaty people. There is truth to be told. There are sustainable ways of living to be learned to ensure reciprocity of the Creator’s gift of Mother Earth.</p>
         <p>In the spirit of respect, reciprocity and truth, we honour and acknowledge the historical and contemporary Treaty 7 territory and languages of the Blackfoot Confederacy: Siksika, Kainai, Piikani, as well as the Stoney Nakoda of Chiniki, Bearspaw and Wesley First Nations, and the Dene of Tsuut’ina First Nation. The coulees, prairie grassland, mountains, lakes and rivers sustain us generously. We further acknowledge that we are all treaty people with a responsibility to remain true to the nature and intent of the treaties including reciprocity with Mother Earth.</p>
