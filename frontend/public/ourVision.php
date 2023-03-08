@@ -41,13 +41,28 @@ session_start();
 <?php
 require '../headers/header.php';
 ?>
-    <div class="wrapper">
-    <img src="../../assets/crossSignForCommunityPage.jpg" alt="church vision" style = "width:1520px;height:800px;border-top: 6px solid #3E702D;">
-    <div class="centered">Our Vision</div>
-    </div>
+<!--This code create the Image and the text in the page-->
+<div class="gif-container">
+        <video autoplay muted loop class="gif">
+            <source src="../../assets/banner17.mp4" type="video/mp4">
+            <source src="banner17.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video> 
+        <div class="text"><span class="letter-highlight">O</span>ur <span class="letter-highlight">V</span>ision </div>
+    </div><br><br>
+    <!--Text inside the vision statement-->
     <div class="txt">
     <h1><i><u><center>Vision Statement</center></u></i></h1>
-    <p>Based on Early Christian ritual and ordination of women then, the Lethbridge Inclusive Catholic Community Fellowship welcomes all people to come to pray, sing and receive from the table. We celebrate with inclusive language, feel the call to social justice action and look with respect to Indigenous culture and teachings.    </p>
+    <p>
+    A new model of ordained ministry in a renewed Roman Catholic Church.<br>
+     For LICCF this means that  
+    <ul>
+    <li>We base our liturgies on the Early Christian ritual of a welcoming table rather than a sacrificing altar.</li>
+    <li>We read the ‘signs of the times’ and welcome all people to be part of change through prayer, song, body practice and social justice action.</li>
+    <li>We receive and give love and healing with those in need.</li>
+    <li>We celebrate, study and act with inclusive language.</li>
+    <li>We interact with Indigenous people of this land, respecting their cultures, languages, and teachings.</li>
+</ul></p>
     </div>
 </div>
 
