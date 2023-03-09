@@ -35,6 +35,7 @@ require '../headers/header.php';
         border-style: ridge;
         padding: 10px;
         margin-top: 20px;
+        margin-bottom: 20px;
       }
 
       h1 {

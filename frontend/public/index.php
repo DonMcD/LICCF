@@ -30,26 +30,55 @@ require '../headers/header.php';
         <div class="text"><span class="letter-highlight">L</span>ethbridge <span class="letter-highlight">I</span>nclusive <br><span class="letter-highlight">C</span>atholic <span class="letter-highlight">C</span>ommunity <span class="letter-highlight">F</span>ellowship</div>
     </div><br><br>
 
-    <h1 id="page-title"><u> NEXT EVENTS </u></h1><BR></BR>
+	<style>
+		.text-box {
+			display: flex;
+			margin-top: 40px;
+			background-color: #C9DCA9;
+            border-radius: 10px;
+			box-shadow: 10px 10px 20px #3E702D;
+		}
+		.left-box {
+			flex: 1;
+			text-align: center;
+			padding: 20px;
+		}
+		.right-box {
+			flex: 2;
+			padding: 20px;
+		}
+	</style>
+
+	<div class="text-box">
+		<div class="left-box">
+			<h1 style="color:#3E702D;">New Events</h1>
+		</div>
+		<div class="right-box">
+			<p><strong>Event Date:</strong> March 12th, 2023</p>
+			<p><strong>Event Name:</strong> ZOOM Mass</p>
+			<p><strong>Event Time:</strong> 10:00 AM</p>
+		</div>
+	</div>
+
+
+    <div style="margin-top: 40px;">
+        <div style="border: 5px solid #C9DCA9; padding: 10px; border-radius: 20px;">
+            <h1 style="text-align: center; color: #3E702D;">Donate</h1>
+            <p> We encourage donations by e-transfer with your mailing address in the message box to 
+            <a href="mailto:LICComm2022@gmail.com">LICComm2022@gmail.com</a> because they are direct 
+            and pose no queries from the Canada Revenue Agency.</p>
     
-    
-    <div style="background-color: #C9DCA9; padding: 1em; border-radius: 10px;">
-      <div class="event">
-      <div class="event-date"><b> FEBRUARY 12TH, 2023</b></div>
-      <div class="event-name"><b> ZOOM MASS </b></div>
-      <div class="event-details"><b> TIME 10 A.M </b></div>
+            <p>Tax Receipts - please include your mailing address in the “message box” unless you have 
+            signed up with your current address as a member.</p>
+        </div>
     </div>
-    </div><br><br><br>
- 
-    <h1 id="donate-title">Donate</h1><br>
 
-    <div style="background-color: #C9DCA9; padding: 1em; border-radius: 10px;">
-    <p>We encourage donations by e-transfer with your mailing address in the message box to <a href="mailto:Liccomm2022@gmail.com">Liccomm2022@gmail.com</a> because they are direct and pose no queries from the Canada Revenue Agency.</p>
-    <p>Tax Receipts - please include your mailing address in the “message box” unless you have signed up with your current address as a member.</p>
-    </div><br><br><br>
+    <div style="margin-top: 20px; margin-bottom:20px;">
+        <h1 style="text-align: center; color: #3E702D;">Calendar</h1>
+        <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&amp;ctz=America%2FEdmonton" 
+        style="border: 10" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
 
-    <h1 id="calendar-title">Calendar</h1>
-    <iframe src="https://calendar.google.com/calendar/embed?src=bd4ca999011f6aa262c2e01dffef17922a205434858c2eef7888fa257012c692%40group.calendar.google.com&ctz=America%2FEdmonton" style="border: 0" width="1000" height="600" frameborder="0" scrolling="no"></iframe><br>
     <?php include_once('..\..\frontend\footers\footer.php'); ?>
     <script src="../../js/sidebar.js"></script>
 </body>

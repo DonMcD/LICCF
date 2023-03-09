@@ -34,6 +34,7 @@ require '../headers/header.php';
         border-radius: 5px;
         padding: 10px;
         margin-top: 20px;
+        margin-bottom: 20px;
       }
  </style>
  
