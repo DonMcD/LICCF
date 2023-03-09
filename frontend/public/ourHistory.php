@@ -5,24 +5,11 @@ session_start();
 ?>
 <!DOCTYPE html>
 <head>
-    <style>
-        .history-txt {
-            width: 80%; /* use percentages instead of pixels for width to make it responsive */
-            margin: 5vw auto; 
-            border: 2px solid black; 
-            padding: 5vw; 
-            border-radius: 2vw; 
-            border: 5px solid #C9DCA9;
-            font-size: 1.5vw; 
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            display: flex; /* use display flex to make the element responsive */
-            justify-content: center; /* center the content horizontally */
-            align-items: center; /* center the content vertically */
-            flex-direction: column; /* set the flex direction to column to stack the content vertically */
-}
-    </style>
+
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
+    <title>LICCF Login</title>
+    <link rel="stylesheet" href="../../css/about.css">
     <title>History</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -45,7 +32,7 @@ require '../headers/header.php';
         <div class="text">Our History </div>
     </div><br><br>
 <!---->
-    <div class="history-txt">
+    <div class="womenhistory-txt">
     <p>Roman Catholic Women Priests Canada
 <ul>
     <li>In the 1970s Catholic women, called to the priesthood, many of them religious, believed their call to ordination would be realized as a fulfillment of Vatican II documents which called for the Church to pay attention to the “signs of the times.”</li>
@@ -60,7 +47,33 @@ require '../headers/header.php';
     <li>RCWP liturgies now embrace inclusive language, contemporary spiritual writings and prayers and share the homily with participation from the community.</li>
     <li>The movement is also inclusive of all genders and colours, non-clerical, non-hierarchical servant leaders and structured by communal governance rather than institutions.</li>
 </ul></p>
-</div>
+</div><br><br>
+
+
+  <div class="teresaStory-txt">
+    <p><i>Teresa’s</i> story of call to ordination can be read <a href="https://rcwpcanada.altervista.org/2021-docs/TeresaHanlonDiaconateOrdination/TeresaDiaconateOrdination.html">here</a>.</p>
+    <p>Working priests:</p>
+    <ul>
+      <li>are not salaried by an institution</li>
+      <li>continue to earn a living as they did prior to saying ‘yes’ to ordination (unless they were employed a Catholic institution in which case they lose their jobs)</li>
+      <li>work as spiritual care providers, others lawyers, educators, social workers, spiritual directors or pastoral care ministers</li>
+      <li>are led by the Spirit</li>
+      <li>practice contemplative listening with their communities</li>
+      <li>Gathering for Sunday worship by zoom and in person</li>
+      <li>share liturgy planning, social justice outreach, and leave governance and financial matters to their communities</li>
+    </ul>
+    <p>Sunday Eucharist:</p>
+    <p>New communities gather initially in homes and then find larger spaces as their numbers grow.</p>
+    <p>Beginning in 2022 
+    LICCF’s name is registered with the Alberta Registries and has been meeting for worship since May 1, 2022, the day after Teresa Hanlon’s priestly ordination.</p>
+    <p>Mass in the Library Theatre Gallery<br>
+    3rd Sundays of the month LICCF celebrates an in-person eucharist at the downtown Lethbridge public library Theatre Gallery at 11 AM.</p>
+    <p>Weekday Mass<br>
+    Since August 2022 we have celebrated eucharist in Teresa & Vincent’s home Wednesdays at 11 AM. Call 403-381-1845 for directions.</p>
+    <p>Collage of Pictures “All Souls Day” “First Eucharist in the Theatre Gallery” “Celebrating at Hanlons” “Ordination to Diaconate” “Ashes for Lent” “Ordination to Priesthood” “Tobacco Ceremony at Thanksgiving”</p>
+    <p>Whatever your journey or background, you are welcome to<a href="get-involved">“join us”</a> which links to Get Involved (found under Community).</p>
+  </div><br><br>
+
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>
 </html>

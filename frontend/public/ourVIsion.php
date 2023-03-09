@@ -4,6 +4,10 @@ session_start();
 ?>
 <!DOCTYPE html>
 <head>
+    <meta charset="utf-8">
+    <meta name= "author" content= "VARchitects">
+    <title>LICCF Login</title>
+    <link rel="stylesheet" href="../../css/about.css">
 <style>
 
     /*This is CSS for Our Vision Page*/
@@ -19,7 +23,7 @@ session_start();
                 align-items: center; /* center the content vertically */
                 flex-direction: column; /* set the flex direction to column to stack the content vertically */
                 padding: 2vw; 
-
+        }
         .centered {
             display: flex;
             justify-content: center;
