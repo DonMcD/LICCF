@@ -7,34 +7,36 @@ session_start();
 <head>
 <style>
 
-        .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 40px;
-                width: 30%;
-
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-        .txt {
-    	        height: auto;
-	            display: block;
-	            margin: 0 auto;
-                width: 200px;
-                border: 1px solid black;
-                border-radius: 30px;
-                width: 400px;
-                font-size: 25px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-                text-align:center;   
+.txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 400px;
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-size: 25px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
 }
-        .img-OP{
-            max-width: 200px;
-	        height: auto;
-	        display: block;
-	        margin: 0 auto;
 
-            
+.img-OP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
         .img-Council{
             max-width: 100%;
@@ -51,35 +53,72 @@ session_start();
 	        display: block;
 	        margin: 0 auto;     
 }
-        .div{
-                width:100%;
-                margin: 100px;
+        .div {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
 }
-        .one{
-            background-color:#C9DCA9;
-            width:33.33%;
-            float:left;
+
+        .one {
+            background-color: #C9DCA9;
+            max-width: 400px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             text-align: center;
-            padding-top: 90px;
-            padding-bottom: 90px;
-            margin-left:20px;
+            padding: 20px;
+}
+
+        .two {
+            background-color: #C9DCA9;
+            max-width: 600px;
+            margin: 20px;
             border-radius: 10px;
             border: 1px solid black;
-            font-size: 25px;
-            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            text-align:center;  
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
 }
-        .two{
-            background-color:#C9DCA9;
-            width: 40%;
-            float:right;
-            padding: 50px;
-            margin-right:20px;
-            border-radius: 10px;
-            border: 1px solid black;
-            font-size: 25px;
-            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+
+
+@media screen and (min-width: 768px) {
+        .div {
+            flex-direction: row;
+  }
+  
+        .one {
+            width: 50%;
+            margin: 20px;
+  }
+  
+        .two {
+            width: 50%;
+            margin: 20px;
+  }
+  .books-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #C9DCA9;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+Explanation:
+
+The class attribute is added to the img tag with the value of responsive-img.
+In the CSS code, the .responsive-img class is defined to make the image responsive. max-width: 100% is used to make sure that the image does not overflow its container on smaller screens, while height: auto allows the image to scale proportionally. display: block and margin: 0 auto center the image horizontally within its container. The border and border-radius properties are kept to give a border and rounded corners to the image.
+
+
+
+
+
 
     </style>
     <meta charset="utf-8">
@@ -103,7 +142,7 @@ require '../headers/header.php';
             <source src="banner13.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <span class="letter-highlight">a</span>re </div>
+        <div class="text">Who we are </div>
     </div><br><br>
 
 <!--This code is to create Council image-->
@@ -137,7 +176,7 @@ require '../headers/header.php';
 <br><br>
 
 <!--Books Images-->
-<center><img src="../../assets/books.png" alt="books img" style=" border: 4 px solid black; margin: 40px; margin-left:100px; border-radius: 20px;"></center>
+<center><img src="../../assets/books.png" alt="books img" class="books-img"></center>
 
 <div class="div">
             <div class="one">

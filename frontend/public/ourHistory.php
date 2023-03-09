@@ -6,25 +6,19 @@ session_start();
 <!DOCTYPE html>
 <head>
     <style>
-        .centered {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 60px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-                color: white;    
-}
-        .txt {
-                width: 300px;
-                border: 1px solid black;
-                padding: 50px;
-                margin: 120px;
-                margin-left:220px;
-                border-radius: 30px;
-                width: 1000px;
-                font-size: 25px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
+        .history-txt {
+            width: 80%; /* use percentages instead of pixels for width to make it responsive */
+            margin: 5vw auto; 
+            border: 2px solid black; 
+            padding: 5vw; 
+            border-radius: 2vw; 
+            border: 5px solid #C9DCA9;
+            font-size: 1.5vw; 
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            display: flex; /* use display flex to make the element responsive */
+            justify-content: center; /* center the content horizontally */
+            align-items: center; /* center the content vertically */
+            flex-direction: column; /* set the flex direction to column to stack the content vertically */
 }
     </style>
     <meta charset="utf-8">
@@ -48,10 +42,10 @@ require '../headers/header.php';
             <source src="banner18.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">O</span>ur <span class="letter-highlight">H</span>istory </div>
+        <div class="text">Our History </div>
     </div><br><br>
 <!---->
-    <div class="txt">
+    <div class="history-txt">
     <p>Roman Catholic Women Priests Canada
 <ul>
     <li>In the 1970s Catholic women, called to the priesthood, many of them religious, believed their call to ordination would be realized as a fulfillment of Vatican II documents which called for the Church to pay attention to the “signs of the times.”</li>
@@ -65,7 +59,7 @@ require '../headers/header.php';
     <li>The women created changes to hierarchical structures, clericalism and prejudices embedded in canon law was essential in a movement of renewal.</li>
     <li>RCWP liturgies now embrace inclusive language, contemporary spiritual writings and prayers and share the homily with participation from the community.</li>
     <li>The movement is also inclusive of all genders and colours, non-clerical, non-hierarchical servant leaders and structured by communal governance rather than institutions.</li>
-</ul>.</p>
+</ul></p>
 </div>
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>
