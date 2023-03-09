@@ -123,7 +123,7 @@ In the CSS code, the .responsive-img class is defined to make the image responsi
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
-    <title>LICCF Login</title>
+    <title>Who Are We?</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
