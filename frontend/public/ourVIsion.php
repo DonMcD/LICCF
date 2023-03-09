@@ -4,13 +4,10 @@ session_start();
 ?>
 <!DOCTYPE html>
 <head>
-<<<<<<< HEAD
-
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
     <title>LICCF Login</title>
     <link rel="stylesheet" href="../../css/about.css">
-=======
 <style>
 
     /*This is CSS for Our Vision Page*/
@@ -26,7 +23,7 @@ session_start();
                 align-items: center; /* center the content vertically */
                 flex-direction: column; /* set the flex direction to column to stack the content vertically */
                 padding: 2vw; 
-
+        }
         .centered {
             display: flex;
             justify-content: center;
@@ -54,7 +51,6 @@ session_start();
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
     <title>Vision</title>
->>>>>>> c6344b21c5c351f44c1ff332fb057a845c4c5c52
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
