@@ -8,8 +8,12 @@ session_start();
 
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
+<<<<<<< HEAD
     <title>LICCF Login</title>
     <link rel="stylesheet" href="../../css/about.css">
+=======
+    <title>History</title>
+>>>>>>> c6344b21c5c351f44c1ff332fb057a845c4c5c52
     <link rel="stylesheet" href="../../css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>

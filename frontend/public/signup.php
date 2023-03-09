@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name= "author" content= "Donavon McDowell">
-    <title>LICCF Signup</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/signup.css">
 

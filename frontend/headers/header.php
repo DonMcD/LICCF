@@ -1,7 +1,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@700&family=Quintessential&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="../../assets/icon.svg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="../../assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="../../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
 <header>
 <a href="../../frontend/public/index.php"><h2>LICCF</h2></a>
   <nav class='nav-head'>
@@ -20,9 +27,9 @@
         <ul class="dropdown-content">
           <li><a href="../../frontend/public/liturgies.php">Liturgies</a></li>
           <li><a href="../../frontend/public/sacraments.php">Sacraments</a></li>
-          <li><a href="#">Special Services and Blessings</a></li>
-          <li><a href="#">Prayer</a></li>
-          <li><a href="#">Spiritual Direction</a></li>
+          <li><a href="../../frontend/public/SpecialServices.php">Special Services and Blessings</a></li>
+          <li><a href="../../frontend/public/prayer.php">Prayer</a></li>
+          <li><a href="../../frontend/public/SpiritualDirection.php">Spiritual Direction</a></li>
         </ul>
       </li>
       <li class="dropdown">
