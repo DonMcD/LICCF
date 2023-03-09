@@ -10,43 +10,7 @@ session_start();
     <link rel="stylesheet" href="../../css/about.css">
 <style>
 
-    /*This is CSS for Our Vision Page*/
-        .vision-txt {
-                width: 80%; 
-                margin: 0 auto;
-                border: 5px solid #C9DCA9;
-                border-radius: 2vw; 
-                font-size: 1.5vw; 
-                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-                display: flex; 
-                justify-content: center; /* center the content horizontally */
-                align-items: center; /* center the content vertically */
-                flex-direction: column; /* set the flex direction to column to stack the content vertically */
-                padding: 2vw; 
-        }
-        .centered {
-            display: flex;
-            justify-content: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 60px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
-                color: white; 
-}
-        .txt {
-                width: 300px;
-                border: 1px solid black;
-                padding: 50px;
-                margin: 0 auto;
-                margin-left:220px;
-                border-radius: 30px;
-                width: 1000px;
-                font-size: 25px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
 
-}
     </style>
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
