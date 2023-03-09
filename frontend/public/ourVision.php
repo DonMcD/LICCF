@@ -4,25 +4,11 @@ session_start();
 ?>
 <!DOCTYPE html>
 <head>
-<style>
-    /*This is CSS for Our Vision Page*/
-        .vision-txt {
-                width: 80%; 
-                margin: 0 auto;
-                border: 5px solid #C9DCA9;
-                border-radius: 2vw; 
-                font-size: 1.5vw; 
-                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-                display: flex; 
-                justify-content: center; /* center the content horizontally */
-                align-items: center; /* center the content vertically */
-                flex-direction: column; /* set the flex direction to column to stack the content vertically */
-                padding: 2vw; 
-}
-    </style>
+
     <meta charset="utf-8">
     <meta name= "author" content= "VARchitects">
     <title>LICCF Login</title>
+    <link rel="stylesheet" href="../../css/about.css">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
