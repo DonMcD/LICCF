@@ -26,41 +26,36 @@ require '../headers/header.php';
         Your browser does not support the video tag.
     </video> 
     <div class="text">Donate</div>
-</div><br><br>
-        
+</div> <br><br>
+<h1>Would you like to make a donation to support our community?</h1>       
 <section class="donate-content">
   <div class="donate-top">
     <div class="mailing-recomendation">
       <p>
         We encourage donations by e-transfer with your mailing address in
         the message box to
-        <a href="mailto:LICComm2022@gmail.com">LICCmm2022@gmail.com</a>
-        because they are direct and pose no queries from the Canada
-        revenue agency.
+        <a href="mailto:LICComm2022@gmail.com">LICComm2022@gmail.com</a>
+        because they are direct and pose no queries from the Canada Revenue Agency.
       </p>
       <p>
-        Tax Recipts - Please include your mailing address in the "message
-        box" unless you have signed up with your current address as a
-        number.
-      </p>
+         Please include your full name for a tax receipt and mailing address with a postal code,
+         unless you have signed up with your current address as a member.
+     </p>
     </div>
   </div>
   <div class="donate-bottom">
     <div>
-      
-      <p>Unique Identifier Numbers</p>
+    <h4 style=" text-align: center;">Unique Identifier Numbers</h4> <br><br>
       <p class="para">
         Each member who donates has a unique Identifier Number which is
-        used for taxt reasons _______________________ contact for your
-        number.
+        used for tax reasons. Please contact 403-381-1845 for your number.
       </p>
     </div>
     <div class="second">
-      <p>Cash & Cheque Donations</p>
+    <h4 style=" text-align: center;">Cash & Cheque Donations</h4> <br><br>
       <p class="para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
-        vero neque iste optio voluptatem soluta modi assumenda aperiam
-        accusantium facere officia pariatur.
+      Donations in person will be issued a receipt at the time of giving. 
+      Finance committee members will be onsite at the library to give you your receipt that Sunday.
       </p>
     </div>
   </div>
