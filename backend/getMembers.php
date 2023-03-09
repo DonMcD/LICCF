@@ -17,7 +17,7 @@ $sql = "SELECT * FROM members WHERE f_name LIKE '%$searchTerm%' OR l_name LIKE '
 
 $result = mysqli_query($conn, $sql);
 
-
+echo "<option value=''></option>";
 // Output the results as a dropdown list
 while ($row = $result->fetch_assoc()) {
     $pid = $row['pid'];

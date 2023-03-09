@@ -25,7 +25,7 @@ if($_SESSION['type'] == 0){
 <div class="profile-main-container">
     <div class='profile-inner-container'>
         <div class='profile-section'>
-            <form id="profileForm" method='POST'>
+            <form id="profileForm" class='donation-form' method='POST'>
                 <table>
                     <tr>
                         <td><h2>Donation Information</h2></td>
@@ -85,43 +85,54 @@ if($_SESSION['type'] == 0){
                         <td><h3>Security Question Answer</h3></td>
                         <td><input type="text" name="sec_question" id="sec_question" value=''/></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td><input type='submit' value='Submit' id='submitButton2'/></td>
-                    </tr>
                 </table>
             </form>
         </div>
     </div>
+    <div class='forms-footer'>
+        <button onclick="duplicateForm()">Add Another Form</button>
+        <button onclick="submitAllForms()">Submit All Forms</button>
+    </div>
 </div>
 <script>
-
-
-
-
-$(document).ready(function() {
-  $("#profileForm").submit(function(event) {
-    // Prevent default form submission
-    event.preventDefault();
-
-    // Serialize form data
-    var formData = $(this).serialize();
-
-    // Send AJAX request
-    $.ajax({
-      url: "../../backend/createDonation.php",
-      type: "POST",
-      data: formData,
-      success: function(response) {
-        // Display toastr alert
-        toastr.success("Donation successfully created!");
-      },
-      error: function(xhr, status, error) {
-        toastr.error("Error: " + error);
-      }
-    });
-  });
-});
+function duplicateForm() {
+  var form = document.querySelector('.donation-form');
+  var body = document.querySelector('.profile-inner-container');
+  var clone = form.cloneNode(true);
+  body.appendChild(clone);
+}
+function submitAllForms() {
+    var dropBox = document.getElementById('searchResults');
+    var amount = document.getElementById('amount');
+    var date = document.getElementById('date');
+    var forms = document.querySelectorAll('.donation-form');
+    if (dropBox.value === '') {
+        toastr.error("Please select a member.");
+    } else {
+        if (amount.value === '') {
+        toastr.error("Please select an amount.");
+        } else {
+            if (date.value === '') {
+            toastr.error("Please select a date.");
+            } else {
+                for (var i = 0; i < forms.length; i++) {
+                    var formData = $(forms[i]).serialize();
+                    $.ajax({
+                        url: "../../backend/createDonation.php",
+                        type: "POST",
+                        data: formData,
+                        success: function(response) {
+                            toastr.success("Donation successfully created!");
+                        },
+                        error: function(xhr, status, error) {
+                            toastr.error("Error: " + error);
+                        }
+                    });
+                }
+            }
+        }
+    }
+}
 
 // Get the text input field and the div to display the search results
 var searchField = document.getElementById('searchField');
@@ -147,8 +158,6 @@ searchField.addEventListener('input', function() {
   xhr.open('GET', '../../backend/getMembers.php?term=' + searchTerm, true);
   xhr.send();
 });
-
-
 </script>
 <script src="../../js/sidebar.js"></script>
 </body>

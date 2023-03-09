@@ -49,7 +49,7 @@ foreach ($members as $member) {
         '{email}' => $member['email'],
     ];
 
-    $spreadsheet = IOFactory::load('../../Files/receipt template.xlsx');
+    $spreadsheet = IOFactory::load('../../Templates/receipt template.xlsx');
     $worksheet = $spreadsheet->getActiveSheet();
 
     // Replace variables in spreadsheet with member data
@@ -70,22 +70,6 @@ foreach ($members as $member) {
 
     $writer->save($fileName);
 
-/*
-    // Set active sheet
-    $spreadsheet->setActiveSheetIndex(0);
-
-    $options = new Options();
-    //$options->setPaper('letter', 'portrait');
-    $writer = new Dompdf($spreadsheet, $options);
-
-    // Generate PDF content from spreadsheet data
-    $writer->loadHtml($spreadsheet->getActiveSheet()->getDirtyData());
-    $writer->render();
-    $pdfContent = $writer->output();
-
-    // Save PDF file to disk
-    file_put_contents($fileName, $pdfContent);
-*/
     // Attach PDF file to email
     $pdfcontents = file_get_contents($fileName);
     $mail->addStringAttachment($pdfcontents, $fileName, 'base64', 'application/pdf');

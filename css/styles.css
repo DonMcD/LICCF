@@ -820,4 +820,29 @@ footer {
     border-radius: 4px;
     box-sizing: border-box;
     margin: 0 auto;
-  }
+}
+
+/*Forms classes*/
+.forms-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.forms-footer button {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 15px;
+}
+.forms-footer button:hover {
+    background-color: #357737;
+}

@@ -22,71 +22,73 @@ require '../headers/header.php';
 require '../headers/topBar.php';
 ?>
 <div class="signup-form-main">
-  <div class="signup-form">
-    <h1>Create Event Attendance</h1>
-    <hr class="signup-divider" />
-    <form id="profileForm" method='POST'>
-      <div class="signup-form-section">
-      <div class="signup-form-row">
-          <div class="signup-form-label">
-            <label for="date">Date</label>
+  <div id='form'>
+    <div class="signup-form">
+      <h1>Create Event Attendance</h1>
+      <hr class="signup-divider" />
+      <form class="attendance-form" method='POST'>
+        <div class="signup-form-section">
+          <div class="signup-form-row">
+            <div class="signup-form-label">
+              <label for="date">Date</label>
+            </div>
+            <div class="signup-form-input">
+              <input type="date" name="date" id="date" required>
+            </div>
           </div>
-          <div class="signup-form-input">
-            <input type="date" name="date" id="date" required>
+          <div class="signup-form-row">
+            <div class="signup-form-label">
+              <label for="in_person">In Person</label>
+            </div>
+            <div class="signup-form-input">
+              <input type="text" name="in_person" id="in_person" required>
+            </div>
           </div>
-        <div class="signup-form-row">
-          <div class="signup-form-label">
-            <label for="in_person">In Person</label>
-          </div>
-          <div class="signup-form-input">
-            <input type="text" name="in_person" id="in_person" required>
-          </div>
+          <div class="signup-form-row">
+            <div class="signup-form-label">
+              <label for="online">Online</label>
+            </div>
+            <div class="signup-form-input">
+              <input type="text" name="online" id="online" required>
+            </div>
+          </div>         
         </div>
-        <div class="signup-form-row">
-          <div class="signup-form-label">
-            <label for="online">Online</label>
-          </div>
-          <div class="signup-form-input">
-            <input type="text" name="online" id="online" required>
-          </div>
-        </div>         
-        </div>
-      </div>
-      
-          <div>
-              <input type='submit' name='submit' id='submit' value='Submit'>
-          </div>
       </form>
+    </div>
   </div>
+  <div class='forms-footer'>
+    <button onclick="duplicateForm()">Add Another Form</button>
+    <button onclick="submitAllForms()">Submit All Forms</button>
+  </div>
+  <br>
 </div>
+
 <script>
-
-$(document).ready(function() {
-  $("#profileForm").submit(function(event) {
-    // Prevent default form submission
-    event.preventDefault();
-
-    // Serialize form data
-    var formData = $(this).serialize();
-
-    // Send AJAX request
+function duplicateForm() {
+  var form = document.querySelector('.signup-form');
+  var body = document.querySelector('#form');
+  var clone = form.cloneNode(true);
+  body.appendChild(clone);
+}
+function submitAllForms() {
+  var forms = document.querySelectorAll('.attendance-form');
+  for (var i = 0; i < forms.length; i++) {
+    var formData = $(forms[i]).serialize();
     $.ajax({
       url: "../../backend/createAttendance.php",
       type: "POST",
       data: formData,
       success: function(response) {
-        // Display toastr alert
         toastr.success("Attendance successfully created!");
       },
       error: function(xhr, status, error) {
         toastr.error("Error: " + error);
       }
     });
-  });
-});
-
+  }
+}
 </script>
-<script src="../../js/sidebar.js"></script>
 
+<script src="../../js/sidebar.js"></script>
 </body>
 </html>
