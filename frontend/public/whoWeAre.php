@@ -51,34 +51,55 @@ session_start();
 	        display: block;
 	        margin: 0 auto;     
 }
-        .div{
-                width:100%;
-                margin: 100px;
+        .div {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
 }
-        .one{
-            background-color:#C9DCA9;
-            width:33.33%;
-            float:left;
+
+        .one {
+            background-color: #C9DCA9;
+            width: 50%;
+            max-width: 400px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             text-align: center;
-            padding-top: 90px;
-            padding-bottom: 90px;
-            margin-left:20px;
-            border-radius: 10px;
-            border: 1px solid black;
-            font-size: 25px;
-            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-            text-align:center;  
+            padding: 20px;
 }
-        .two{
-            background-color:#C9DCA9;
-            width: 40%;
-            float:right;
-            padding: 50px;
-            margin-right:20px;
+
+        .two {
+            background-color: #C9DCA9;
+            width: 50%;
+            max-width: 600px;
+            margin: 20px;
             border-radius: 10px;
             border: 1px solid black;
-            font-size: 25px;
-            font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+            font-size: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+            padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+        .div {
+            flex-direction: row;
+  }
+  
+        .one {
+            width: 33.33%;
+            margin: 20px;
+  }
+  
+        .two {
+            width: 66.66%;
+            margin: 20px;
+  }
 }
 
     </style>
@@ -103,7 +124,7 @@ require '../headers/header.php';
             <source src="banner13.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">W</span>ho <span class="letter-highlight">w</span>e <span class="letter-highlight">a</span>re </div>
+        <div class="text">Who we are </div>
     </div><br><br>
 
 <!--This code is to create Council image-->

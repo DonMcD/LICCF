@@ -1,30 +1,23 @@
 <?php
 //USE THIS CODE ON EVERY PAGE THAT REQUIRES USER AUTHENTICATION!!
 session_start();
-
 ?>
 <!DOCTYPE html>
 <head>
 <style>
-        .centered {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 60px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
-                color: white; 
-}
-        .txt {
-                width: 300px;
-                border: 1px solid black;
-                padding: 50px;
-                margin: 120px;
-                margin-left:220px;
-                border-radius: 30px;
-                width: 1000px;
-                font-size: 25px;
-                font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;   
+    /*This is CSS for Our Vision Page*/
+        .vision-txt {
+                width: 80%; 
+                margin: 0 auto;
+                border: 5px solid #C9DCA9;
+                border-radius: 2vw; 
+                font-size: 1.5vw; 
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                display: flex; 
+                justify-content: center; /* center the content horizontally */
+                align-items: center; /* center the content vertically */
+                flex-direction: column; /* set the flex direction to column to stack the content vertically */
+                padding: 2vw; 
 }
     </style>
     <meta charset="utf-8">
@@ -48,10 +41,10 @@ require '../headers/header.php';
             <source src="banner17.ogg" type="video/ogg">
             Your browser does not support the video tag.
         </video> 
-        <div class="text"><span class="letter-highlight">O</span>ur <span class="letter-highlight">V</span>ision </div>
+        <div class="text">Our Vision </div>
     </div><br><br>
     <!--Text inside the vision statement-->
-    <div class="txt">
+    <div class="vision-txt">
     <h1><i><u><center>Vision Statement</center></u></i></h1>
     <p>
     A new model of ordained ministry in a renewed Roman Catholic Church.<br>
@@ -65,7 +58,7 @@ require '../headers/header.php';
 </ul></p>
     </div>
 </div>
-
+<br><br>
 
 <?php include_once('..\..\frontend\footers\footer.php'); ?>
 </body>

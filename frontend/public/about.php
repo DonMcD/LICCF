@@ -62,7 +62,7 @@ require '../headers/header.php';
         <source src="banner2.ogg" type="video/ogg">
         Your browser does not support the video tag.
     </video> 
-    <div class="text"><span class="letter-highlight">A</span>bout <span class="letter-highlight">u</span>s</div>
+    <div class="text">About us</div>
 </div><br><br>
 <br><br>
 <div class="txt">
