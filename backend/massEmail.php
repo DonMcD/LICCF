@@ -1,11 +1,11 @@
 <?php
+require_once 'serverDetails.php';
+require_once './Authentication/mailAuthentication.php';
+require_once 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';
-require './serverDetails.php';
+
 
 $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 
@@ -30,8 +30,8 @@ if ($result->num_rows > 0) {
         $mail->IsHTML(true);
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'liccftest@gmail.com';
-        $mail->Password = 'citgxpzhmtoticrv';
+        $mail->Username = $emailUsername;
+        $mail->Password = $emailKey;
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
