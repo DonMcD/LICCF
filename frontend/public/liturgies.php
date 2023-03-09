@@ -32,7 +32,7 @@ require '../headers/header.php';
   <div class="donate-top">
   <div style="border: 5px solid #C9DCA9; border-radius: 10px; padding: 10px; text-align: center;">
   <p>
-  Centrally located, the Theatre Galley site is barrier free and spacious. To protect those who are immune 
+  Centrally located, the Theatre Gallery site is barrier free and spacious. To protect those who are immune 
   comprised we ask that you wear a mask. We celebrate with chairs in a circular arrangement to emphasize 
   equality of all. The liturgical prayers and readings are in inclusive language and often representative of 
   contemporary spiritual writers. Readings are guided by the Comprehensive Catholic Lectionary 
@@ -51,7 +51,7 @@ require '../headers/header.php';
           Zoom on a device or by telephone. We sing along with YouTube music, and for 10 minutes in breakout 
           rooms we share our noticings in regard to the readings and homily before consecrating the gifts
           together and sharing in a final blessing.
-          Ask to be put on the mailing list for a link <a href="mailto:LICCmm2022@gmail.com">here.</a>
+          Ask to be put on the mailing list for a link <a href="mailto:LICComm2022@gmail.com">here.</a>
       </p>
      
     </div>

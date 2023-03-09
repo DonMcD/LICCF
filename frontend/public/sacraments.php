@@ -27,6 +27,16 @@ require '../headers/header.php';
   </video> 
   <div class="text">Sacraments</div>
 </div><br><br>
+<div style="text-align:center; width:75%; border: 5px solid #C9DCA9; border-radius: 10px; padding: 10px; text-align: center;">
+    The word sacrament comes from the Latin word for 'holy', sacer. As signs of the sacred, sacraments are considered to
+    be 'set apart' from everyday life. In this sense, they have at times been used to denigrate the body and set women apart from men. 
+    We use the sacraments to honour the Holy that is present in all embodied life.<br><br>
+
+    We can see from their symbols that the sacraments are rooted in the physical world: water, fire, bread, wine, oil,
+    human hands. Jesus's words at the last supper, "This is my body" and "This is my blood", further reveal the
+    sacredness of incarnation. We therefore perform the sacraments as a celebration of our embodiment and God's 
+    presence in our lives.
+</div>
 <section class="sacrements">
   <h2>We minister the following sacraments</h2>
   <div class="cards">
