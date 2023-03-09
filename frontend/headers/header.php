@@ -35,9 +35,9 @@
       <li class="dropdown">
         <a href="../../frontend/public/community.php">Community</a>
         <ul class="dropdown-content">
-          <li><a href="#">News and Events</a></li>
-          <li><a href="#">Get Involved</a></li>
-          <li><a href="#">Indigenous Allyship</a></li>
+          <li><a href="../../frontend/public/news-events.php">News and Events</a></li>
+          <li><a href="../../frontend/public/getInvolved.php">Get Involved</a></li>
+          <li><a href="../../frontend/public/indigenousAllyship.php">Indigenous Allyship</a></li>
         </ul>
       </li>
       <li><a href="../../frontend/public/contact.php">Contact</a></li>
