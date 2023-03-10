@@ -29,7 +29,7 @@ require '../headers/header.php';
 </div><br><br>
 <h1><u>Our Ministry Statement</u></h1>
     <div style="text-align:center; width:75%; border: 8px solid #3E702D; border-radius: 10px; background-color: #C9DCA9;">
-        LICCF provides Christian ministry to individuals, families and society 
+    <br><br> LICCF provides Christian ministry to individuals, families and society 
         in solidarity with the guidance and prophetic vision of the international Roman Catholic Women priests movement. We 
         are rooted in the the life-giving aspects of the Roman Catholic sacramental tradition, while maintaining a 
         commitment to ecumenical sharing, spiritual openness and interfaith dialogue.We are inspired by the women and men 
@@ -39,25 +39,25 @@ require '../headers/header.php';
         selves to his call for compassionate action. This is our model for ministry. As a community, we celebrate, share 
         and rejoice in the love that God our Creator offers us as we break bread together and strive to become a centre of
         love, hope and service for one another and the wider world.All people who wish to join us are welcome in our 
-        community and at the Eucharistic table.</p>
+        community and at the Eucharistic table.</p><br>
 </div><br><br>
 
 <div class="boxes">
     <div class="row">
       <div class="box">
-        <img src="../../assets/bread.jpg" alt="" />
+      <a href="../../frontend/public/liturgies.php"><img src="../../assets/bread.jpg" alt="" /></a>
         <br/>
         <a href="../../frontend/public/liturgies.php" class="button">Liturgies</a> 
       </div>
       <div class="box">
-        <img src="../../assets/pic.jpg" alt="" />
+      <a href="../../frontend/public/sacraments.php"><img src="../../assets/pic.jpg" alt="" /></a>
         <br/>
         <a href="../../frontend/public/sacraments.php" class="button">Sacraments</a> 
       </div>
       <div class="box">
-        <img src="../../assets/candles.jpg" alt="" />
+      <a href="../../frontend/public/SpiritualDirection.php"><img src="../../assets/candles.jpg" alt="" /></a>
         <br/>
-        <a href="../../frontend/public/liturgies.php" class="button">Spiritual Direction</a> 
+        <a href="../../frontend/public/SpiritualDirection.php" class="button">Spiritual Direction</a> 
       </div>
     </div>
 </div>
