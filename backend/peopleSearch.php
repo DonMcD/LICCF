@@ -50,7 +50,7 @@ if ($gender === 'All') {
 
 if (isset($_POST['searchBar'])) {
   $searchBar = $_POST['searchBar'];
-  $query = "SELECT m.f_name, m.attendance, m.l_name, m.dob, m.type, m.status, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
+  $query = "SELECT m.h_number, m.f_name, m.attendance, m.l_name, m.dob, m.type, m.status, t.title, m.pid, m.baptized, m.gender, m.confirmation, m.start_date, m.city
   FROM members m
   LEFT JOIN titles t ON m.pid = t.pid
   WHERE $genderFilter m.status = 0 $filterClause AND

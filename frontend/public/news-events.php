@@ -4,7 +4,7 @@
     <meta name="author" content="VARchitects">
     <title>News And Events</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="../../css/community.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>

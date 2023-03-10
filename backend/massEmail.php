@@ -1,6 +1,6 @@
 <?php
 require_once 'serverDetails.php';
-require_once './Authentication/mailAuthentication.php';
+require_once './mailAuthentication.php';
 require_once 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
